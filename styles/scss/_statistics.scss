@@ -1,0 +1,451 @@
+.statistics {
+ padding-bottom: rem(150px);
+ display: flex;
+ flex-direction: column;
+ &__container {
+  display: flex;
+  flex-direction: column;
+ }
+ @include ifdesktop {
+  &__container {
+   padding-left: rem(129px);
+   padding-right: rem(84px);
+  }
+  &__container div {
+   opacity: 0;
+   visibility: hidden;
+   transition: 0.3s;
+  }
+ }
+ @include onlymobile {
+  &__container {
+   padding-left: rem(38px);
+   padding-right: rem(41px);
+  }
+  &__container div {
+   opacity: 0;
+   visibility: hidden;
+   transition: 0.3s;
+  }
+ }
+
+ &__title {
+  font-weight: 500;
+  font-size: rem(48px);
+  line-height: rem(52.39px);
+  margin-bottom: rem(25px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  @include onlymobile {
+   font-size: rem(20px);
+   line-height: rem(21.83px);
+   font-weight: 600;
+   margin-bottom: rem(15px);
+  }
+ }
+
+ &__subtitle {
+  font-size: rem(24px);
+  line-height: rem(26.2px);
+  font-weight: 400;
+  color: rgba(161, 161, 161, 1);
+  margin-bottom: rem(30px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  @include onlymobile {
+   font-size: rem(13px);
+   line-height: rem(14.19px);
+   margin-bottom: rem(15px);
+  }
+ }
+
+ &__graph {
+  width: 100%;
+  @include onlymobile {
+   height: rem(419px);
+  }
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative;
+  overflow: hidden;
+ }
+
+ &__graph-main {
+  @include ifdesktop {
+   display: block;
+   width: rem(977px);
+   height: rem(268px);
+   transform: translateX(15%);
+  }
+  @include onlymobile {
+   display: none;
+  }
+ }
+ &__graph-main.mobile {
+  @include ifdesktop {
+   display: none;
+  }
+  @include onlymobile {
+   display: block;
+   transform: translate(20%);
+   width: rem(230px);
+   height: rem(220px);
+  }
+ }
+ &__graph-percents-wrapper {
+  height: rem(404px);
+  overflow: hidden;
+  position: absolute;
+
+  width: 100%;
+  @include ifdesktop {
+   display: block;
+  }
+  @include onlymobile {
+   display: none;
+  }
+ }
+ &__mobile-line {
+  transform: scaleY(-1);
+ }
+ &__graph-percents-wrapper.mobile {
+  @include ifdesktop {
+   display: none;
+  }
+  @include onlymobile {
+   display: flex;
+  }
+ }
+ &__graph-percents {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(85px);
+  width: 100%;
+  @include ifdesktop {
+   transform: translateY(-60%);
+  }
+  @include onlymobile {
+   row-gap: rem(60px);
+   transform: translateY(-52.5%);
+  }
+ }
+ &__graph-percent {
+  font-size: rem(12px);
+  line-height: rem(13.1px);
+  font-weight: 400;
+  position: relative;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(
+   90deg,
+   #404040 1.33%,
+   rgba(64, 64, 64, 0) 92.78%
+  );
+  border-image-slice: 1;
+  @include onlymobile {
+   font-size: rem(7px);
+   line-height: rem(7.64px);
+  }
+ }
+ &__main-line {
+  stroke-dasharray: 4500;
+  opacity: 0;
+ }
+ &__main-line.animation {
+  opacity: 1;
+  animation: draw 5s ease-in;
+ }
+ &__main-line.anim-out {
+  stroke-dasharray: 2000;
+  animation: reverse-draw 5s linear;
+  opacity: 1;
+ }
+ &__main-line.anim-end {
+  stroke-dasharray: 4500;
+  opacity: 1;
+ }
+ &__graph-bg {
+  fill-opacity: 0;
+  transition: 0.3s;
+ }
+ &__graph-bg.appeared {
+  fill-opacity: 1;
+  transition: 0.3s;
+ }
+ &__graph-circle {
+  opacity: 0;
+  transition: 0.3s;
+ }
+ &__graph-value {
+  opacity: 0;
+  transition: 0.3s;
+ }
+ &__graph-month {
+  opacity: 0;
+  transition: 0.3s;
+ }
+
+ &__graph-main.circle-appear &__graph-circle {
+  opacity: 1;
+  transition: 0.3s;
+ }
+ &__graph-main.circle-appear &__graph-value {
+  opacity: 1;
+  transition: 0.3s;
+ }
+ &__graph-main.mobile.value-appear &__graph-value {
+  opacity: 1;
+  transition: 0.3s;
+ }
+
+ @keyframes reverse-draw {
+  0% {
+   stroke-dashoffset: 0;
+  }
+  100% {
+   stroke-dashoffset: 4500;
+  }
+ }
+ @keyframes draw {
+  0% {
+   stroke-dashoffset: 4500;
+  }
+  100% {
+   stroke-dashoffset: 0;
+  }
+ }
+ &__tabs {
+  display: flex;
+  gap: rem(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  margin-bottom: rem(25px);
+ }
+ &__tab {
+  display: flex;
+  gap: rem(10px);
+  padding: rem(10px) rem(15px);
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+  &::before {
+   content: '';
+   position: absolute;
+   background: linear-gradient(
+    90deg,
+    #ffffff 8.91%,
+    rgba(255, 255, 255, 0) 83.17%
+   );
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
+   padding: 1px;
+  }
+  &::after {
+   content: '';
+   background: url('data:image/svg+xml,<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="4.99609" cy="5" r="5" fill="%235F976E"/></svg>')
+    no-repeat;
+   width: rem(10px);
+   height: rem(10px);
+   background-size: 100%;
+  }
+  @include onlymobile {
+   padding: rem(10px) rem(15px);
+   gap: rem(5px);
+  }
+ }
+ &__tab-logo {
+  max-width: rem(100px);
+  @include onlymobile {
+   max-width: rem(75px);
+  }
+ }
+ &__tab-name {
+  font-weight: 600;
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+  color: rgba(161, 161, 161, 1);
+  @include onlymobile {
+   font-size: rem(14px);
+   line-height: rem(17.07px);
+   font-weight: 400;
+  }
+ }
+ &.visible &__container div {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+ }
+ &.visible &__title {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+ }
+ &.visible &__subtitle {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+ }
+ &.visible &__tabs {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+ }
+ &.visible button {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+ }
+
+ &.month-appear &__graph-month {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+ }
+
+ &__years {
+  display: flex;
+  gap: rem(35px);
+  margin-bottom: rem(30px);
+ }
+ &__year {
+  font-weight: 400;
+  font-size: rem(24px);
+  line-height: rem(26.2px);
+  color: rgba(156, 156, 156, 1);
+ }
+ &__year.active {
+  color: white;
+  border-bottom: 1px solid rgba(95, 151, 110, 1);
+ }
+ &__levels {
+  margin-bottom: rem(25px);
+  align-items: center;
+  gap: rem(15px);
+  @include ifdesktop {
+   display: flex;
+  }
+  @include onlymobile {
+   display: none;
+  }
+ }
+ &__dropdown-icon {
+  width: rem(7.5px);
+  height: rem(15px);
+  @include onlymobile {
+   width: rem(5px);
+   height: rem(10px);
+  }
+ }
+ &__levels.mobile {
+  @include ifdesktop {
+   display: none;
+  }
+  @include onlymobile {
+   display: flex;
+   flex-direction: column;
+   max-width: rem(115px);
+   width: 100%;
+  }
+ }
+ &__level-items {
+  max-height: rem(63px);
+  overflow: auto;
+  width: 100%;
+  border: 1px solid rgba(161, 161, 161, 1);
+  border-radius: 0px 0px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: none;
+  transform: translateY(-30%);
+
+  padding-top: rem(8px);
+ }
+
+ &__level-item {
+  font-weight: 400;
+  font-size: rem(10px);
+  line-height: rem(10.92px);
+  color: rgba(161, 161, 161, 1);
+  position: relative;
+  width: 100%;
+  text-align: center;
+ }
+ &__level-item:not(:nth-last-child(1)) {
+  padding-bottom: rem(4px);
+  &::after {
+   bottom: 0;
+   right: 0;
+   position: absolute;
+   content: '';
+   width: 100%;
+   height: 1px;
+   background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 54.95%
+   );
+  }
+ }
+ &__level-item:not(:first-child) {
+  padding-top: rem(4px);
+ }
+ &__level {
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: rem(17.46px);
+  color: rgba(161, 161, 161, 1);
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+   color: white;
+   transition: 0.3s;
+  }
+ }
+ &__current-level {
+  cursor: pointer;
+  display: flex;
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+  font-weight: 500;
+  padding: rem(10px) rem(20px);
+  gap: rem(10px);
+  border-radius: rem(15px);
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 1);
+  @include onlymobile {
+   font-size: rem(10px);
+   line-height: rem(12.19px);
+   font-weight: 500;
+   padding: rem(10px);
+   border-radius: rem(5px);
+   border: 1px solid rgba(161, 161, 161, 1);
+   width: 100%;
+   position: relative;
+   z-index: 2;
+   background: black;
+  }
+ }
+ &__history-button {
+  padding: rem(10px) rem(43.5px);
+  background: rgba(95, 151, 110, 1);
+  font-size: rem(24px);
+  line-height: rem(36.38px);
+  border-radius: rem(20px);
+  font-weight: 700;
+  font-family: $font-nexa;
+  align-self: center;
+  opacity: 0;
+  visibility: hidden;
+ }
+}

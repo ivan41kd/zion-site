@@ -1,0 +1,90 @@
+.reviews {
+ padding-top: rem(59px);
+ &__title {
+  font-size: rem(70px);
+  line-height: rem(106.12px);
+  font-family: $font-nexa;
+  @include onlymobile {
+   font-size: rem(20px);
+   line-height: rem(21.83px);
+   margin-bottom: rem(30px);
+  }
+ }
+ &__slider {
+  display: flex;
+  gap: rem(30px);
+  align-items: center;
+ }
+ &__swiper {
+  display: flex !important;
+  background: radial-gradient(
+   rgba(15, 138, 116, 0.45) 1.54%,
+   rgb(15 138 116 / 0%) 71.66%
+  );
+  backdrop-filter: blur(157.6999969482422px);
+  align-items: center;
+ }
+ &__swiper-wrapper {
+  width: rem(1130px);
+ }
+ &__slide {
+  display: flex !important;
+  flex-direction: column;
+  padding: rem(30px) rem(34px) rem(31.54px) rem(33px);
+  gap: rem(15px);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.06) inset;
+  background: linear-gradient(
+   88.3deg,
+   rgba(71, 150, 124, 0.1) 5.58%,
+   rgba(194, 181, 120, 0.002) 98.82%
+  );
+  border-radius: rem(20px);
+  backdrop-filter: blur(131.60000610351562px);
+  @include onlymobile {
+   padding: rem(10px) rem(13.91px) rem(48px) rem(17.61px);
+  }
+ }
+ &__user {
+  display: flex;
+  align-items: center;
+  gap: rem(15px);
+ }
+ &__user-icon {
+  width: rem(55px);
+  height: rem(55px);
+  @include onlymobile {
+   width: rem(40px);
+   height: rem(40px);
+  }
+ }
+ &__user-name {
+  font-family: $font-nexa;
+  font-size: rem(31px);
+  font-weight: 800;
+  line-height: rem(47px);
+  @include onlymobile {
+   font-size: rem(16px);
+   line-height: rem(24.26px);
+  }
+ }
+ &__description {
+  font-family: $font-nexa;
+  font-size: rem(18px);
+  font-weight: 400;
+  line-height: rem(18.83px);
+  color: rgba(161, 161, 161, 1);
+  @include onlymobile {
+   font-size: rem(11px);
+   line-height: rem(11.51px);
+  }
+ }
+ &__swiper-button {
+  position: static !important;
+  color: white !important;
+  @include onlymobile {
+   &:after {
+    font-size: rem(35px) !important;
+   }
+  }
+ }
+}

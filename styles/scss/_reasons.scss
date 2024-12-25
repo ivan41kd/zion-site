@@ -1,0 +1,88 @@
+.reasons {
+ padding-bottom: rem(96px);
+ @include ifdesktop {
+  background: url('../../assets/img/bg/reasons-bg.png') no-repeat;
+  background-size: 100%;
+ }
+ @include onlymobile {
+  background-position: center;
+  background-size: cover !important;
+  background: url('../../assets/img/bg/reasons-bg-mobile.png') no-repeat;
+  padding-bottom: rem(59px);
+ }
+ &__title {
+  font-weight: 400;
+  font-size: rem(48px);
+  line-height: rem(52.39px);
+  margin-bottom: rem(64px);
+
+  @include onlymobile {
+   font-size: rem(20px);
+   line-height: rem(21.83px);
+   font-weight: 600;
+   margin-bottom: rem(14.62px);
+  }
+ }
+ &__cards {
+  display: grid;
+  grid-template-columns: repeat(3, rem(375px));
+  gap: rem(41px) rem(33px);
+  @include onlymobile {
+   display: flex;
+   flex-direction: column;
+   gap: rem(7.25px);
+  }
+ }
+ &__card {
+  border-radius: rem(20px);
+  display: flex;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.06) inset;
+  background: linear-gradient(
+   88.3deg,
+   rgba(71, 150, 124, 0.1) 5.58%,
+   rgba(194, 181, 120, 0.002) 98.82%
+  );
+  padding: rem(31px) rem(21.16px) rem(70px) rem(24px);
+  backdrop-filter: blur(131.60000610351562px);
+  gap: rem(15px);
+  @include onlymobile {
+   padding: rem(13px) rem(20px) rem(18px) rem(13px);
+   align-items: center;
+  }
+ }
+ &__card-icon {
+  width: rem(85px);
+  height: rem(52px);
+  @include onlymobile {
+   width: rem(67.93px);
+   height: rem(41.61px);
+  }
+ }
+ &__card-texts {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(15px);
+  @include onlymobile {
+   row-gap: rem(5px);
+  }
+ }
+ &__card-title {
+  font-weight: 500;
+  font-size: rem(24px);
+  line-height: rem(26.2px);
+  @include onlymobile {
+   font-size: rem(14px);
+   line-height: rem(15.28px);
+  }
+ }
+ &__card-subtitle {
+  font-weight: 400;
+  font-size: rem(13px);
+  line-height: rem(14.19px);
+  color: rgba(161, 161, 161, 1);
+  @include onlymobile {
+   font-size: rem(10px);
+   line-height: rem(10.92px);
+  }
+ }
+}

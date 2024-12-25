@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Nexa Trial";
+  font-weight: 400;
+  src: url("./Nexa-Trial-Regular.woff2") format("woff2"), url("./Nexa-Trial-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Nexa Trial";
+  font-weight: 700;
+  src: url("./Nexa-Trial-Bold.woff2") format("woff2"), url("./Nexa-Trial-Bold.woff") format("woff");
+}/*# sourceMappingURL=nexa.css.map */

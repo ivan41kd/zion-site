@@ -1,0 +1,531 @@
+.dashboard {
+ width: rem(1173px);
+ &__container {
+  padding: 0 rem(54px);
+  padding-right: 0;
+ }
+ &__title {
+  font-weight: 500;
+  font-size: rem(48px);
+  line-height: rem(52.39px);
+  margin-bottom: rem(30px);
+ }
+
+ &__tabs {
+  display: flex;
+  gap: rem(20px);
+  margin-bottom: rem(40px);
+ }
+ &__tab {
+  position: relative;
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+  font-weight: 600;
+  width: fit-content;
+  display: flex;
+  padding: rem(10px) rem(15px);
+  align-items: center;
+  gap: rem(5px);
+  color: rgba(96, 92, 92, 1);
+  cursor: pointer;
+  &::before {
+   content: '';
+   position: absolute;
+   background: linear-gradient(
+    90deg,
+    #9c9c9c 8.91%,
+    rgba(156, 156, 156, 0) 83.17%
+   );
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
+   padding: 1px;
+  }
+ }
+ &__tab.active {
+  color: white;
+ }
+ &__tab.online {
+  &::after {
+   content: '';
+   width: rem(10px);
+   height: rem(10px);
+   background: rgba(95, 151, 110, 1);
+   border-radius: 50px;
+  }
+ }
+ &__tab:nth-child(2) &__tab-icon {
+  width: rem(20px);
+  height: rem(20px);
+ }
+ &__tab:nth-child(3) &__tab-icon {
+  width: rem(36px);
+  height: rem(22px);
+ }
+ &__tab:nth-child(5) &__tab-icon {
+  width: rem(86px);
+  height: rem(20px);
+ }
+ &__tab:nth-child(6) &__tab-icon {
+  width: rem(60px);
+  height: rem(20px);
+ }
+ &__tab:nth-child(7) &__tab-icon {
+  width: rem(60px);
+  height: rem(20px);
+ }
+ &__tab-icon {
+  width: rem(30px);
+  height: rem(30px);
+ }
+
+ &__cards {
+  display: flex;
+  gap: rem(20px);
+ }
+ &__card {
+  width: rem(340px);
+  display: flex;
+  flex-direction: column;
+  gap: rem(15px);
+ }
+ &__card.demo {
+  position: relative;
+  &::after {
+   content: '';
+   position: absolute;
+   background: linear-gradient(
+    93.41deg,
+    #1a6889 22.48%,
+    #81c7dd 53.2%,
+    #1a6889 79.18%
+   );
+
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
+   padding: 3px;
+  }
+ }
+ &__card.profit {
+  width: rem(400px);
+  gap: rem(20px);
+ }
+ &__card.btc {
+  position: relative;
+  &::after {
+   content: '';
+   position: absolute;
+   background: linear-gradient(93.41deg, #ff9416 22.48%, #627eea 79.18%);
+
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
+   padding: 3px;
+  }
+ }
+
+ &__card.demo &__card-button {
+  background: linear-gradient(
+   93.41deg,
+   #1a6889 22.48%,
+   #81c7dd 53.2%,
+   #1a6889 79.18%
+  );
+ }
+ &__card-info {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10px);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.06) inset;
+  background: rgba(71, 150, 124, 0.1);
+  border-radius: rem(15px);
+  position: relative;
+  z-index: 10;
+ }
+ &__card-info-name {
+  font-weight: 400;
+  font-size: rem(13px);
+  line-height: rem(15.85px);
+  color: rgba(156, 156, 156, 1);
+ }
+ &__card-info-wrapper {
+  padding: rem(15px) rem(30px) 0 rem(30px);
+ }
+ &__card-info-header {
+  margin-bottom: rem(10px);
+ }
+ &__card-info-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ &__card-info-deposit-sticker {
+  display: flex;
+  gap: rem(5px);
+ }
+ &__deposit-sticker-icon {
+  width: rem(20px);
+  height: rem(20px);
+ }
+ &__card-info-deposit-sticker {
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+  font-weight: 600;
+  color: rgba(156, 156, 156, 1);
+ }
+ &__card-deposit {
+  display: flex;
+  gap: rem(5px);
+ }
+ &__card-deposit-amount {
+  font-size: rem(28px);
+  font-weight: 600;
+  line-height: rem(34.13px);
+ }
+ &__card-deposit-icon {
+  width: rem(23px);
+  height: rem(23px);
+ }
+ &__card-deposit-value {
+  font-size: rem(20px);
+  line-height: rem(24.38px);
+  font-weight: 600;
+ }
+ &__card-button {
+  padding: rem(13px) 0;
+  background: white;
+  border-radius: rem(15px);
+  color: black;
+  font-size: rem(20px);
+  line-height: rem(24.38px);
+  font-weight: 600;
+ }
+ &__card-info-date {
+  font-size: rem(13px);
+  font-weight: 400;
+  line-height: rem(15.85px);
+  color: rgba(156, 156, 156, 1);
+ }
+ &__conditions {
+  font-size: rem(11px);
+  line-height: rem(13.41px);
+  color: rgba(156, 156, 156, 1);
+  text-decoration: underline;
+  text-align: center;
+ }
+ &__level-profit-icon {
+  width: rem(62px);
+  height: rem(70px);
+ }
+ &__level-profit {
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.06) inset;
+  backdrop-filter: blur(32.29999923706055px);
+  background: rgba(71, 150, 124, 0.1);
+  border-radius: rem(15px);
+  padding: rem(10px) rem(30px);
+ }
+ &__level-profit-wrapper {
+  display: flex;
+  justify-content: space-between;
+ }
+ &__level-profit-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(5px);
+ }
+ &__level-profit-name {
+  font-size: rem(13px);
+  line-height: rem(15.85px);
+  color: rgba(156, 156, 156, 1);
+  font-weight: 400;
+ }
+ &__level-profit-level {
+  font-weight: 600;
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+ }
+ &__level-profit-value {
+  font-weight: 600;
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+ }
+ &__card-info-profit-sticker {
+  padding: rem(5px) rem(10px);
+  border-radius: rem(7px);
+  font-size: rem(20px);
+  line-height: rem(24.38px);
+  font-weight: 700;
+ }
+ &__card-info-profit-sticker.up {
+  background: rgba(95, 151, 110, 1);
+ }
+ &__card-info-profit-sticker.down {
+  background: rgba(238, 100, 103, 1);
+ }
+ &__card-profit-info {
+  display: flex;
+  gap: rem(5px);
+  margin-bottom: rem(10px);
+ }
+ &__card-profit-icon {
+  width: rem(20px);
+  height: rem(20px);
+ }
+ &__card-profit-icon.btc {
+  width: rem(36px);
+ }
+ &__card-profit-name {
+  font-weight: 600;
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+  color: rgba(156, 156, 156, 1);
+ }
+ &__card-profit-amount {
+  font-weight: 600;
+  font-size: rem(28px);
+  line-height: rem(34.13px);
+ }
+ &__card-info.profit &__card-info-wrapper:not(:first-child) {
+  padding-bottom: rem(20px);
+ }
+ &__card-partner-wrapper {
+  padding: rem(15px) rem(30px);
+  padding-bottom: 0;
+ }
+ &__card-info-title {
+  font-weight: 600;
+  font-size: rem(20px);
+  line-height: rem(24.38px);
+  margin-bottom: rem(10px);
+ }
+ &__deposit-sticker-icon.btc {
+  width: rem(36px);
+  height: rem(22px);
+ }
+ &__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(50px);
+ }
+ &__bottom-tabs {
+  display: flex;
+  margin-bottom: rem(35px);
+  gap: rem(10px);
+ }
+ &__bottom-tab {
+  position: relative;
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+  font-weight: 600;
+  width: fit-content;
+  display: flex;
+  padding: rem(10px) rem(15px);
+  align-items: center;
+  gap: rem(5px);
+  color: rgba(96, 92, 92, 1);
+  cursor: pointer;
+
+  &::before {
+   content: '';
+   position: absolute;
+   background: linear-gradient(
+    90deg,
+    #a2a2a2 8.91%,
+    rgba(255, 255, 255, 0) 83.17%
+   );
+
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
+   padding: 1px;
+  }
+ }
+ &__bottom-tab.active {
+  position: relative;
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+  font-weight: 600;
+  width: fit-content;
+  display: flex;
+  padding: rem(10px) rem(15px);
+  align-items: center;
+  gap: rem(5px);
+  color: white;
+  cursor: pointer;
+  &::before {
+   content: '';
+   position: absolute;
+   background: linear-gradient(
+    90deg,
+    #ffffff 8.91%,
+    rgba(255, 255, 255, 0) 83.17%
+   );
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
+   padding: 1px;
+  }
+ }
+ &__bottom-table {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.06) inset;
+  background: rgba(71, 150, 124, 0.1);
+  backdrop-filter: blur(32.29999923706055px);
+  border-radius: rem(15px);
+  width: 100%;
+ }
+ &__bottom-table-header {
+  display: grid;
+  grid-template-columns: rem(205px) rem(240px) rem(126px) rem(167px);
+ }
+ &__bottom-table-header-tab {
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+  color: rgba(156, 156, 156, 1);
+  padding: rem(10px);
+ }
+ &__bottom-table-body {
+  display: flex;
+  gap: rem(10px);
+  align-items: center;
+ }
+ &__bottom-table-items {
+  display: grid;
+  grid-template-columns:
+   rem(83px) rem(130px) rem(83px) rem(130px) rem(143px)
+   rem(148px);
+  border: 1px solid rgba(64, 64, 64, 1);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+ }
+ &__bottom-table-item {
+  padding: rem(19px) 0;
+  font-weight: 500;
+  text-align: center;
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+  border-right: 1px solid rgba(64, 64, 64, 1);
+ }
+ &__bottom-table-buttons {
+  display: flex;
+  gap: rem(10px);
+  align-items: center;
+ }
+ &__bottom-table-button {
+  padding: 0;
+  background: white;
+  font-weight: 400;
+  font-size: rem(12px);
+  line-height: rem(14.63px);
+  color: white;
+  border-radius: rem(10px);
+  width: rem(94px);
+  height: rem(35px);
+ }
+ &__bottom-table-button.output {
+  font-size: rem(20px);
+  line-height: rem(24.38px);
+  background: rgba(238, 100, 103, 1);
+ }
+ &__bottom-table-button.renew {
+  background: rgba(95, 151, 110, 1);
+  padding: 0 rem(9px);
+ }
+ &__bottom-table-autorenew {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: rem(35px);
+  padding: 0 rem(5px);
+  gap: rem(5px);
+  width: 100%;
+  &::before {
+   content: '';
+   position: absolute;
+   background: linear-gradient(
+    90deg,
+    #9c9c9c 8.91%,
+    rgba(255, 255, 255, 0) 83.17%
+   );
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
+   padding: 1px;
+  }
+ }
+ &__bottom-table-autorenew-name {
+  font-size: rem(13px);
+  line-height: rem(15.85px);
+  font-weight: 400;
+  color: rgba(156, 156, 156, 1);
+  text-wrap: nowrap;
+ }
+ &__bottom-table-autorenew-button-wrapper {
+  border: 1px solid rgba(156, 156, 156, 1);
+  border-radius: rem(10px);
+  width: 100%;
+  padding: rem(4px) rem(3px);
+  position: relative;
+  z-index: 2;
+ }
+ &__autorenew-button {
+  width: rem(30px);
+  height: rem(20px);
+  display: block;
+  background: rgba(238, 100, 103, 1);
+  border-radius: rem(7px);
+  cursor: pointer;
+  transition: 0.3s;
+ }
+ &__autorenew-button.enabled {
+  background: rgba(95, 151, 110, 1);
+  transform: translateX(60%);
+  transition: 0.3s;
+ }
+}

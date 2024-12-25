@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zion | Логин</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+   rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles/scss/style.css" />
+  <link rel="stylesheet" href="./styles/fonts/nexa/nexa.css" />
+ </head>
+ <body>
+  <main class="main layout">
+   <div class="container">
+    <div class="main__branding">
+     <img
+      src="./assets/img/logos/brand-logo.svg"
+      alt="ZION ЛОГОТИП "
+      class="main__branding-logo"
+     />
+    </div>
+   </div>
+   <section class="form-layout">
+    <div class="form-layout__container container">
+     <div class="form-layout__wrapper">
+      <h1 class="form-layout__title">Вход</h1>
+      <form class="form-layout__form">
+       <div class="form-layout__input-wrapper">
+        <input type="text" class="form-layout__input login" />
+        <span class="form-layout__input-placeholder">E-mail или логин</span>
+       </div>
+       <div class="form-layout__input-wrapper password">
+        <input type="password" class="form-layout__input password" />
+        <span class="form-layout__input-placeholder">Пароль</span>
+        <svg
+         width="33"
+         height="23"
+         viewBox="0 0 33 23"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+         class="form-layout__show-password"
+        >
+         <path
+          d="M21.3565 11.8287C21.3565 14.1957 19.4378 16.1144 17.0708 16.1144C14.704 16.1144 12.7852 14.1957 12.7852 11.8287C12.7852 9.46168 14.704 7.54297 17.0708 7.54297C19.4378 7.54297 21.3565 9.46168 21.3565 11.8287Z"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+         />
+         <path
+          d="M17.0712 1.82812C10.6745 1.82812 5.25985 6.03224 3.43945 11.8281C5.25982 17.624 10.6745 21.8281 17.0712 21.8281C23.4678 21.8281 28.8825 17.624 30.7029 11.8281C28.8825 6.03228 23.4678 1.82812 17.0712 1.82812Z"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+         />
+         <path
+          d="M1 1L32 22"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          class="form-layout__show-stroke"
+         />
+        </svg>
+       </div>
+       <div class="form-layout__form-buttons">
+        <button type="submit" class="form-layout__form-button">Войти</button>
+        <a href="#"> Забыли пароль? </a>
+       </div>
+      </form>
+      <div class="form-layout__ways">
+       <div class="form-layout__way">
+        <h2 class="form-layout__way-title">
+         Вход и регистрация через Telegram
+        </h2>
+        <button class="form-layout__telegram-button">
+         <img
+          src="./assets/img/logos/telegram.svg"
+          alt="ZION ТЕЛЕГРАМ ЛОГИН"
+          class="form-layout__telegram-icon"
+         />
+         Войти через Telegram
+        </button>
+       </div>
+       <div class="form-layout__way">
+        <h2 class="form-layout__way-title">Регистрация по почте</h2>
+        <a href="register.html">
+         <button class="form-layout__email-button">
+          <img
+           src="./assets/img/icons/email-icon.svg"
+           alt="ZION EMAIL ЛОГИН"
+           class="form-layout__email-button-icon"
+          />
+          Регистрация через E-mail
+         </button>
+        </a>
+       </div>
+      </div>
+     </div>
+     <p class="form-layout__copyright">2023 ZION TRADE. All rights reserved.</p>
+    </div>
+   </section>
+  </main>
+  <script src="./js/input/input.js"></script>
+  <script src="./js/login/login.js"></script>
+ </body>
+</html>

@@ -1,0 +1,8 @@
+.container {
+ @include onlymobile {
+  padding: 0 rem(39px);
+ }
+ @include ifdesktop {
+  padding: 0 rem(129px);
+ }
+}

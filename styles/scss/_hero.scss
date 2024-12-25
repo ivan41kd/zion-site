@@ -1,0 +1,134 @@
+.hero {
+ padding-top: rem(135px);
+ padding-bottom: rem(286px);
+ position: relative;
+ @include onlymobile {
+  padding-top: rem(61px);
+  padding-bottom: rem(280px);
+ }
+ &__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(30px);
+  max-width: rem(834px);
+  width: 100%;
+  @include onlymobile {
+   align-items: center;
+  }
+ }
+ &__title {
+  font-weight: 500;
+  font-size: rem(48px);
+  line-height: rem(52.39px);
+  @include onlymobile {
+   font-size: rem(23px);
+   line-height: rem(25.1px);
+   font-weight: 600;
+   text-align: center;
+  }
+ }
+ &__subtitle {
+  font-weight: 400;
+  font-size: rem(24px);
+  line-height: rem(26.2px);
+  color: rgba(161, 161, 161, 1);
+  @include onlymobile {
+   font-size: rem(12px);
+   line-height: rem(13.1px);
+   font-weight: 500;
+   text-align: center;
+   width: rem(310px);
+  }
+ }
+ &__check {
+  display: flex;
+  align-items: center;
+  gap: rem(10px);
+  @include onlymobile {
+   justify-content: center;
+   font-size: rem(16px);
+   line-height: rem(19.5px);
+  }
+ }
+ &__check-sticker {
+  position: relative;
+  font-weight: 600;
+  font-size: rem(24px);
+  line-height: rem(29.26px);
+  text-transform: uppercase;
+  padding: rem(10px) rem(15px);
+  &::after {
+   content: '';
+   position: absolute;
+   background: linear-gradient(
+    93.41deg,
+    #1a6889 22.48%,
+    #81c7dd 53.2%,
+    #1a6889 79.18%
+   );
+
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
+   padding: 3px;
+  }
+  @include onlymobile {
+   font-size: rem(16px);
+   line-height: rem(19.5px);
+  }
+ }
+ &__check-text {
+  font-size: rem(32px);
+  line-height: rem(34.93px);
+  font-weight: 500;
+  @include onlymobile {
+   font-size: rem(20px);
+   line-height: rem(21.83px);
+   font-weight: 500;
+   text-align: center;
+  }
+ }
+ &__buttons {
+  display: flex;
+  gap: rem(30px);
+  @include onlymobile {
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+ }
+ &__button {
+  border-radius: rem(20px);
+  padding: rem(10px) rem(50px);
+  font-family: $font-nexa;
+  font-weight: 700;
+  font-size: rem(24px);
+  line-height: rem(36.38px);
+  @include onlymobile {
+   border-radius: rem(10px);
+   width: rem(192px);
+   padding: rem(5px) 0;
+   font-size: rem(16px);
+   line-height: rem(24.26px);
+  }
+ }
+
+ @include onlymobile {
+  .container {
+   padding: 0;
+  }
+ }
+ &__button.create {
+  background: rgba(95, 151, 110, 1);
+ }
+ &__button.app {
+  background: rgba(168, 168, 168, 1);
+ }
+}

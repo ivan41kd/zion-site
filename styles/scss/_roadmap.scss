@@ -1,0 +1,154 @@
+.roadmap {
+ @include ifdesktop {
+  background: url('../../assets/img/bg/roadmap-bg.png') no-repeat;
+  background-size: 100%;
+ }
+ @include onlymobile {
+  background: url('../../assets/img/bg/roadmap-bg-mobile.png') no-repeat;
+  background-size: 100%;
+ }
+ position: relative;
+ background-size: 100%;
+ @include ifdesktop {
+  height: rem(1024px);
+ }
+ @include onlymobile {
+  height: rem(600px);
+ }
+ @include onlymobile {
+  .container {
+   padding: 0 rem(15px);
+  }
+ }
+ &::after {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 1.2%, #000000 79.64%);
+  height: rem(186px);
+  width: 100%;
+  position: absolute;
+  content: '';
+  top: 0;
+  transform: rotate(180deg);
+ }
+ &::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 1.2%, #000000 63.66%);
+
+  height: rem(186px);
+  width: 100%;
+  position: absolute;
+  content: '';
+  bottom: 0;
+ }
+ &__wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+  @include ifdesktop {
+   gap: rem(100px);
+  }
+  @include onlymobile {
+   gap: rem(30px);
+  }
+ }
+ &__title {
+  font-weight: 600;
+  font-size: rem(74px);
+
+  line-height: rem(80.77px);
+  transform: translateY(50%);
+  @include onlymobile {
+   font-size: rem(20px);
+   line-height: rem(21.83px);
+  }
+ }
+ &__steps {
+  padding-top: rem(124px);
+  display: flex;
+  flex-direction: column;
+
+  @include ifdesktop {
+   gap: rem(35px);
+  }
+  @include onlymobile {
+   padding-top: rem(125px);
+   gap: rem(15px);
+  }
+ }
+ &__step {
+  display: flex;
+  align-items: center;
+  gap: rem(25px);
+  @include onlymobile {
+   gap: rem(5px);
+  }
+ }
+
+ &__step:nth-child(1) {
+  transform: translateX(-8%);
+ }
+ &__step:nth-child(2) {
+  transform: translateX(-4%);
+ }
+ &__step:nth-child(3) {
+  transform: translateX(0%);
+ }
+ &__step:nth-child(4) {
+  transform: translateX(4%);
+ }
+ &__step:nth-child(5) {
+  transform: translateX(4.5%);
+ }
+ &__step:nth-child(6) {
+  @include ifdesktop {
+   transform: translateX(2.5%);
+  }
+  @include onlymobile {
+   transform: translateX(-1.5%);
+  }
+ }
+ &__step:nth-child(7) {
+  @include onlymobile {
+   transform: translateX(-8.5%);
+  }
+ }
+ &__step:nth-child(8) {
+  @include ifdesktop {
+   transform: translateX(-3.5%);
+  }
+  @include onlymobile {
+   transform: translateX(-26.5%);
+  }
+ }
+
+ &__step-number {
+  font-weight: 400;
+  font-size: rem(48px);
+  line-height: rem(52.39px);
+  @include onlymobile {
+   font-size: rem(24px);
+   line-height: rem(26.2px);
+   font-weight: 400;
+  }
+ }
+ &__step-name {
+  font-size: rem(22px);
+  line-height: rem(24.01px);
+  font-weight: 500;
+  @include onlymobile {
+   font-size: rem(10px);
+   line-height: rem(10.92px);
+   font-weight: 500;
+  }
+ }
+ &__step-date {
+  font-size: rem(20px);
+  line-height: rem(21.83px);
+  font-weight: 400;
+  color: rgba(156, 156, 156, 1);
+  @include onlymobile {
+   font-size: rem(10px);
+   line-height: rem(10.92px);
+   font-weight: 400;
+  }
+ }
+}
