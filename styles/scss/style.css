@@ -2107,7 +2107,7 @@ button.btc {
 .header__burger {
   position: absolute;
   width: 100vw;
-  height: 101vh;
+  height: 100vh;
   left: 0;
   top: -2.625rem;
   background: rgb(0, 0, 0);
@@ -2131,7 +2131,7 @@ button.btc {
   flex: 1 1 max-content;
   display: flex;
   flex-direction: column;
-  gap: 0rem;
+  gap: 1.25rem;
 }
 .header__burger-container::before {
   content: "";
