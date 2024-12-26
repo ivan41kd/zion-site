@@ -136,6 +136,11 @@
   font-weight: 400;
   position: relative;
   border-bottom: 2px solid transparent;
+  -o-border-image: linear-gradient(
+   90deg,
+   #404040 1.33%,
+   rgba(64, 64, 64, 0) 92.78%
+  );
   border-image: linear-gradient(
    90deg,
    #404040 1.33%,
@@ -153,10 +158,12 @@
  }
  &__main-line.animation {
   opacity: 1;
+  -webkit-animation: draw 5s ease-in;
   animation: draw 5s ease-in;
  }
  &__main-line.anim-out {
   stroke-dasharray: 2000;
+  -webkit-animation: reverse-draw 5s linear;
   animation: reverse-draw 5s linear;
   opacity: 1;
  }
@@ -198,12 +205,29 @@
   transition: 0.3s;
  }
 
+ @-webkit-keyframes reverse-draw {
+  0% {
+   stroke-dashoffset: 0;
+  }
+  100% {
+   stroke-dashoffset: 4500;
+  }
+ }
+
  @keyframes reverse-draw {
   0% {
    stroke-dashoffset: 0;
   }
   100% {
    stroke-dashoffset: 4500;
+  }
+ }
+ @-webkit-keyframes draw {
+  0% {
+   stroke-dashoffset: 4500;
+  }
+  100% {
+   stroke-dashoffset: 0;
   }
  }
  @keyframes draw {
@@ -260,6 +284,7 @@
   @include onlymobile {
    padding: rem(10px) rem(15px);
    gap: rem(5px);
+   width: rem(130px);
   }
  }
  &__tab-logo {

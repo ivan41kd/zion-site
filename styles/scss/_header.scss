@@ -2,6 +2,7 @@
  display: flex;
  flex-direction: column;
  row-gap: rem(14px);
+ position: -webkit-sticky;
  position: sticky;
  top: 0;
  @include ifdesktop {
@@ -34,11 +35,14 @@
   animation: scroll 10s linear infinite;
   flex-shrink: 0;
   gap: 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
  }
  &__swiper-slide {
   display: flex;
   align-items: center;
+  -moz-column-gap: 13px;
   column-gap: 13px;
   border-left: 1px solid rgba(255, 255, 255, 1);
   padding-left: 10px;
@@ -46,6 +50,7 @@
   padding-top: rem(6px);
   padding-bottom: rem(6px);
   @include onlymobile {
+   -moz-column-gap: rem(6px);
    column-gap: rem(6px);
    padding: 0;
    padding-left: rem(10px);
@@ -84,6 +89,15 @@
  }
  .trade-up {
   color: rgba(95, 151, 110, 1);
+ }
+
+ @-webkit-keyframes scroll {
+  from {
+   transform: translateX(0);
+  }
+  to {
+   transform: translateX(-100%);
+  }
  }
 
  @keyframes scroll {
@@ -127,6 +141,7 @@
  }
  &__nav {
   padding: rem(5px) rem(50px);
+  -webkit-backdrop-filter: blur(71.4000015258789px);
   backdrop-filter: blur(71.4000015258789px);
   border-radius: rem(20px);
  }

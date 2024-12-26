@@ -43,6 +43,7 @@
    rgba(194, 181, 120, 0.002) 98.82%
   );
   padding: rem(31px) rem(21.16px) rem(70px) rem(24px);
+  -webkit-backdrop-filter: blur(131.60000610351562px);
   backdrop-filter: blur(131.60000610351562px);
   gap: rem(15px);
   @include onlymobile {
