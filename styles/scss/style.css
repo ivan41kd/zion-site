@@ -2131,8 +2131,7 @@ button.btc {
   flex: 1 1 max-content;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 1.25rem;
+  gap: 5.625rem;
 }
 .header__burger-container::before {
   content: "";
