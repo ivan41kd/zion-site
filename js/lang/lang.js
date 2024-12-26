@@ -1,5 +1,5 @@
 const headerLang = document.querySelectorAll('.header__lang');
-const formLang = document.querySelector('.form-layout__lang');
+const formLang = document.querySelectorAll('.form-layout__lang');
 const mainLang = document.querySelector('.main__lang');
 const asideLang = document.querySelectorAll('.aside__lang');
 

@@ -4235,6 +4235,10 @@ button.btc {
     flex: 1;
   }
 }
+.form-layout__top {
+  display: flex;
+  justify-content: space-between;
+}
 .form-layout__title {
   font-size: 2.5rem;
   font-weight: 500;
@@ -4674,6 +4678,11 @@ button.btc {
 .form-layout__back-page:active {
   transition: 0.3s;
   transform: scale(1.2);
+}
+@media screen and (min-width: 0px) and (max-width: 1023px) {
+  .form-layout__top .form-layout__lang {
+    display: none;
+  }
 }
 
 .aside {

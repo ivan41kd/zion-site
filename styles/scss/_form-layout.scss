@@ -18,6 +18,10 @@
   height: auto;
   flex: 1;
  }
+ &__top {
+  display: flex;
+  justify-content: space-between;
+ }
  &__title {
   font-size: rem(40px);
   font-weight: 500;
@@ -412,6 +416,11 @@
   &:active {
    transition: 0.3s;
    transform: scale(1.2);
+  }
+ }
+ &__top &__lang {
+  @include onlymobile {
+   display: none;
   }
  }
 }
