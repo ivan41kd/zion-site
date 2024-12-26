@@ -112,6 +112,7 @@
   font-weight: 700;
   font-size: rem(24px);
   line-height: rem(36.38px);
+  color: black;
   @include onlymobile {
    border-radius: rem(10px);
    width: rem(192px);

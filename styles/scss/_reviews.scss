@@ -40,8 +40,10 @@
    rgba(194, 181, 120, 0.002) 98.82%
   );
   border-radius: rem(20px);
-  -webkit-backdrop-filter: blur(131.60000610351562px);
-  backdrop-filter: blur(131.60000610351562px);
+  @include ifdesktop {
+   -webkit-backdrop-filter: blur(131.60000610351562px);
+   backdrop-filter: blur(131.60000610351562px);
+  }
   @include onlymobile {
    padding: rem(10px) rem(13.91px) rem(48px) rem(17.61px);
   }

@@ -500,6 +500,7 @@
   align-self: center;
   opacity: 0;
   visibility: hidden;
+  color: black;
   @include onlymobile {
    font-size: rem(14px);
    line-height: rem(21.22px);
