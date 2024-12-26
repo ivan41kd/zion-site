@@ -589,6 +589,7 @@
  flex-direction: row;
  justify-content: space-between;
  position: relative;
+ flex: 1 1;
  & .container {
   @include ifdesktop {
    padding-right: 0;

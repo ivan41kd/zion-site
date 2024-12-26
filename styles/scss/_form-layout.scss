@@ -10,7 +10,6 @@
  @include ifdesktop {
   width: rem(886px);
   border-radius: 100px 0px 0px 0px;
-  height: 100dvh;
  }
 
  @include onlymobile {

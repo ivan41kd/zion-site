@@ -4008,6 +4008,7 @@ button.btc {
   flex-direction: row;
   justify-content: space-between;
   position: relative;
+  flex: 1 1;
 }
 @media (min-width: 1024px) {
   .main.layout {
@@ -4224,7 +4225,6 @@ button.btc {
   .form-layout {
     width: 55.375rem;
     border-radius: 100px 0px 0px 0px;
-    height: 100dvh;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 1023px) {
