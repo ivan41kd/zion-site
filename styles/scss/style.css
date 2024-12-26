@@ -2107,7 +2107,7 @@ button.btc {
 .header__burger {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   left: 0;
   top: -2.625rem;
   background: rgb(0, 0, 0);
