@@ -86,8 +86,14 @@ const levelMobileWrapper = statisticsSection.querySelector(
  '.statistics__level-items'
 );
 
+const levelsDesktop = statisticsSection.querySelector('.statistics__levels');
+
 const levelsMobile = statisticsSection.querySelector(
  '.statistics__levels.mobile'
+);
+
+const currentLevel = statisticsSection.querySelector(
+ '.statistics__current-level-value'
 );
 
 const renderLevels = (levelsarr, wrapper) => {
@@ -111,6 +117,10 @@ const renderLevels = (levelsarr, wrapper) => {
  });
 };
 
+const openLevel = (wrapper) => {
+ wrapper.classList.toggle('active');
+};
+
 const resetAnimations = () => {
  const line = document.querySelectorAll('.statistics__line');
  const mobileLine = document.querySelectorAll('.statistics__mobile-line');
@@ -124,14 +134,14 @@ const resetAnimations = () => {
 
 const selectLevel = ({ level, value }) => {
  const currentLevel = statisticsSection.querySelector(
-  '.statistics__current-level'
+  '.statistics__current-level-value'
  );
  const currentMobileLevel = levelsMobile.querySelector(
-  '.statistics__current-level'
+  '.statistics__current-level-value'
  );
 
  currentLevel.textContent = `Уровень ${level} - ${value}%`;
- currentMobileLevel.textContent = `Уровень ${level} - ${value}%`;
+ currentMobileLevel.textContent = `Уровень ${level} - ${value}% `;
  if (!isAnimating) {
   isAnimating = true;
 
@@ -145,7 +155,7 @@ const selectLevel = ({ level, value }) => {
   graphMobile.classList.remove('value-appear');
 
   const result = -60 + level * 8 + level / value;
-  const mobileResult = -52.5 + level * 8.5 + level / value;
+  const mobileResult = -53.5 + level * 8.5 + level / value;
 
   setTimeout(() => {
    graph.classList.remove('anim-out');
@@ -249,3 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
  });
 });
+
+levelsDesktop.addEventListener('click', () => openLevel(levelsDesktop));
+levelsMobile.addEventListener('click', () => openLevel(levelsMobile));

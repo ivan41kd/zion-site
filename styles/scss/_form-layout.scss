@@ -7,20 +7,51 @@
   rgba(71, 150, 124, 0.1) 5.58%,
   rgba(194, 181, 120, 0.002) 98.82%
  );
- width: rem(886px);
- border-radius: 100px 0px 0px 0px;
- height: rem(1024px);
+ @include ifdesktop {
+  width: rem(886px);
+  border-radius: 100px 0px 0px 0px;
+  height: 100dvh;
+ }
+
+ @include onlymobile {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  flex: 1;
+ }
  &__title {
   font-size: rem(40px);
   font-weight: 500;
   line-height: rem(43.66px);
+  @include onlymobile {
+   font-size: rem(24px);
+   line-height: rem(26.2px);
+  }
+ }
+ &__header {
+  display: none;
+  @include onlymobile {
+   display: flex;
+   justify-content: space-between;
+   padding: rem(15px);
+  }
+ }
+ &__header-logo {
+  width: rem(169px);
+  height: rem(30px);
  }
  &__wrapper {
   display: flex;
   flex-direction: column;
   row-gap: rem(40px);
   padding-top: rem(70px);
-  width: rem(700px);
+  @include ifdesktop {
+   width: rem(700px);
+  }
+  @include onlymobile {
+   padding-top: rem(35px);
+   row-gap: rem(50px);
+  }
  }
  &__container {
   display: flex;
@@ -28,9 +59,15 @@
   height: 100%;
   justify-content: space-between;
   padding-bottom: rem(90px);
+  @include onlymobile {
+   padding-bottom: rem(30px);
+  }
+  gap: rem(20px);
  }
  &__input-wrapper {
-  width: rem(400px);
+  @include ifdesktop {
+   width: rem(400px);
+  }
   position: relative;
   display: flex;
   flex-direction: column;
@@ -60,6 +97,9 @@
   display: flex;
   flex-direction: column;
   row-gap: rem(40px);
+  @include onlymobile {
+   row-gap: rem(30px);
+  }
  }
  &__input-placeholder {
   position: absolute;
@@ -71,6 +111,11 @@
   top: rem(0px);
   z-index: -1;
   transition: 0.3s;
+  @include onlymobile {
+   font-size: rem(15px);
+   line-height: rem(16.37px);
+   top: rem(5px);
+  }
  }
  &__input-subtitle {
   font-weight: 400;
@@ -100,6 +145,12 @@
    background: white;
    transition: 0.3s;
   }
+  @include onlymobile {
+   font-size: rem(15px);
+   line-height: rem(16.37px);
+   padding: rem(10px) rem(40px);
+   border-radius: rem(10px);
+  }
  }
  &__show-password {
   position: absolute;
@@ -122,6 +173,10 @@
   display: flex;
   gap: rem(30px);
   align-items: center;
+  @include onlymobile {
+   gap: rem(15px);
+   flex-direction: column;
+  }
  }
  &__form-buttons a {
   font-weight: 400;
@@ -129,6 +184,10 @@
   line-height: rem(21.83px);
   color: rgba(161, 161, 161, 1) !important;
   transition: 0.3s;
+  @include onlymobile {
+   font-size: rem(14px);
+   line-height: rem(15.28px);
+  }
  }
  &__form-buttons a:hover {
   color: white !important;
@@ -145,27 +204,51 @@
   line-height: rem(21.83px);
   color: white;
   align-items: center;
-  width: rem(320px);
+  @include ifdesktop {
+   width: rem(320px);
+  }
+  @include onlymobile {
+   padding: rem(12.5px) rem(20px);
+   font-size: rem(16px);
+   line-height: rem(17.46px);
+   width: rem(259px);
+  }
  }
  &__telegram-icon {
   width: rem(30px);
   height: rem(30px);
+  @include onlymobile {
+   width: rem(20px);
+   height: rem(20px);
+  }
  }
  &__ways {
   display: flex;
   flex-direction: column;
   row-gap: rem(60px);
+  @include onlymobile {
+   row-gap: rem(50px);
+  }
  }
  &__way {
   display: flex;
   flex-direction: column;
   row-gap: rem(30px);
-  width: fit-content;
+  @include ifdesktop {
+   width: fit-content;
+  }
+  @include onlymobile {
+   row-gap: rem(20px);
+  }
  }
  &__way-title {
   font-weight: 500;
   font-size: rem(24px);
   line-height: rem(26.2px);
+  @include onlymobile {
+   font-size: rem(16px);
+   line-height: rem(17.46px);
+  }
  }
  &__email-button {
   display: flex;
@@ -179,17 +262,32 @@
   line-height: rem(17.46px);
   font-weight: 400;
   align-items: center;
+  @include onlymobile {
+   padding: rem(15px) rem(15px);
+   font-size: rem(14px);
+   line-height: rem(15.28px);
+   width: rem(259px);
+  }
  }
  &__email-button-icon {
   width: rem(25px);
   height: rem(25px);
+  @include onlymobile {
+   width: rem(20px);
+   height: rem(20px);
+  }
  }
  &__copyright {
   font-size: rem(16px);
   line-height: rem(17.46px);
   color: rgba(161, 161, 161, 1);
   font-weight: 400;
+  @include onlymobile {
+   font-size: rem(10px);
+   line-height: rem(10.92px);
+  }
  }
+
  &__get-code {
   font-size: rem(15px);
   line-height: rem(16.37px);
@@ -202,6 +300,13 @@
   right: 0;
   top: rem(-7px);
   padding: rem(5px);
+  transition: 0.3s;
+  &:hover {
+   border: 1px solid white;
+   transition: 0.3s;
+
+   color: white;
+  }
  }
  &__input-error {
   font-weight: 400;
@@ -213,5 +318,101 @@
 
  &__input-wrapper.verified &__show-password {
   display: none;
+ }
+ &__lang {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  gap: rem(10px);
+  position: relative;
+ }
+ &__lang:hover &__lang-icon {
+  transform: scale(0.8);
+  transition: 0.3s;
+  @include ifdesktop {
+   transform-origin: top left;
+  }
+  @include onlymobile {
+   transform: scale(1.2);
+  }
+ }
+ &__lang:hover {
+  gap: 0;
+  align-items: center;
+  transition: 0.3s;
+ }
+ &__lang:hover &__lang-icon path {
+  transition: 0.3s;
+  stroke: white;
+ }
+ &__lang-icon {
+  width: rem(35px);
+  height: rem(35px);
+  transition: 0.3s;
+  @include onlymobile {
+   width: rem(20px);
+   height: rem(20px);
+  }
+ }
+ &__lang-icon path {
+  transition: 0.3s;
+ }
+
+ &__lang-current {
+  transition: 0.3s;
+  font-weight: 100;
+  font-size: rem(24px);
+  line-height: rem(26.2px);
+  width: rem(37px);
+  @include onlymobile {
+   display: none;
+  }
+ }
+
+ &__lang:hover &__lang-current {
+  transition: 0.3s;
+  font-weight: 300;
+  font-size: rem(20px);
+  line-height: rem(21.83px);
+  width: rem(31px);
+ }
+ &__lang:hover &__lang-list {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+ }
+
+ &__lang-list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(5px);
+  right: 0;
+  padding-top: 8px;
+  opacity: 0;
+  visibility: hidden;
+  top: 70%;
+  transition: 0.3s;
+  @include onlymobile {
+   top: 90%;
+   right: rem(-5px);
+  }
+ }
+ &__lang-list-item {
+  font-weight: 300;
+  font-size: rem(20px);
+  line-height: rem(21.83px);
+  color: rgba(161, 161, 161, 1);
+ }
+
+ &__back-page {
+  width: rem(26px);
+  height: rem(26px);
+  transition: 0.3s;
+  &:active {
+   transition: 0.3s;
+   transform: scale(1.2);
+  }
  }
 }

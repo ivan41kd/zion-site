@@ -102,6 +102,7 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   gap: rem(10px);
   }
  }
  &__button {
@@ -128,7 +129,31 @@
  &__button.create {
   background: rgba(95, 151, 110, 1);
  }
+ @include ifdesktop {
+  &__button.log-in,
+  &__button.app-mobile {
+   display: none;
+  }
+ }
+ @include onlymobile {
+  &__button.app {
+   display: none;
+  }
+  &__button.log-in,
+  &__button.app-mobile {
+   display: block;
+  }
+ }
  &__button.app {
   background: rgba(168, 168, 168, 1);
+ }
+ &__button.log-in {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 1);
+  color: white;
+ }
+ &__button.app-mobile {
+  background: rgba(168, 168, 168, 1);
+  color: black;
  }
 }

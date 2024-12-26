@@ -1,20 +1,56 @@
 .dashboard {
- width: rem(1173px);
+ width: rem(1190px);
+ @include onlymobile {
+  width: 100%;
+ }
  &__container {
   padding: 0 rem(54px);
   padding-right: 0;
+  @include onlymobile {
+   padding: 0 rem(15px);
+  }
+ }
+ &__content {
+  display: flex;
+  gap: rem(20px);
+  @include onlymobile {
+   flex-direction: column;
+  }
+ }
+ &__title-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(30px);
  }
  &__title {
   font-weight: 500;
   font-size: rem(48px);
   line-height: rem(52.39px);
-  margin-bottom: rem(30px);
+ }
+ &__title-icon {
+  width: rem(52px);
+  height: rem(52px);
+  margin-right: rem(13px);
  }
 
  &__tabs {
   display: flex;
   gap: rem(20px);
   margin-bottom: rem(40px);
+  @include onlymobile {
+   display: none;
+  }
+ }
+ &__tabs.mobile {
+  display: flex;
+  gap: rem(20px);
+  margin-bottom: rem(40px);
+  @include ifdesktop {
+   display: none;
+  }
+  @include onlymobile {
+   display: flex;
+  }
  }
  &__tab {
   position: relative;
@@ -22,7 +58,7 @@
   line-height: rem(19.5px);
   font-weight: 600;
   width: fit-content;
-  display: flex;
+  display: flex !important;
   padding: rem(10px) rem(15px);
   align-items: center;
   gap: rem(5px);
@@ -33,7 +69,41 @@
    position: absolute;
    background: linear-gradient(
     90deg,
-    #9c9c9c 8.91%,
+    #a2a2a2 8.91%,
+    rgba(255, 255, 255, 0) 83.17%
+   );
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
+   padding: 1px;
+   z-index: -1;
+  }
+  @include onlymobile {
+   font-size: rem(14px);
+   line-height: rem(17.07px);
+   padding: rem(10px) rem(15px);
+   width: fit-content !important;
+   &::after {
+    width: rem(8px);
+    height: rem(8px);
+   }
+  }
+ }
+ &__tab.active {
+  color: white;
+  &::before {
+   content: '';
+   position: absolute;
+   background: linear-gradient(
+    90deg,
+    #ffffff 8.91%,
     rgba(156, 156, 156, 0) 83.17%
    );
    width: 100%;
@@ -49,9 +119,6 @@
    padding: 1px;
   }
  }
- &__tab.active {
-  color: white;
- }
  &__tab.online {
   &::after {
    content: '';
@@ -61,40 +128,61 @@
    border-radius: 50px;
   }
  }
- &__tab:nth-child(2) &__tab-icon {
-  width: rem(20px);
-  height: rem(20px);
+ @include ifdesktop {
+  &__tab-icon {
+   width: rem(30px);
+   height: rem(30px);
+  }
+  &__tab:nth-child(2) &__tab-icon {
+   width: rem(20px);
+   height: rem(20px);
+  }
+  &__tab:nth-child(3) &__tab-icon {
+   width: rem(36px);
+   height: rem(22px);
+  }
+  &__tab:nth-child(5) &__tab-icon {
+   width: rem(86px);
+   height: rem(20px);
+  }
+  &__tab:nth-child(6) &__tab-icon {
+   width: rem(60px);
+   height: rem(20px);
+  }
+  &__tab:nth-child(7) &__tab-icon {
+   width: rem(60px);
+   height: rem(20px);
+  }
  }
- &__tab:nth-child(3) &__tab-icon {
-  width: rem(36px);
-  height: rem(22px);
- }
- &__tab:nth-child(5) &__tab-icon {
-  width: rem(86px);
-  height: rem(20px);
- }
- &__tab:nth-child(6) &__tab-icon {
-  width: rem(60px);
-  height: rem(20px);
- }
- &__tab:nth-child(7) &__tab-icon {
-  width: rem(60px);
-  height: rem(20px);
- }
- &__tab-icon {
-  width: rem(30px);
-  height: rem(30px);
+ @include onlymobile {
+  &__tab-icon {
+   width: fit-content;
+   height: rem(20px);
+  }
  }
 
  &__cards {
   display: flex;
   gap: rem(20px);
+  @include onlymobile {
+   flex-direction: column;
+  }
  }
  &__card {
   width: rem(340px);
   display: flex;
   flex-direction: column;
-  gap: rem(15px);
+  justify-content: space-between;
+  @include onlymobile {
+   width: 100%;
+   flex-direction: row;
+   flex-wrap: wrap;
+   row-gap: rem(10px);
+  }
+ }
+ &__card &__level-profit {
+  display: flex;
+  justify-content: space-between;
  }
  &__card.demo {
   position: relative;
@@ -118,12 +206,63 @@
     linear-gradient(#fff 0 0);
    -webkit-mask-composite: destination-out;
    mask-composite: exclude;
-   padding: 3px;
+   padding: 1.5px;
+  }
+ }
+ &__card.dash-999 {
+  position: relative;
+  &::after {
+   content: '';
+   position: absolute;
+   background: linear-gradient(
+    120.2deg,
+    #5b5b5b 0.6%,
+    #ffffff 56.36%,
+    #5b5b5b 105.56%
+   );
+
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
+   padding: 1.5px;
+  }
+ }
+ &__card.dash-1000 {
+  position: relative;
+  &::after {
+   content: '';
+   position: absolute;
+   background: linear-gradient(93.41deg, #ddc081 22.48%, #5f976e 79.18%);
+
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
+   padding: 1.5px;
   }
  }
  &__card.profit {
   width: rem(400px);
   gap: rem(20px);
+  @include onlymobile {
+   width: 100%;
+   flex-direction: row;
+   flex-wrap: wrap;
+   row-gap: rem(10px);
+  }
  }
  &__card.btc {
   position: relative;
@@ -154,6 +293,17 @@
    #1a6889 79.18%
   );
  }
+ &__card.dash-999 &__card-button {
+  background: linear-gradient(
+   120.2deg,
+   #5b5b5b 0.6%,
+   #ffffff 56.36%,
+   #5b5b5b 105.56%
+  );
+ }
+ &__card.dash-1000 &__card-button {
+  background: linear-gradient(93.41deg, #ddc081 22.48%, #5f976e 79.18%);
+ }
  &__card-info {
   display: flex;
   flex-direction: column;
@@ -163,18 +313,42 @@
   border-radius: rem(15px);
   position: relative;
   z-index: 10;
+  @include onlymobile {
+   width: rem(168px);
+   justify-content: space-between;
+  }
+ }
+ &__card-info.profit {
+  @include onlymobile {
+   width: 100%;
+  }
+ }
+ &__card-info.partner {
+  @include onlymobile {
+   width: 100%;
+  }
  }
  &__card-info-name {
   font-weight: 400;
   font-size: rem(13px);
   line-height: rem(15.85px);
   color: rgba(156, 156, 156, 1);
+  @include onlymobile {
+   font-size: rem(10px);
+   line-height: rem(12.19px);
+  }
  }
  &__card-info-wrapper {
   padding: rem(15px) rem(30px) 0 rem(30px);
+  @include onlymobile {
+   padding: rem(10px) rem(15px) 0 rem(15px);
+  }
  }
  &__card-info-header {
   margin-bottom: rem(10px);
+  @include onlymobile {
+   width: 100%;
+  }
  }
  &__card-info-header-wrapper {
   display: flex;
@@ -194,24 +368,43 @@
   line-height: rem(19.5px);
   font-weight: 600;
   color: rgba(156, 156, 156, 1);
+  @include onlymobile {
+   display: none;
+  }
  }
  &__card-deposit {
   display: flex;
   gap: rem(5px);
+  align-items: center;
+  @include onlymobile {
+   margin-bottom: rem(10px);
+  }
  }
  &__card-deposit-amount {
   font-size: rem(28px);
   font-weight: 600;
   line-height: rem(34.13px);
+  @include onlymobile {
+   font-size: rem(18px);
+   line-height: rem(21.94px);
+  }
  }
  &__card-deposit-icon {
   width: rem(23px);
   height: rem(23px);
+  @include onlymobile {
+   width: rem(25px);
+   height: rem(25px);
+  }
  }
  &__card-deposit-value {
   font-size: rem(20px);
   line-height: rem(24.38px);
   font-weight: 600;
+  @include onlymobile {
+   font-size: rem(16px);
+   line-height: rem(19.5px);
+  }
  }
  &__card-button {
   padding: rem(13px) 0;
@@ -221,12 +414,20 @@
   font-size: rem(20px);
   line-height: rem(24.38px);
   font-weight: 600;
+  @include onlymobile {
+   font-size: rem(14px);
+   line-height: rem(17.07px);
+   padding: rem(8px) 0;
+  }
  }
  &__card-info-date {
   font-size: rem(13px);
   font-weight: 400;
   line-height: rem(15.85px);
   color: rgba(156, 156, 156, 1);
+  @include onlymobile {
+   display: none;
+  }
  }
  &__conditions {
   font-size: rem(11px);
@@ -245,10 +446,19 @@
   background: rgba(71, 150, 124, 0.1);
   border-radius: rem(15px);
   padding: rem(10px) rem(30px);
+  display: none;
+  @include onlymobile {
+   width: 100%;
+   display: flex;
+  }
  }
  &__level-profit-wrapper {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  @include onlymobile {
+   width: 100%;
+  }
  }
  &__level-profit-info {
   display: flex;
@@ -277,6 +487,14 @@
   font-size: rem(20px);
   line-height: rem(24.38px);
   font-weight: 700;
+  @include onlymobile {
+   font-size: rem(12px);
+   line-height: rem(14.63px);
+   border-radius: rem(5px);
+   padding: rem(2px) rem(10px);
+   display: flex;
+   align-items: center;
+  }
  }
  &__card-info-profit-sticker.up {
   background: rgba(95, 151, 110, 1);
@@ -301,11 +519,19 @@
   font-size: rem(16px);
   line-height: rem(19.5px);
   color: rgba(156, 156, 156, 1);
+  @include onlymobile {
+   font-size: rem(14px);
+   line-height: rem(17.07px);
+  }
  }
  &__card-profit-amount {
   font-weight: 600;
   font-size: rem(28px);
   line-height: rem(34.13px);
+  @include onlymobile {
+   font-size: rem(18px);
+   line-height: rem(21.94px);
+  }
  }
  &__card-info.profit &__card-info-wrapper:not(:first-child) {
   padding-bottom: rem(20px);
@@ -329,10 +555,21 @@
   flex-direction: column;
   row-gap: rem(50px);
  }
+ &__bottom-tabs.mobile {
+  @include onlymobile {
+   display: flex !important;
+  }
+  @include ifdesktop {
+   display: none;
+  }
+ }
  &__bottom-tabs {
   display: flex;
   margin-bottom: rem(35px);
   gap: rem(10px);
+  @include onlymobile {
+   display: none !important;
+  }
  }
  &__bottom-tab {
   position: relative;
@@ -367,6 +604,10 @@
    -webkit-mask-composite: destination-out;
    mask-composite: exclude;
    padding: 1px;
+  }
+  @include onlymobile {
+   font-size: rem(15px);
+   line-height: rem(18.29px);
   }
  }
  &__bottom-tab.active {
@@ -410,10 +651,27 @@
   backdrop-filter: blur(32.29999923706055px);
   border-radius: rem(15px);
   width: 100%;
+  @include onlymobile {
+   display: none;
+  }
  }
+ &__bottom-table.mobile {
+  @include ifdesktop {
+   display: none;
+  }
+  @include onlymobile {
+   display: flex;
+  }
+ }
+
  &__bottom-table-header {
   display: grid;
   grid-template-columns: rem(205px) rem(240px) rem(126px) rem(167px);
+  @include onlymobile {
+   grid-template-columns: rem(49px) rem(55px) rem(55px) rem(76px) rem(44px) rem(
+     50px
+    );
+  }
  }
  &__bottom-table-header-tab {
   font-weight: 400;
@@ -421,6 +679,14 @@
   line-height: rem(19.5px);
   color: rgba(156, 156, 156, 1);
   padding: rem(10px);
+  @include onlymobile {
+   font-size: rem(7px);
+   line-height: rem(8.53px);
+   color: rgba(156, 156, 156, 1);
+   font-weight: 400;
+   padding: rem(6px);
+   text-align: center;
+  }
  }
  &__bottom-table-body {
   display: flex;
@@ -436,6 +702,15 @@
   border-left: none;
   border-right: none;
   border-bottom: none;
+
+  @include onlymobile {
+   font-size: rem(7px);
+   line-height: rem(8.53px);
+   color: rgba(156, 156, 156, 1);
+   grid-template-columns: rem(50px) rem(55px) rem(55px) rem(75px) rem(45px) rem(
+     63px
+    );
+  }
  }
  &__bottom-table-item {
   padding: rem(19px) 0;
@@ -444,11 +719,26 @@
   font-size: rem(16px);
   line-height: rem(19.5px);
   border-right: 1px solid rgba(64, 64, 64, 1);
+  @include onlymobile {
+   font-size: rem(7px);
+   line-height: rem(8.53px);
+   color: rgba(156, 156, 156, 1);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+ }
+ &__bottom-table-col &__bottom-table-item:not(:nth-last-child(1)) {
+  border-bottom: 1px rgba(64, 64, 64, 1) solid;
  }
  &__bottom-table-buttons {
   display: flex;
   gap: rem(10px);
   align-items: center;
+  @include onlymobile {
+   flex-direction: column;
+   justify-content: center;
+  }
  }
  &__bottom-table-button {
   padding: 0;
@@ -460,11 +750,23 @@
   border-radius: rem(10px);
   width: rem(94px);
   height: rem(35px);
+  @include onlymobile {
+   width: rem(50px);
+   height: auto;
+   font-size: rem(6px);
+   line-height: rem(7.31px);
+  }
  }
  &__bottom-table-button.output {
   font-size: rem(20px);
   line-height: rem(24.38px);
   background: rgba(238, 100, 103, 1);
+  @include onlymobile {
+   width: rem(50px);
+   height: rem(14px);
+   font-size: rem(6px);
+   line-height: rem(7.31px);
+  }
  }
  &__bottom-table-button.renew {
   background: rgba(95, 151, 110, 1);
@@ -478,14 +780,166 @@
   padding: 0 rem(5px);
   gap: rem(5px);
   width: 100%;
-  &::before {
+  @include ifdesktop {
+   &::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(
+     90deg,
+     #9c9c9c 8.91%,
+     rgba(255, 255, 255, 0) 83.17%
+    );
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    -webkit-mask:
+     linear-gradient(#fff 0 0) content-box,
+     linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    padding: 1px;
+   }
+  }
+  @include onlymobile {
+   display: flex;
+   flex-direction: column;
+   border-right: 1px solid rgba(64, 64, 64, 1);
+   height: 100%;
+   justify-content: center;
+  }
+ }
+ &__bottom-table-autorenew-name {
+  font-size: rem(13px);
+  line-height: rem(15.85px);
+  font-weight: 400;
+  color: rgba(156, 156, 156, 1);
+  text-wrap: nowrap;
+  @include onlymobile {
+   font-size: rem(5px);
+   line-height: rem(6.1px);
+  }
+ }
+ &__bottom-table-autorenew-button-wrapper {
+  border: 1px solid rgba(156, 156, 156, 1);
+  border-radius: rem(10px);
+  width: 100%;
+  padding: rem(4px) rem(3px);
+  position: relative;
+  z-index: 2;
+  @include onlymobile {
+   width: rem(33.53px);
+   padding: rem(2px) rem(2.03px);
+   border-radius: rem(5px);
+  }
+ }
+ &__autorenew-button {
+  width: rem(30px);
+  height: rem(20px);
+  display: block;
+  background: rgba(238, 100, 103, 1);
+  border-radius: rem(7px);
+  cursor: pointer;
+  transition: 0.3s;
+  @include onlymobile {
+   width: rem(16.5px);
+   height: rem(11px);
+   border-radius: rem(3px);
+  }
+ }
+ &__bottom-table-autorenew-button-wrapper.enabled &__autorenew-button {
+  background: rgba(95, 151, 110, 1);
+  transform: translateX(120%);
+  transition: 0.3s;
+  @include onlymobile {
+   transform: translateX(70%);
+  }
+ }
+ &__deposits {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(15px);
+  width: rem(340px);
+  @include onlymobile {
+   flex-direction: row;
+   justify-content: space-between;
+  }
+ }
+ &__deposits &__level-profit {
+  display: flex;
+  @include onlymobile {
+   display: none;
+  }
+ }
+ &__deposit {
+  padding: rem(15px) rem(30px);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.06) inset;
+  background: rgba(71, 150, 124, 0.1);
+  border-radius: rem(15px);
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(10px);
+  @include onlymobile {
+   width: rem(168px);
+   padding: rem(10px) rem(15px);
+  }
+ }
+ &__deposit-name {
+  font-size: rem(13px);
+  line-height: rem(15.85px);
+  font-weight: 400;
+  color: rgba(156, 156, 156, 1);
+  @include onlymobile {
+   font-size: rem(10px);
+   line-height: rem(12.19px);
+  }
+ }
+ &__deposit-wallet {
+  display: flex;
+  gap: rem(5px);
+  font-size: rem(20px);
+  font-weight: 600;
+  line-height: rem(24.38px);
+  align-items: center;
+  @include onlymobile {
+   font-size: rem(16px);
+   line-height: rem(19.5px);
+  }
+ }
+ &__deposit-wallet-icon {
+  width: rem(23px);
+  height: rem(22px);
+  @include onlymobile {
+   width: rem(26px);
+   height: rem(25px);
+  }
+ }
+ &__deposit-amount {
+  font-weight: 600;
+  font-size: rem(28px);
+  line-height: rem(34.13px);
+  @include onlymobile {
+   font-size: rem(18px);
+   line-height: rem(21.94px);
+  }
+ }
+ &__deposit.demo,
+ &__level-profit.demo,
+ &__profit.demo,
+ &__trade-deposit.demo,
+ &__trade-info.demo {
+  position: relative;
+  &::after {
    content: '';
    position: absolute;
    background: linear-gradient(
-    90deg,
-    #9c9c9c 8.91%,
-    rgba(255, 255, 255, 0) 83.17%
+    93.41deg,
+    #1a6889 22.48%,
+    #81c7dd 53.2%,
+    #1a6889 79.18%
    );
+
    width: 100%;
    height: 100%;
    top: 0;
@@ -496,36 +950,590 @@
     linear-gradient(#fff 0 0);
    -webkit-mask-composite: destination-out;
    mask-composite: exclude;
-   padding: 1px;
+   padding: 1.5px;
   }
  }
- &__bottom-table-autorenew-name {
+ &__trade-deposit.demo &__trade-deposit-amount {
+  background: -webkit-linear-gradient(
+   93.41deg,
+   #1a6889 22.48%,
+   #81c7dd 53.2%,
+   #1a6889 79.18%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+ &__trade-deposit.dash-999 &__trade-deposit-amount {
+  background: -webkit-linear-gradient(
+   120.2deg,
+   #5b5b5b 0.6%,
+   #ffffff 56.36%,
+   #5b5b5b 105.56%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+ &__trade-deposit.dash-1000 &__trade-deposit-amount {
+  background: -webkit-linear-gradient(93.41deg, #ddc081 22.48%, #5f976e 79.18%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+ &__trade-info.dash-1000 &__trade-info-amount {
+  background: -webkit-linear-gradient(93.41deg, #ddc081 22.48%, #5f976e 79.18%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+ &__trade-info.dash-999 &__trade-info-amount {
+  background: -webkit-linear-gradient(
+   120.2deg,
+   #5b5b5b 0.6%,
+   #ffffff 56.36%,
+   #5b5b5b 105.56%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+ &__trade-info.demo &__trade-info-amount {
+  background: -webkit-linear-gradient(
+   93.41deg,
+   #1a6889 22.48%,
+   #81c7dd 53.2%,
+   #1a6889 79.18%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+ &__deposit.dash-999,
+ &__level-profit.dash-999,
+ &__profit.dash-999,
+ &__trade-deposit.dash-999,
+ &__trade-info.dash-999 {
+  position: relative;
+  &::after {
+   content: '';
+   position: absolute;
+   background: linear-gradient(
+    120.2deg,
+    #5b5b5b 0.6%,
+    #ffffff 56.36%,
+    #5b5b5b 105.56%
+   );
+
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
+   padding: 1.5px;
+  }
+ }
+ &__deposit.dash-1000,
+ &__level-profit.dash-1000,
+ &__profit.dash-1000,
+ &__trade-deposit.dash-1000,
+ &__trade-info.dash-1000 {
+  position: relative;
+  &::after {
+   content: '';
+   position: absolute;
+   background: linear-gradient(93.41deg, #ddc081 22.48%, #5f976e 79.18%);
+
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
+   padding: 1.5px;
+  }
+ }
+ &__profit {
+  width: rem(400px);
+  padding: rem(34px) rem(45px);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.06) inset;
+  background: rgba(71, 150, 124, 0.1);
+  border-radius: rem(15px);
+  @include onlymobile {
+   width: 100%;
+   padding: rem(10px) rem(17px);
+  }
+ }
+
+ &__profit-item {
+  display: flex;
+  justify-content: space-between;
+ }
+ &__profit-info {
+  @include onlymobile {
+   row-gap: rem(5px);
+  }
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(10px);
+ }
+ &__profit-info-name {
+  font-weight: 400;
+  font-size: rem(15px);
+  line-height: rem(18.29px);
+  color: rgba(156, 156, 156, 1);
+  @include onlymobile {
+   font-size: rem(10px);
+   line-height: rem(12.19px);
+  }
+ }
+ &__profit-info-amount {
+  font-weight: 600;
+  font-size: rem(28px);
+  line-height: rem(34.13px);
+  @include onlymobile {
+   font-size: rem(18px);
+   line-height: rem(21.94px);
+  }
+ }
+ &__profit-result {
+  padding: 0 rem(10px);
   font-size: rem(13px);
   line-height: rem(15.85px);
-  font-weight: 400;
-  color: rgba(156, 156, 156, 1);
-  text-wrap: nowrap;
- }
- &__bottom-table-autorenew-button-wrapper {
-  border: 1px solid rgba(156, 156, 156, 1);
-  border-radius: rem(10px);
-  width: 100%;
-  padding: rem(4px) rem(3px);
-  position: relative;
-  z-index: 2;
- }
- &__autorenew-button {
-  width: rem(30px);
+  color: white;
+  font-weight: 700;
   height: rem(20px);
-  display: block;
-  background: rgba(238, 100, 103, 1);
   border-radius: rem(7px);
-  cursor: pointer;
-  transition: 0.3s;
+  display: flex;
+  align-items: center;
  }
- &__autorenew-button.enabled {
+ &__profit-result.plus {
   background: rgba(95, 151, 110, 1);
-  transform: translateX(60%);
+ }
+ &__profit-result.minus {
+  background: rgba(238, 100, 103, 1);
+ }
+ &__profit-graph {
+  width: 100%;
+ }
+ &__profit-items {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(10px);
+ }
+ &__profit-item.main-profit &__profit-info {
+  row-gap: rem(26px);
+  @include onlymobile {
+   row-gap: rem(5px);
+  }
+ }
+ &__profit-item.main-profit &__profit-result {
+  height: rem(34px);
+  font-size: rem(20px);
+  line-height: rem(24.38px);
+  padding: 0 rem(10px);
+  @include onlymobile {
+   height: rem(19px);
+   font-size: rem(12px);
+   line-height: rem(14.63px);
+  }
+ }
+ &__profit-wallet {
+  display: flex;
+  gap: rem(5px);
+  align-items: center;
+  font-size: rem(20px);
+  line-height: rem(24.38px);
+  font-weight: 600;
+  @include onlymobile {
+   font-size: rem(12px);
+   line-height: rem(14.63px);
+   gap: rem(3px);
+  }
+ }
+ &__profit-wallet-icon {
+  width: rem(23px);
+  height: rem(22px);
+  @include onlymobile {
+   width: rem(17px);
+   height: rem(16px);
+  }
+ }
+ &__trade-deposits {
+  width: rem(340px);
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(15px);
+ }
+ &__trade-deposit {
+  background: rgba(71, 150, 124, 0.1);
+  border-radius: rem(15px);
+  padding: rem(16px) rem(30px);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.06) inset;
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(10px);
+ }
+ &__trade-deposit-name {
+  font-weight: 400;
+  font-size: rem(13px);
+  line-height: rem(15.85px);
+  color: rgba(156, 156, 156, 1);
+  @include onlymobile {
+   font-size: rem(10px);
+   line-height: rem(12.19px);
+  }
+ }
+ &__trade-deposit-wallet {
+  display: flex;
+  gap: rem(5px);
+  font-size: rem(20px);
+  line-height: rem(24.38px);
+  font-weight: 600;
+  align-items: center;
+  @include onlymobile {
+   font-size: rem(16px);
+   line-height: rem(19.5px);
+  }
+ }
+ &__trade-deposit-icon {
+  width: rem(23px);
+  height: rem(22px);
+ }
+ &__trade-deposit-amount {
+  font-weight: 600;
+  font-size: rem(28px);
+  line-height: rem(34.13px);
+ }
+ &__trade-info {
+  padding: rem(25px) rem(30px);
+  background: rgba(71, 150, 124, 0.1);
+  border-radius: rem(15px);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.06) inset;
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(5px);
+ }
+ &__trade-info-name {
+  font-weight: 400;
+  font-size: rem(13px);
+  line-height: rem(15.85px);
+  color: rgba(156, 156, 156, 1);
+ }
+ &__trade-info-amount {
+  font-weight: 600;
+  font-size: rem(28px);
+  line-height: rem(34.13px);
+ }
+ &__history {
+  display: flex;
+  flex-direction: column;
+  gap: rem(25px);
+ }
+ &__history-cards {
+  display: flex;
+  gap: rem(25px);
+ }
+ &__history-card {
+  width: rem(358px);
+  background: rgba(71, 150, 124, 0.1);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.06) inset;
+  backdrop-filter: blur(32.29999923706055px);
+  border-radius: rem(15px);
+  padding: rem(18px) rem(20px);
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(15px);
+  @include onlymobile {
+   width: rem(108px);
+   row-gap: rem(8px);
+   padding: rem(10px);
+  }
+ }
+ &__history-operation-icon {
+  width: rem(17px);
+  height: rem(17px);
+  @include onlymobile {
+   width: rem(10px);
+   height: rem(10px);
+  }
+ }
+ &__history-card-label {
+  font-weight: 500;
+  font-size: rem(12px);
+  line-height: rem(14.63px);
+  @include onlymobile {
+   font-size: rem(10px);
+   line-height: rem(12.19px);
+   font-weight: 400;
+  }
+ }
+ &__history-operation {
+  display: flex;
+  gap: rem(10px);
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+  font-weight: 600;
+  align-items: center;
+  @include onlymobile {
+   gap: rem(5px);
+   font-size: rem(12px);
+   font-weight: 500;
+   line-height: rem(14.63px);
+  }
+ }
+ &__history-operation.input {
+  color: rgba(95, 151, 110, 1);
+ }
+ &__history-operation.output {
+  color: rgba(186, 9, 27, 1);
+ }
+ &__history-amount {
+  font-weight: 600;
+  font-size: rem(28px);
+  line-height: rem(34.13px);
+  @include onlymobile {
+   font-size: rem(12px);
+   line-height: rem(14.63px);
+   font-weight: 600;
+  }
+ }
+ &__history-table {
+  display: flex;
+  flex-direction: column;
+  background: rgba(71, 150, 124, 0.1);
+  border-radius: rem(15px);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.06) inset;
+
+  backdrop-filter: blur(32.29999923706055px);
+  @include onlymobile {
+   display: none;
+  }
+ }
+ &__history-table-item-col &__history-table-item:not(:nth-last-child(1)) {
+  border-bottom: 1px rgba(64, 64, 64, 1) solid;
+ }
+ &__history-table.mobile {
+  display: none;
+  @include onlymobile {
+   display: flex;
+  }
+ }
+ &__history-table-header {
+  display: grid;
+  grid-template-columns: repeat(5, rem(224px));
+  @include onlymobile {
+   grid-template-columns: rem(55px) rem(56px) rem(85px) rem(75px) rem(70px);
+   align-items: center;
+  }
+ }
+ &__history-table-header-name {
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+  color: rgba(156, 156, 156, 1);
+  @include onlymobile {
+   font-size: rem(8px);
+   line-height: rem(9.75px);
+  }
+ }
+ &__history-table-header-tab {
+  padding: rem(10px);
+  @include onlymobile {
+   text-align: center;
+   padding: rem(5px);
+  }
+ }
+ &__history-table-items {
+  display: grid;
+  grid-template-columns:
+   rem(86px) rem(138px) rem(222px) rem(225px) rem(225px)
+   rem(240px);
+  border: 1px solid rgba(64, 64, 64, 1);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  @include onlymobile {
+   grid-template-columns: rem(56px) rem(56px) rem(85px) rem(75px) rem(70px);
+  }
+ }
+ &__history-table-item {
+  display: flex;
+  justify-content: center;
+  padding: rem(20px) 0;
+  text-align: center;
+  font-size: rem(16px);
+  font-weight: 500;
+  line-height: rem(19.5px);
+  border-right: 1px solid rgb(64, 64, 64);
+  gap: rem(10px);
+  align-items: center;
+  @include onlymobile {
+   padding: rem(10px) 0;
+   font-size: rem(9px);
+   line-height: rem(10.97px);
+   display: flex;
+   flex-direction: column;
+  }
+ }
+
+ &__history-table-operation-icon {
+  width: rem(17px);
+  height: rem(17px);
+  @include onlymobile {
+   width: rem(10px);
+   height: rem(10px);
+  }
+ }
+ &__history-table-item.completed {
+  color: rgba(214, 193, 94, 1);
+ }
+ &__history-table-item.in-progress {
+  color: rgba(161, 161, 161, 1);
+ }
+ &__history-table-item.failed {
+  color: rgba(186, 9, 27, 1);
+ }
+ &__history-table-item.output {
+  color: rgba(186, 9, 27, 1);
+ }
+ &__history-table-item.input {
+  color: rgba(95, 151, 110, 1);
+ }
+ &__history-table-result-icon {
+  width: rem(15px);
+  height: rem(10px);
+ }
+
+ &__trades-title {
+  font-size: rem(48px);
+  font-weight: 500;
+  line-height: rem(52.39px);
+  margin-bottom: rem(35px);
+  display: flex;
+  gap: rem(10px);
+  align-items: center;
+  &::before {
+   display: block;
+   content: '';
+   background: rgba(95, 151, 110, 1) no-repeat;
+   border-radius: rem(50px);
+   width: rem(22px);
+   height: rem(22px);
+   background-size: cover;
+  }
+  @include onlymobile {
+   font-size: rem(32px);
+   line-height: rem(34.93px);
+   margin-bottom: rem(15px);
+   &::before {
+    width: rem(10px);
+    height: rem(10px);
+   }
+  }
+ }
+ &__trades-table {
+  display: flex;
+  flex-direction: column;
+  background: rgba(71, 150, 124, 0.1);
+  border-radius: rem(15px);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.06) inset;
+
+  backdrop-filter: blur(32.29999923706055px);
+ }
+ &__trades-table-header {
+  display: grid;
+  grid-template-columns:
+   rem(210px) rem(160px) rem(160px) rem(160px) rem(160px)
+   rem(112px) rem(160px);
+  @include onlymobile {
+   grid-template-columns:
+    rem(85px) rem(45px) rem(45px) rem(45px) rem(45px) rem(32px)
+    rem(45px);
+  }
+ }
+ &__trades-table-header-name {
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: rem(19.5px);
+  color: rgba(156, 156, 156, 1);
+  @include onlymobile {
+   font-size: rem(6px);
+   line-height: rem(7.31px);
+  }
+ }
+ &__trades-table-header-tab {
+  padding: rem(10px);
+  @include onlymobile {
+   text-align: center;
+   display: flex;
+   align-items: center;
+   padding: rem(8px);
+   justify-content: center;
+  }
+ }
+ &__trades-table-items {
+  display: grid;
+  grid-template-columns:
+   rem(210px) rem(160px) rem(160px) rem(160px) rem(160px)
+   rem(112px) rem(174px);
+  border: 1px solid rgba(64, 64, 64, 1);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  @include onlymobile {
+   grid-template-columns:
+    rem(85px) rem(45px) rem(45px) rem(45px) rem(45px) rem(32px)
+    rem(45px);
+  }
+ }
+ &__trades-table-item {
+  display: flex;
+  justify-content: center;
+  padding: rem(20px) 0;
+  text-align: center;
+  font-size: rem(16px);
+  font-weight: 500;
+  line-height: rem(19.5px);
+  border-right: 1px solid rgb(64, 64, 64);
+  gap: rem(10px);
+  align-items: center;
+  color: white;
+  @include onlymobile {
+   font-size: rem(7px);
+   line-height: rem(8.53px);
+   padding: rem(10.5px);
+  }
+ }
+ &__trades-table-item a {
+  text-decoration: underline;
+  color: white;
+ }
+ &__trades-table-item.green {
+  color: rgba(59, 169, 89, 1);
+ }
+ &__trades-table-item.red {
+  color: rgba(186, 9, 27, 1);
+ }
+ &__trades-table-item.blue {
+  color: rgba(82, 141, 255, 1);
+ }
+ &__trades-table-item-icon {
+  width: rem(24px);
+  height: rem(24px);
+  @include onlymobile {
+   width: rem(15px);
+   height: rem(15px);
+  }
+ }
+ .inactive {
+  opacity: 0;
   transition: 0.3s;
+  visibility: hidden;
+  display: none;
  }
 }

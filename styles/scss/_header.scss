@@ -182,7 +182,12 @@
  &__lang:hover &__lang-icon {
   transform: scale(0.8);
   transition: 0.3s;
-  transform-origin: top left;
+  @include ifdesktop {
+   transform-origin: top left;
+  }
+  @include onlymobile {
+   transform: scale(1.2);
+  }
  }
  &__lang:hover {
   gap: 0;
@@ -197,6 +202,10 @@
   width: rem(35px);
   height: rem(35px);
   transition: 0.3s;
+  @include onlymobile {
+   width: rem(20px);
+   height: rem(20px);
+  }
  }
  &__lang-icon path {
   transition: 0.3s;
@@ -207,6 +216,10 @@
   font-weight: 100;
   font-size: rem(24px);
   line-height: rem(26.2px);
+  width: rem(37px);
+  @include onlymobile {
+   display: none;
+  }
  }
 
  &__lang:hover &__lang-current {
@@ -214,6 +227,12 @@
   font-weight: 300;
   font-size: rem(20px);
   line-height: rem(21.83px);
+  width: rem(31px);
+ }
+ &__lang:hover &__lang-list {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
  }
 
  &__lang-list {
@@ -222,15 +241,33 @@
   flex-direction: column;
   row-gap: rem(5px);
   right: 0;
-  top: rem(45px);
+  padding-top: 8px;
   opacity: 0;
   visibility: hidden;
+  top: 70%;
+  transition: 0.3s;
+  @include onlymobile {
+   top: 90%;
+   right: rem(-5px);
+  }
+ }
+ &__lang-list-item {
+  font-weight: 300;
+  font-size: rem(20px);
+  line-height: rem(21.83px);
+  color: rgba(161, 161, 161, 1);
+ }
+
+ &__mobile-settings {
+  display: flex;
+  gap: rem(15px);
+  align-items: center;
  }
 
  &__burger {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 101vh;
   left: 0;
   top: rem(-42px);
   background: rgba(0, 0, 0, 1);
@@ -239,6 +276,11 @@
   flex-direction: column;
   transform: translateX(-100%);
   transition: 0.3s;
+ }
+ &__burger-menu-settings {
+  display: flex;
+  gap: rem(15px);
+  align-items: center;
  }
  &__burger.active {
   transform: translateX(0);
@@ -276,7 +318,7 @@
  &__burger-wrapper {
   display: flex;
   flex-direction: column;
-  padding: rem(55px) rem(36px) 0 rem(16px);
+  padding: 0 rem(36px) 0 rem(16px);
   position: relative;
   z-index: 2;
  }
@@ -310,7 +352,7 @@
   height: rem(20px);
  }
  &__burger-menu {
-  padding: rem(12.5px) 0;
+  padding: rem(45px) rem(16px);
   position: relative;
   z-index: 2;
   background: linear-gradient(
@@ -319,5 +361,12 @@
    rgba(0, 0, 0, 0.94) 60%,
    rgba(0, 0, 0, 0) 100%
   );
+  display: flex;
+  justify-content: space-between;
+ }
+
+ &__burger-icon {
+  width: rem(25px);
+  height: rem(16px);
  }
 }

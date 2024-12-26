@@ -3,7 +3,7 @@
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zion | Дашборд</title>
+  <title>Zion | Altcoins</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -1072,19 +1072,23 @@
       </div>
      </div>
     </div>
-
     <section class="dashboard">
      <div class="dashboard__container">
       <div class="dashboard__header">
        <div class="dashboard__title-wrapper">
-        <h1 class="dashboard__title">Дашборд</h1>
+        <img
+         src="./assets/img/logos/altcoins.svg"
+         alt="ZION ALTCOINS"
+         class="dashboard__title-icon"
+        />
+        <h1 class="dashboard__title">ALtcoins</h1>
        </div>
       </div>
       <div class="dashboard__tabs">
        <a href="dashboard.html">
-        <div class="dashboard__tab active">Дашборд</div>
+        <div class="dashboard__tab">Дашборд</div>
        </a>
-       <div class="dashboard__tab online">
+       <div class="dashboard__tab active online">
         <a href="dashboard-binance.html">
          <img
           src="./assets/img/logos/altcoins.svg"
@@ -1127,8 +1131,11 @@
       </div>
       <div class="dashboard__tabs mobile swiper">
        <div class="dashboard__tabs-wrapper swiper-wrapper">
-        <div class="dashboard__tab active swiper-slide">Дашборд</div>
-        <div class="dashboard__tab online swiper-slide">
+        <div class="dashboard__tab swiper-slide">
+         <a href="dashboard.html"> Дашборд </a>
+        </div>
+
+        <div class="dashboard__tab online swiper-slide active">
          <a href="dashboard-binance.html">
           <img
            src="./assets/img/logos/altcoins.svg"
@@ -1171,49 +1178,33 @@
        </div>
       </div>
       <div class="dashboard__wrapper">
-       <div class="dashboard__cards">
-        <div class="dashboard__card dash-1000">
-         <div class="dashboard__card-info">
-          <div class="dashboard__card-info-wrapper">
-           <div class="dashboard__card-info-header">
-            <div class="dashboard__card-info-header-wrapper">
-             <p class="dashboard__card-info-name">Общий депозит</p>
-             <div class="dashboard__card-info-deposit-sticker">
-              <img
-               src="./assets/img/logos/altcoins.svg"
-               alt="ZION ALTCOINS"
-               class="dashboard__deposit-sticker-icon"
-              />
-              ALtcoins
-             </div>
-            </div>
-           </div>
-           <div class="dashboard__card-deposit">
-            <img
-             src="./assets/img/icons/usdt-icon.svg"
-             alt="ZION USDT"
-             class="dashboard__card-deposit-icon"
-            />
-            <p class="dashboard__card-deposit-value">USDT</p>
-           </div>
-           <p class="dashboard__card-deposit-amount">$ 0</p>
+       <div class="dashboard__content">
+        <div class="dashboard__deposits">
+         <div class="dashboard__deposit dash-1000">
+          <p class="dashboard__deposit-name">Общий депозит</p>
+          <div class="dashboard__deposit-wallet">
+           <img
+            src="./assets/img/icons/usdt-icon.svg"
+            alt="ZION USDT"
+            class="dashboard__deposit-wallet-icon"
+           />
+           USDT
           </div>
-          <button class="dashboard__card-button">Создать депозит</button>
+          <p class="dashboard__deposit-amount">$ 0</p>
          </div>
-         <div class="dashboard__card-info">
-          <div class="dashboard__card-info-wrapper">
-           <div class="dashboard__card-info-header">
-            <div class="dashboard__card-info-header-wrapper">
-             <p class="dashboard__card-info-name">Доступно к выводу</p>
-             <p class="dashboard__card-info-date">18.12.2023</p>
-            </div>
-           </div>
-           <p class="dashboard__card-deposit-amount">$ 0</p>
+         <div class="dashboard__deposit dash-1000">
+          <p class="dashboard__deposit-name">1/20 депозита</p>
+          <div class="dashboard__deposit-wallet">
+           <img
+            src="./assets/img/icons/usdt-icon.svg"
+            alt="ZION USDT"
+            class="dashboard__deposit-wallet-icon"
+           />
+           USDT
           </div>
-          <p class="dashboard__conditions">Условия вывода</p>
-          <button class="dashboard__card-button">Создать депозит</button>
+          <p class="dashboard__deposit-amount">$ 0</p>
          </div>
-         <div class="dashboard__level-profit">
+         <div class="dashboard__level-profit dash-1000">
           <div class="dashboard__level-profit-wrapper">
            <div class="dashboard__level-profit-info">
             <p class="dashboard__level-profit-name">Уровень доходности</p>
@@ -1228,778 +1219,236 @@
           </div>
          </div>
         </div>
-        <div class="dashboard__card profit">
-         <div class="dashboard__card-info profit">
-          <div class="dashboard__card-info-wrapper">
-           <div class="dashboard__card-info-header">
-            <div class="dashboard__card-info-header-wrapper">
-             <p class="dashboard__card-info-name">Доход за сутки</p>
-             <div class="dashboard__card-info-profit-sticker up">+0,888%</div>
-            </div>
+        <div class="dashboard__profit dash-1000">
+         <div class="dashboard__profit-items">
+          <div class="dashboard__profit-item main-profit">
+           <div class="dashboard__profit-info">
+            <p class="dashboard__profit-info-name">Доход за сутки</p>
+            <p class="dashboard__profit-info-amount">$ +0</p>
            </div>
-           <div class="dashboard__card-profit-info">
-            <img
-             src="./assets/img/logos/binance-grey.svg"
-             alt="ZION ALTCOINS"
-             class="dashboard__card-profit-icon"
-            />
-            <p class="dashboard__card-profit-name">ALtcoins</p>
-           </div>
-           <p class="dashboard__card-profit-amount">$ +0</p>
+           <div class="dashboard__profit-result plus">+0,888%</div>
           </div>
-          <div class="dashboard__card-info-wrapper">
-           <div class="dashboard__card-info-header">
-            <div class="dashboard__card-info-header-wrapper">
-             <p class="dashboard__card-info-name">Доход за сутки</p>
-             <div class="dashboard__card-info-profit-sticker up">+0,888%</div>
-            </div>
+          <img
+           src="./assets/img/dashboard/graph.svg"
+           alt="ZION ГРАФИК ДОХОДА"
+           class="dashboard__profit-graph"
+          />
+          <div class="dashboard__profit-item">
+           <div class="dashboard__profit-info">
+            <p class="dashboard__profit-info-name">Доход за неделю</p>
+            <p class="dashboard__profit-info-amount">$ +0</p>
            </div>
-           <div class="dashboard__card-profit-info">
-            <img
-             src="./assets/img/logos/btc-eth.svg"
-             alt="ZION BTC-ETH"
-             class="dashboard__card-profit-icon btc"
-            />
-            <p class="dashboard__card-profit-name">BTC/ETH</p>
-           </div>
-           <p class="dashboard__card-profit-amount">$ +0</p>
+           <div class="dashboard__profit-result minus">+0,888%</div>
           </div>
-         </div>
-         <div class="dashboard__card-info partner">
-          <div class="dashboard__card-partner-wrapper">
-           <div class="dashboard__card-info-header">
-            <div class="dashboard__card-info-header-wrapper">
-             <p class="dashboard__card-info-name">Доступно к выводу</p>
-            </div>
+          <div class="dashboard__profit-item">
+           <div class="dashboard__profit-info">
+            <p class="dashboard__profit-info-name">Всего</p>
+            <p class="dashboard__profit-info-amount">$ +0</p>
            </div>
-           <p class="dashboard__card-info-title">Партнерская программа</p>
-           <p class="dashboard__card-profit-amount">$ 0</p>
-          </div>
-          <p class="dashboard__conditions">Условия вывода</p>
-          <button class="dashboard__card-button dash-1000">Вывод</button>
-         </div>
-        </div>
-        <div class="dashboard__card btc">
-         <div class="dashboard__card-info">
-          <div class="dashboard__card-info-wrapper">
-           <div class="dashboard__card-info-header">
-            <div class="dashboard__card-info-header-wrapper">
-             <p class="dashboard__card-info-name">Общий депозит</p>
-             <div class="dashboard__card-info-deposit-sticker">
-              <img
-               src="./assets/img/logos/btc-eth.svg"
-               alt="ZION ALTCOINS"
-               class="dashboard__deposit-sticker-icon btc"
-              />
-              BTC/ETH
-             </div>
-            </div>
-           </div>
-           <div class="dashboard__card-deposit">
+           <div class="dashboard__profit-wallet">
             <img
              src="./assets/img/icons/usdt-icon.svg"
-             alt="ZION USDT"
-             class="dashboard__card-deposit-icon"
+             alt="ZION ДОХОД ВАЛЮТА"
+             class="dashboard__profit-wallet-icon"
             />
-            <p class="dashboard__card-deposit-value">USDT</p>
+            USDT
            </div>
-           <p class="dashboard__card-deposit-amount">$ 0</p>
           </div>
-          <button class="dashboard__card-button btc">Создать депозит</button>
          </div>
-         <div class="dashboard__card-info">
-          <div class="dashboard__card-info-wrapper">
-           <div class="dashboard__card-info-header">
-            <div class="dashboard__card-info-header-wrapper">
-             <p class="dashboard__card-info-name">Доступно к выводу</p>
-             <p class="dashboard__card-info-date">18.12.2023</p>
-            </div>
-           </div>
-           <p class="dashboard__card-deposit-amount">$ 0</p>
+        </div>
+        <div class="dashboard__level-profit dash-1000">
+         <div class="dashboard__level-profit-wrapper">
+          <div class="dashboard__level-profit-info">
+           <p class="dashboard__level-profit-name">Уровень доходности</p>
+           <p class="dashboard__level-profit-level">Уровень 1</p>
+           <p class="dashboard__level-profit-value">5%</p>
           </div>
-          <p class="dashboard__conditions">Условия вывода</p>
-          <button class="dashboard__card-button btc">Создать депозит</button>
+          <img
+           src="./assets/img/levels/level-1.png"
+           alt="ZION УРОВЕНЬ-1"
+           class="dashboard__level-profit-icon"
+          />
          </div>
-         <div class="dashboard__level-profit">
-          <div class="dashboard__level-profit-wrapper">
-           <div class="dashboard__level-profit-info">
-            <p class="dashboard__level-profit-name">Уровень доходности</p>
-            <p class="dashboard__level-profit-level">Уровень 1</p>
-            <p class="dashboard__level-profit-value">20%</p>
-           </div>
+        </div>
+        <div class="dashboard__trade-deposits">
+         <div class="dashboard__trade-deposit dash-1000">
+          <p class="dashboard__trade-deposit-name">Торгуемый депозит</p>
+          <div class="dashboard__trade-deposit-wallet">
            <img
-            src="./assets/img/logos/btc-eth.svg"
-            alt="ZION BTC"
-            class="dashboard__level-profit-icon"
+            src="./assets/img/icons/usdt-icon.svg"
+            alt="ZION ДОХОД ВАЛЮТА"
+            class="dashboard__trade-deposit-icon"
            />
+           USDT
           </div>
+          <p class="dashboard__trade-deposit-amount">$ 0</p>
+         </div>
+         <div class="dashboard__trade-info dash-1000">
+          <p class="dashboard__trade-info-name">Количество сделок</p>
+          <p class="dashboard__trade-info-amount">144</p>
+         </div>
+         <div class="dashboard__trade-info dash-1000">
+          <p class="dashboard__trade-info-name">Активные сделки</p>
+          <p class="dashboard__trade-info-amount">3</p>
          </div>
         </div>
        </div>
        <div class="dashboard__bottom">
-        <div class="dashboard__bottom-tabs">
-         <div class="dashboard__bottom-tab active" data-tab="1">
-          Депозиты Altcoins
-         </div>
-         <div class="dashboard__bottom-tab" data-tab="2">Депозиты BTC/ETH</div>
-         <div class="dashboard__bottom-tab" data-tab="3">История операций</div>
-        </div>
-        <div class="dashboard__bottom-tabs mobile swiper">
-         <div class="dashboard__bottom-tabs-wrapper swiper-wrapper">
-          <div class="dashboard__bottom-tab active" data-tab="1">
-           Депозиты Altcoins
+        <h2 class="dashboard__trades-title">Сделки Live</h2>
+        <div class="dashboard__trades-table">
+         <div class="dashboard__trades-table-header">
+          <div class="dashboard__trades-table-header-tab">
+           <p class="dashboard__trades-table-header-name">Торгуемая пара</p>
           </div>
-          <div class="dashboard__bottom-tab" data-tab="2">Депозиты BTC/ETH</div>
-          <div class="dashboard__bottom-tab" data-tab="3">История операций</div>
-         </div>
-        </div>
-
-        <div class="dashboard__bottom-table dashboard-tab active" data-tab="1">
-         <div class="dashboard__bottom-table-header">
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Дата пополнения</p>
+          <div class="dashboard__trades-table-header-tab">
+           <p class="dashboard__trades-table-header-name">Цена покупки</p>
           </div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Старт торговли</p>
+          <div class="dashboard__trades-table-header-tab">
+           <p class="dashboard__trades-table-header-name">Время покупки</p>
           </div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Сумма</p>
+          <div class="dashboard__trades-table-header-tab">
+           <p class="dashboard__trades-table-header-name">Цена продажи</p>
           </div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Доступен вывод</p>
+          <div class="dashboard__trades-table-header-tab">
+           <p class="dashboard__trades-table-header-name">Время продажи</p>
+          </div>
+          <div class="dashboard__trades-table-header-tab">
+           <p class="dashboard__trades-table-header-name">Спред</p>
+          </div>
+          <div class="dashboard__trades-table-header-tab">
+           <p class="dashboard__trades-table-header-name">USDT</p>
           </div>
          </div>
-         <div class="dashboard__bottom-table-body">
-          <div class="dashboard__bottom-table-items">
-           <div class="dashboard__bottom-table-item">14-12-23</div>
-           <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           <div class="dashboard__bottom-table-item">14-12-23</div>
-           <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           <div class="dashboard__bottom-table-item">$ 10,000.00</div>
-           <div class="dashboard__bottom-table-item">14-12-2023</div>
-          </div>
-          <div class="dashboard__bottom-table-buttons">
-           <button class="dashboard__bottom-table-button output">Вывод</button>
-           <button class="dashboard__bottom-table-button renew">
-            Продление на 90 дней
-           </button>
-          </div>
-          <div class="dashboard__bottom-table-autorenew">
-           <p class="dashboard__bottom-table-autorenew-name">Авто-продление</p>
-           <div class="dashboard__bottom-table-autorenew-button-wrapper">
-            <span class="dashboard__autorenew-button"></span>
-           </div>
-          </div>
-         </div>
-         <div class="dashboard__bottom-table-body">
-          <div class="dashboard__bottom-table-items">
-           <div class="dashboard__bottom-table-item">14-12-23</div>
-           <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           <div class="dashboard__bottom-table-item">14-12-23</div>
-           <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           <div class="dashboard__bottom-table-item">$ 10,000.00</div>
-           <div class="dashboard__bottom-table-item">14-12-2023</div>
-          </div>
-          <div class="dashboard__bottom-table-buttons">
-           <button class="dashboard__bottom-table-button output">Вывод</button>
-           <button class="dashboard__bottom-table-button renew">
-            Продление на 90 дней
-           </button>
-          </div>
-          <div class="dashboard__bottom-table-autorenew">
-           <p class="dashboard__bottom-table-autorenew-name">Авто-продление</p>
-           <div class="dashboard__bottom-table-autorenew-button-wrapper">
-            <span class="dashboard__autorenew-button"></span>
-           </div>
-          </div>
-         </div>
-         <div class="dashboard__bottom-table-body">
-          <div class="dashboard__bottom-table-items">
-           <div class="dashboard__bottom-table-item">14-12-23</div>
-           <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           <div class="dashboard__bottom-table-item">14-12-23</div>
-           <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           <div class="dashboard__bottom-table-item">$ 10,000.00</div>
-           <div class="dashboard__bottom-table-item">14-12-2023</div>
-          </div>
-          <div class="dashboard__bottom-table-buttons">
-           <button class="dashboard__bottom-table-button output">Вывод</button>
-           <button class="dashboard__bottom-table-button renew">
-            Продление на 90 дней
-           </button>
-          </div>
-          <div class="dashboard__bottom-table-autorenew">
-           <p class="dashboard__bottom-table-autorenew-name">Авто-продление</p>
-           <div class="dashboard__bottom-table-autorenew-button-wrapper">
-            <span class="dashboard__autorenew-button"></span>
-           </div>
-          </div>
-         </div>
-        </div>
-        <div
-         class="dashboard__bottom-table dashboard-tab mobile active"
-         data-tab="1"
-        >
-         <div class="dashboard__bottom-table-header">
-          <div class="dashboard__bottom-table-header-tab"></div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Дата пополнения</p>
-          </div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Старт торговли</p>
-          </div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Сумма</p>
-          </div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Доступен вывод</p>
-          </div>
-         </div>
-         <div class="dashboard__bottom-table-body">
-          <div class="dashboard__bottom-table-items">
-           <div class="dashboard__bottom-table-autorenew">
-            <p class="dashboard__bottom-table-autorenew-name">Авто-продление</p>
-            <div class="dashboard__bottom-table-autorenew-button-wrapper">
-             <span class="dashboard__autorenew-button"></span>
-            </div>
-           </div>
-           <div class="dashboard__bottom-table-col">
-            <div class="dashboard__bottom-table-item">14-12-23</div>
-            <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           </div>
-           <div class="dashboard__bottom-table-col">
-            <div class="dashboard__bottom-table-item">14-12-23</div>
-            <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           </div>
-           <div class="dashboard__bottom-table-item">$ 10,000.00</div>
-           <div class="dashboard__bottom-table-item">14-12-2023</div>
-           <div class="dashboard__bottom-table-buttons">
-            <button class="dashboard__bottom-table-button output">Вывод</button>
-            <button class="dashboard__bottom-table-button renew">
-             Продление 90 дней
-            </button>
-           </div>
-          </div>
-         </div>
-         <div class="dashboard__bottom-table-body">
-          <div class="dashboard__bottom-table-items">
-           <div class="dashboard__bottom-table-autorenew">
-            <p class="dashboard__bottom-table-autorenew-name">Авто-продление</p>
-            <div class="dashboard__bottom-table-autorenew-button-wrapper">
-             <span class="dashboard__autorenew-button"></span>
-            </div>
-           </div>
-           <div class="dashboard__bottom-table-col">
-            <div class="dashboard__bottom-table-item">14-12-23</div>
-            <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           </div>
-           <div class="dashboard__bottom-table-col">
-            <div class="dashboard__bottom-table-item">14-12-23</div>
-            <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           </div>
-           <div class="dashboard__bottom-table-item">$ 10,000.00</div>
-           <div class="dashboard__bottom-table-item">14-12-2023</div>
-           <div class="dashboard__bottom-table-buttons">
-            <button class="dashboard__bottom-table-button output">Вывод</button>
-            <button class="dashboard__bottom-table-button renew">
-             Продление 90 дней
-            </button>
-           </div>
-          </div>
-         </div>
-         <div class="dashboard__bottom-table-body">
-          <div class="dashboard__bottom-table-items">
-           <div class="dashboard__bottom-table-autorenew">
-            <p class="dashboard__bottom-table-autorenew-name">Авто-продление</p>
-            <div class="dashboard__bottom-table-autorenew-button-wrapper">
-             <span class="dashboard__autorenew-button"></span>
-            </div>
-           </div>
-           <div class="dashboard__bottom-table-col">
-            <div class="dashboard__bottom-table-item">14-12-23</div>
-            <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           </div>
-           <div class="dashboard__bottom-table-col">
-            <div class="dashboard__bottom-table-item">14-12-23</div>
-            <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           </div>
-           <div class="dashboard__bottom-table-item">$ 10,000.00</div>
-           <div class="dashboard__bottom-table-item">14-12-2023</div>
-           <div class="dashboard__bottom-table-buttons">
-            <button class="dashboard__bottom-table-button output">Вывод</button>
-            <button class="dashboard__bottom-table-button renew">
-             Продление 90 дней
-            </button>
-           </div>
-          </div>
-         </div>
-        </div>
-        <div
-         class="dashboard__bottom-table inactive dashboard-tab"
-         data-tab="2"
-        >
-         <div class="dashboard__bottom-table-header">
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Дата пополнения</p>
-          </div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Старт торговли</p>
-          </div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Сумма</p>
-          </div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Доступен вывод</p>
-          </div>
-         </div>
-         <div class="dashboard__bottom-table-body">
-          <div class="dashboard__bottom-table-items">
-           <div class="dashboard__bottom-table-item">14-12-23</div>
-           <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           <div class="dashboard__bottom-table-item">14-12-23</div>
-           <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           <div class="dashboard__bottom-table-item">$ 10,000.00</div>
-           <div class="dashboard__bottom-table-item">14-12-2023</div>
-          </div>
-          <div class="dashboard__bottom-table-buttons">
-           <button class="dashboard__bottom-table-button output">Вывод</button>
-           <button class="dashboard__bottom-table-button renew">
-            Продление на 90 дней
-           </button>
-          </div>
-          <div class="dashboard__bottom-table-autorenew">
-           <p class="dashboard__bottom-table-autorenew-name">Авто-продление</p>
-           <div class="dashboard__bottom-table-autorenew-button-wrapper">
-            <span class="dashboard__autorenew-button"></span>
-           </div>
-          </div>
-         </div>
-         <div class="dashboard__bottom-table-body">
-          <div class="dashboard__bottom-table-items">
-           <div class="dashboard__bottom-table-item">14-12-23</div>
-           <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           <div class="dashboard__bottom-table-item">14-12-23</div>
-           <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           <div class="dashboard__bottom-table-item">$ 10,000.00</div>
-           <div class="dashboard__bottom-table-item">14-12-2023</div>
-          </div>
-          <div class="dashboard__bottom-table-buttons">
-           <button class="dashboard__bottom-table-button output">Вывод</button>
-           <button class="dashboard__bottom-table-button renew">
-            Продление на 90 дней
-           </button>
-          </div>
-          <div class="dashboard__bottom-table-autorenew">
-           <p class="dashboard__bottom-table-autorenew-name">Авто-продление</p>
-           <div class="dashboard__bottom-table-autorenew-button-wrapper">
-            <span class="dashboard__autorenew-button"></span>
-           </div>
-          </div>
-         </div>
-         <div class="dashboard__bottom-table-body">
-          <div class="dashboard__bottom-table-items">
-           <div class="dashboard__bottom-table-item">14-12-23</div>
-           <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           <div class="dashboard__bottom-table-item">14-12-23</div>
-           <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           <div class="dashboard__bottom-table-item">$ 10,000.00</div>
-           <div class="dashboard__bottom-table-item">14-12-2023</div>
-          </div>
-          <div class="dashboard__bottom-table-buttons">
-           <button class="dashboard__bottom-table-button output">Вывод</button>
-           <button class="dashboard__bottom-table-button renew">
-            Продление на 90 дней
-           </button>
-          </div>
-          <div class="dashboard__bottom-table-autorenew">
-           <p class="dashboard__bottom-table-autorenew-name">Авто-продление</p>
-           <div class="dashboard__bottom-table-autorenew-button-wrapper">
-            <span class="dashboard__autorenew-button"></span>
-           </div>
-          </div>
-         </div>
-        </div>
-        <div
-         class="dashboard__bottom-table dashboard-tab mobile inactive"
-         data-tab="2"
-        >
-         <div class="dashboard__bottom-table-header">
-          <div class="dashboard__bottom-table-header-tab"></div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Дата пополнения</p>
-          </div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Старт торговли</p>
-          </div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Сумма</p>
-          </div>
-          <div class="dashboard__bottom-table-header-tab">
-           <p class="dashboard__bottom-table-header-name">Доступен вывод</p>
-          </div>
-         </div>
-         <div class="dashboard__bottom-table-body">
-          <div class="dashboard__bottom-table-items">
-           <div class="dashboard__bottom-table-autorenew">
-            <p class="dashboard__bottom-table-autorenew-name">Авто-продление</p>
-            <div class="dashboard__bottom-table-autorenew-button-wrapper">
-             <span class="dashboard__autorenew-button"></span>
-            </div>
-           </div>
-           <div class="dashboard__bottom-table-col">
-            <div class="dashboard__bottom-table-item">14-12-23</div>
-            <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           </div>
-           <div class="dashboard__bottom-table-col">
-            <div class="dashboard__bottom-table-item">14-12-23</div>
-            <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           </div>
-           <div class="dashboard__bottom-table-item">$ 10,000.00</div>
-           <div class="dashboard__bottom-table-item">14-12-2023</div>
-           <div class="dashboard__bottom-table-buttons">
-            <button class="dashboard__bottom-table-button output">Вывод</button>
-            <button class="dashboard__bottom-table-button renew">
-             Продление 90 дней
-            </button>
-           </div>
-          </div>
-         </div>
-         <div class="dashboard__bottom-table-body">
-          <div class="dashboard__bottom-table-items">
-           <div class="dashboard__bottom-table-autorenew">
-            <p class="dashboard__bottom-table-autorenew-name">Авто-продление</p>
-            <div class="dashboard__bottom-table-autorenew-button-wrapper">
-             <span class="dashboard__autorenew-button"></span>
-            </div>
-           </div>
-           <div class="dashboard__bottom-table-col">
-            <div class="dashboard__bottom-table-item">14-12-23</div>
-            <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           </div>
-           <div class="dashboard__bottom-table-col">
-            <div class="dashboard__bottom-table-item">14-12-23</div>
-            <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           </div>
-           <div class="dashboard__bottom-table-item">$ 10,000.00</div>
-           <div class="dashboard__bottom-table-item">14-12-2023</div>
-           <div class="dashboard__bottom-table-buttons">
-            <button class="dashboard__bottom-table-button output">Вывод</button>
-            <button class="dashboard__bottom-table-button renew">
-             Продление 90 дней
-            </button>
-           </div>
-          </div>
-         </div>
-         <div class="dashboard__bottom-table-body">
-          <div class="dashboard__bottom-table-items">
-           <div class="dashboard__bottom-table-autorenew">
-            <p class="dashboard__bottom-table-autorenew-name">Авто-продление</p>
-            <div class="dashboard__bottom-table-autorenew-button-wrapper">
-             <span class="dashboard__autorenew-button"></span>
-            </div>
-           </div>
-           <div class="dashboard__bottom-table-col">
-            <div class="dashboard__bottom-table-item">14-12-23</div>
-            <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           </div>
-           <div class="dashboard__bottom-table-col">
-            <div class="dashboard__bottom-table-item">14-12-23</div>
-            <div class="dashboard__bottom-table-item">14:05:00 UTC</div>
-           </div>
-           <div class="dashboard__bottom-table-item">$ 10,000.00</div>
-           <div class="dashboard__bottom-table-item">14-12-2023</div>
-           <div class="dashboard__bottom-table-buttons">
-            <button class="dashboard__bottom-table-button output">Вывод</button>
-            <button class="dashboard__bottom-table-button renew">
-             Продление 90 дней
-            </button>
-           </div>
-          </div>
-         </div>
-        </div>
-        <div class="dashboard__history inactive dashboard-tab" data-tab="3">
-         <div class="dashboard__history-cards">
-          <div class="dashboard__history-card">
-           <p class="dashboard__history-card-label">Всего</p>
-           <div class="dashboard__history-operation input">
+         <div class="dashboard__trades-table-body">
+          <div class="dashboard__trades-table-items">
+           <div class="dashboard__trades-table-item">
             <img
-             src="./assets/img/icons/input-icon.svg"
-             alt="ZION ВВОД"
-             class="dashboard__history-operation-icon"
+             src="./assets/img/icons/dego-usdt.svg"
+             alt="ZION DEGO-USDT"
+             class="dashboard__trades-table-item-icon"
             />
-            <p class="dashboard__history-operation-name">Ввод</p>
+            <a
+             href="https://www.binance.com/ru/trade/DEGO_USDT?theme=dark&type=spot"
+            >
+             DEGO/USDT
+            </a>
            </div>
-           <p class="dashboard__history-amount">$ 0</p>
-          </div>
-          <div class="dashboard__history-card">
-           <p class="dashboard__history-card-label">Всего</p>
-           <div class="dashboard__history-operation output">
-            <img
-             src="./assets/img/icons/output-icon.svg"
-             alt="ZION ВЫВОД"
-             class="dashboard__history-operation-icon"
-            />
-            <p class="dashboard__history-operation-name">Вывод</p>
-           </div>
-           <p class="dashboard__history-amount">$ 0</p>
-          </div>
-          <div class="dashboard__history-card">
-           <p class="dashboard__history-card-label">Всего</p>
-           <div class="dashboard__history-operation output">
-            <img
-             src="./assets/img/icons/output-icon.svg"
-             alt="ZION ВЫВОД"
-             class="dashboard__history-operation-icon"
-            />
-            <p class="dashboard__history-operation-name">Вывод</p>
-           </div>
-           <p class="dashboard__history-amount">$ 0</p>
+           <div class="dashboard__trades-table-item green">1.235</div>
+           <div class="dashboard__trades-table-item green">14:05 UTC</div>
+           <div class="dashboard__trades-table-item green">1.344</div>
+           <div class="dashboard__trades-table-item green">14:05 UTC</div>
+           <div class="dashboard__trades-table-item green">3</div>
+           <div class="dashboard__trades-table-item green">0.6000</div>
           </div>
          </div>
-         <div class="dashboard__history-table">
-          <div class="dashboard__history-table-header">
-           <div class="dashboard__history-table-header-tab">
-            <p class="dashboard__history-table-header-name">Дата операции</p>
+         <div class="dashboard__trades-table-body">
+          <div class="dashboard__trades-table-items">
+           <div class="dashboard__trades-table-item">
+            <img
+             src="./assets/img/icons/alice-usdt.svg"
+             alt="ZION ALICE-USDT"
+             class="dashboard__trades-table-item-icon"
+            />
+            <a
+             href="https://www.binance.com/ru/trade/ALICE_USDT?theme=dark&type=spot"
+            >
+             ALICE/USDT
+            </a>
            </div>
-           <div class="dashboard__history-table-header-tab">
-            <p class="dashboard__history-table-header-name">Тип операции</p>
-           </div>
-           <div class="dashboard__history-table-header-tab">
-            <p class="dashboard__history-table-header-name">Раздел</p>
-           </div>
-           <div class="dashboard__history-table-header-tab">
-            <p class="dashboard__history-table-header-name">Сумма</p>
-           </div>
-           <div class="dashboard__history-table-header-tab">
-            <p class="dashboard__history-table-header-name">Статус</p>
-           </div>
-          </div>
-          <div class="dashboard__history-table-body">
-           <div class="dashboard__history-table-items">
-            <div class="dashboard__history-table-item">14-12-23</div>
-            <div class="dashboard__history-table-item">14:05:00 UTC</div>
-            <div class="dashboard__history-table-item output">
-             <img
-              src="./assets/img/icons/output-icon.svg"
-              alt="ZION ВЫВОД"
-              class="dashboard__history-table-operation-icon"
-             />
-             Вывод
-            </div>
-            <div class="dashboard__history-table-item">
-             Партнерская программа
-            </div>
-            <div class="dashboard__history-table-item">$ 10,000.00</div>
-            <div class="dashboard__history-table-item completed">
-             <img
-              src="./assets/img/icons/operation-completed.svg"
-              alt=""
-              class="dashboard__history-table-result-icon"
-             />
-             Исполнен
-            </div>
-           </div>
-          </div>
-          <div class="dashboard__history-table-body">
-           <div class="dashboard__history-table-items">
-            <div class="dashboard__history-table-item">14-12-23</div>
-            <div class="dashboard__history-table-item">14:05:00 UTC</div>
-            <div class="dashboard__history-table-item input">
-             <img
-              src="./assets/img/icons/input-icon.svg"
-              alt="ZION ВЫВОД"
-              class="dashboard__history-table-operation-icon"
-             />
-             Ввод
-            </div>
-            <div class="dashboard__history-table-item">Трейдинг</div>
-            <div class="dashboard__history-table-item">$ 10,000.00</div>
-            <div class="dashboard__history-table-item in-progress">
-             <img
-              src="./assets/img/icons/operation-progress.svg"
-              alt=""
-              class="dashboard__history-table-result-icon"
-             />
-             В обработке
-            </div>
-           </div>
-          </div>
-          <div class="dashboard__history-table-body">
-           <div class="dashboard__history-table-items">
-            <div class="dashboard__history-table-item">14-12-23</div>
-            <div class="dashboard__history-table-item">14:05:00 UTC</div>
-            <div class="dashboard__history-table-item output">
-             <img
-              src="./assets/img/icons/output-icon.svg"
-              alt="ZION ВЫВОД"
-              class="dashboard__history-table-operation-icon"
-             />
-             Вывод
-            </div>
-            <div class="dashboard__history-table-item">
-             Партнерская программа
-            </div>
-            <div class="dashboard__history-table-item">$ 10,000.00</div>
-            <div class="dashboard__history-table-item completed">
-             <img
-              src="./assets/img/icons/operation-completed.svg"
-              alt=""
-              class="dashboard__history-table-result-icon"
-             />
-             Исполнен
-            </div>
-           </div>
-          </div>
-          <div class="dashboard__history-table-body">
-           <div class="dashboard__history-table-items">
-            <div class="dashboard__history-table-item">14-12-23</div>
-            <div class="dashboard__history-table-item">14:05:00 UTC</div>
-            <div class="dashboard__history-table-item input">
-             <img
-              src="./assets/img/icons/input-icon.svg"
-              alt="ZION ВЫВОД"
-              class="dashboard__history-table-operation-icon"
-             />
-             Ввод
-            </div>
-            <div class="dashboard__history-table-item">Трейдинг</div>
-            <div class="dashboard__history-table-item">$ 10,000.00</div>
-            <div class="dashboard__history-table-item failed">
-             <img
-              src="./assets/img/icons/operation-failed.svg"
-              alt=""
-              class="dashboard__history-table-result-icon"
-             />
-             Недостаточно средств
-            </div>
-           </div>
+           <div class="dashboard__trades-table-item red">1.235</div>
+           <div class="dashboard__trades-table-item red">14:05 UTC</div>
+           <div class="dashboard__trades-table-item red">0.08634</div>
+           <div class="dashboard__trades-table-item red">14:05 UTC</div>
+           <div class="dashboard__trades-table-item red">-3</div>
+           <div class="dashboard__trades-table-item red">-0.6000</div>
           </div>
          </div>
-         <div class="dashboard__history-table mobile">
-          <div class="dashboard__history-table-header">
-           <div class="dashboard__history-table-header-tab">
-            <p class="dashboard__history-table-header-name">Дата операции</p>
+         <div class="dashboard__trades-table-body">
+          <div class="dashboard__trades-table-items">
+           <div class="dashboard__trades-table-item">
+            <img
+             src="./assets/img/icons/akrm-usdt.svg"
+             alt="ZION ARKM-USDT"
+             class="dashboard__trades-table-item-icon"
+            />
+            <a
+             href="https://www.binance.com/ru/trade/ARKM_USDT?theme=dark&type=spot"
+            >
+             ARKM/USDT
+            </a>
            </div>
-           <div class="dashboard__history-table-header-tab">
-            <p class="dashboard__history-table-header-name">Тип операции</p>
-           </div>
-           <div class="dashboard__history-table-header-tab">
-            <p class="dashboard__history-table-header-name">Раздел</p>
-           </div>
-           <div class="dashboard__history-table-header-tab">
-            <p class="dashboard__history-table-header-name">Сумма</p>
-           </div>
-           <div class="dashboard__history-table-header-tab">
-            <p class="dashboard__history-table-header-name">Статус</p>
-           </div>
+           <div class="dashboard__trades-table-item blue">1.235</div>
+           <div class="dashboard__trades-table-item blue">14:05 UTC</div>
+           <div class="dashboard__trades-table-item blue">1.235</div>
+           <div class="dashboard__trades-table-item blue">14:05 UTC</div>
+           <div class="dashboard__trades-table-item blue">3</div>
+           <div class="dashboard__trades-table-item blue">0</div>
           </div>
-          <div class="dashboard__history-table-body">
-           <div class="dashboard__history-table-items">
-            <div class="dashboard__history-table-item-col">
-             <div class="dashboard__history-table-item">14-12-23</div>
-             <div class="dashboard__history-table-item">14:05:00 UTC</div>
-            </div>
-            <div class="dashboard__history-table-item output">
-             <img
-              src="./assets/img/icons/output-icon.svg"
-              alt="ZION ВЫВОД"
-              class="dashboard__history-table-operation-icon"
-             />
-             Вывод
-            </div>
-            <div class="dashboard__history-table-item">
-             Партнерская программа
-            </div>
-            <div class="dashboard__history-table-item">$ 10,000.00</div>
-            <div class="dashboard__history-table-item completed">
-             <img
-              src="./assets/img/icons/operation-completed.svg"
-              alt=""
-              class="dashboard__history-table-result-icon"
-             />
-             Исполнен
-            </div>
+         </div>
+         <div class="dashboard__trades-table-body">
+          <div class="dashboard__trades-table-items">
+           <div class="dashboard__trades-table-item">
+            <img
+             src="./assets/img/icons/stx-usdt.svg"
+             alt="ZION STX-USDT"
+             class="dashboard__trades-table-item-icon"
+            />
+            <a
+             href="https://www.binance.com/ru/trade/STX_USDT?theme=dark&type=spot"
+            >
+             STX/USDT
+            </a>
            </div>
+           <div class="dashboard__trades-table-item">1.235</div>
+           <div class="dashboard__trades-table-item">14:05 UTC</div>
+           <div class="dashboard__trades-table-item">-</div>
+           <div class="dashboard__trades-table-item">-:-:- UTC</div>
+           <div class="dashboard__trades-table-item">-</div>
+           <div class="dashboard__trades-table-item">-</div>
           </div>
-          <div class="dashboard__history-table-body">
-           <div class="dashboard__history-table-items">
-            <div class="dashboard__history-table-item-col">
-             <div class="dashboard__history-table-item">14-12-23</div>
-             <div class="dashboard__history-table-item">14:05:00 UTC</div>
-            </div>
-            <div class="dashboard__history-table-item input">
-             <img
-              src="./assets/img/icons/input-icon.svg"
-              alt="ZION ВЫВОД"
-              class="dashboard__history-table-operation-icon"
-             />
-             Ввод
-            </div>
-            <div class="dashboard__history-table-item">Трейдинг</div>
-            <div class="dashboard__history-table-item">$ 10,000.00</div>
-            <div class="dashboard__history-table-item in-progress">
-             <img
-              src="./assets/img/icons/operation-progress.svg"
-              alt=""
-              class="dashboard__history-table-result-icon"
-             />
-             В обработке
-            </div>
+         </div>
+         <div class="dashboard__trades-table-body">
+          <div class="dashboard__trades-table-items">
+           <div class="dashboard__trades-table-item">
+            <img
+             src="./assets/img/icons/woo-usdt.svg"
+             alt="ZION WOO-USDT"
+             class="dashboard__trades-table-item-icon"
+            />
+            <a
+             href="https://www.binance.com/ru/trade/WOO_USDT?theme=dark&type=spot"
+            >
+             WOO/USDT
+            </a>
            </div>
+           <div class="dashboard__trades-table-item">1.235</div>
+           <div class="dashboard__trades-table-item">14:05 UTC</div>
+           <div class="dashboard__trades-table-item">-</div>
+           <div class="dashboard__trades-table-item">-:-:- UTC</div>
+           <div class="dashboard__trades-table-item">-</div>
+           <div class="dashboard__trades-table-item">-</div>
           </div>
-          <div class="dashboard__history-table-body">
-           <div class="dashboard__history-table-items">
-            <div class="dashboard__history-table-item-col">
-             <div class="dashboard__history-table-item">14-12-23</div>
-             <div class="dashboard__history-table-item">14:05:00 UTC</div>
-            </div>
-            <div class="dashboard__history-table-item output">
-             <img
-              src="./assets/img/icons/output-icon.svg"
-              alt="ZION ВЫВОД"
-              class="dashboard__history-table-operation-icon"
-             />
-             Вывод
-            </div>
-            <div class="dashboard__history-table-item">
-             Партнерская программа
-            </div>
-            <div class="dashboard__history-table-item">$ 10,000.00</div>
-            <div class="dashboard__history-table-item completed">
-             <img
-              src="./assets/img/icons/operation-completed.svg"
-              alt=""
-              class="dashboard__history-table-result-icon"
-             />
-             Исполнен
-            </div>
+         </div>
+         <div class="dashboard__trades-table-body">
+          <div class="dashboard__trades-table-items">
+           <div class="dashboard__trades-table-item">
+            <img
+             src="./assets/img/icons/dock-usdt.svg"
+             alt="ZION DOCK-USDT"
+             class="dashboard__trades-table-item-icon"
+            />
+            <a
+             href="https://www.binance.com/ru/trade/DOCK_USDT?theme=dark&type=spot"
+            >
+             DOCK/USDT
+            </a>
            </div>
-          </div>
-          <div class="dashboard__history-table-body">
-           <div class="dashboard__history-table-items">
-            <div class="dashboard__history-table-item-col">
-             <div class="dashboard__history-table-item">14-12-23</div>
-             <div class="dashboard__history-table-item">14:05:00 UTC</div>
-            </div>
-            <div class="dashboard__history-table-item input">
-             <img
-              src="./assets/img/icons/input-icon.svg"
-              alt="ZION ВЫВОД"
-              class="dashboard__history-table-operation-icon"
-             />
-             Ввод
-            </div>
-            <div class="dashboard__history-table-item">Трейдинг</div>
-            <div class="dashboard__history-table-item">$ 10,000.00</div>
-            <div class="dashboard__history-table-item failed">
-             <img
-              src="./assets/img/icons/operation-failed.svg"
-              alt=""
-              class="dashboard__history-table-result-icon"
-             />
-             Недостаточно средств
-            </div>
-           </div>
+           <div class="dashboard__trades-table-item green">1.235</div>
+           <div class="dashboard__trades-table-item green">14:05 UTC</div>
+           <div class="dashboard__trades-table-item green">1.344</div>
+           <div class="dashboard__trades-table-item green">14:05 UTC</div>
+           <div class="dashboard__trades-table-item green">3</div>
+           <div class="dashboard__trades-table-item green">0.6000</div>
           </div>
          </div>
         </div>
@@ -2011,7 +1460,6 @@
   </main>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./js/dashboard/renew/renew.js"></script>
-  <script src="./js/dashboard/tab/tab.js"></script>
   <script src="./js/header/header.js"></script>
   <script src="./js/lang/lang.js"></script>
   <script src="./js/slider/tab.js"></script>

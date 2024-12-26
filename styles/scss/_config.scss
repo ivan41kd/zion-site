@@ -13,6 +13,7 @@ html {
  -moz-text-size-adjust: none;
  -webkit-text-size-adjust: none;
  text-size-adjust: none;
+ scroll-behavior: smooth;
  @media only screen and (min-width: 0px) {
   font-size: ($base-font-size / $design-mobile-width) * 100vw;
  }
@@ -70,6 +71,10 @@ body {
  display: flex;
  flex-direction: column;
  overflow-x: hidden;
+ scroll-behavior: smooth;
+}
+body.scroll-disabled {
+ overflow: hidden;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -157,6 +162,17 @@ button.demo {
   #81c7dd 53.2%,
   #1a6889 79.18%
  );
+}
+button.dash-999 {
+ background: linear-gradient(
+  120.2deg,
+  #5b5b5b 0.6%,
+  #ffffff 56.36%,
+  #5b5b5b 105.56%
+ );
+}
+button.dash-1000 {
+ background: linear-gradient(93.41deg, #ddc081 22.48%, #5f976e 79.18%);
 }
 button.btc {
  background: linear-gradient(93.41deg, #ff9416 22.48%, #627eea 79.18%);

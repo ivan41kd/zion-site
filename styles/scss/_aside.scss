@@ -9,8 +9,12 @@
  max-width: rem(213px);
  width: 100%;
  flex: 1 0 max-content;
+ height: 100%;
+ @include onlymobile {
+  display: none;
+ }
  &__wrapper {
-  padding: rem(25px) rem(15.11px) 0 rem(25px);
+  padding: rem(25px) rem(15.11px) rem(12px) rem(25px);
   display: flex;
   row-gap: rem(55px);
   flex-direction: column;
@@ -166,6 +170,9 @@
    color: white;
    transition: 0.3s;
   }
+  &:active {
+   font-weight: 600;
+  }
  }
  &__logout-icon {
   width: rem(13px);
@@ -184,11 +191,96 @@
   display: flex;
   flex-direction: column;
   gap: rem(20px);
+  width: fit-content;
  }
  &__lang-wrapper {
   gap: rem(5px);
   display: flex;
 
   align-items: center;
+ }
+ &__lang {
+  display: flex;
+  cursor: pointer;
+  transition: 0.3s;
+  gap: rem(10px);
+  position: relative;
+ }
+ &__lang:hover &__lang-icon {
+  transform: scale(0.8);
+  transition: 0.3s;
+  @include ifdesktop {
+   transform-origin: top left;
+  }
+  @include onlymobile {
+   transform: scale(1.2);
+  }
+ }
+ &__lang:hover {
+  gap: 0;
+  transition: 0.3s;
+ }
+ &__lang:hover &__lang-icon path {
+  transition: 0.3s;
+  stroke: white;
+ }
+ &__lang-icon {
+  width: rem(35px);
+  height: rem(35px);
+  transition: 0.3s;
+  @include onlymobile {
+   width: rem(20px);
+   height: rem(20px);
+  }
+ }
+ &__lang-icon path {
+  transition: 0.3s;
+ }
+
+ &__lang-current {
+  transition: 0.3s;
+  font-weight: 100;
+  font-size: rem(24px);
+  line-height: rem(26.2px);
+  width: rem(37px);
+  @include onlymobile {
+   display: none;
+  }
+ }
+
+ &__lang:hover &__lang-current {
+  transition: 0.3s;
+  font-weight: 300;
+  font-size: rem(20px);
+  line-height: rem(21.83px);
+  width: rem(31px);
+ }
+ &__lang:hover &__lang-list {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+ }
+
+ &__lang-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(5px);
+  right: 0;
+  padding-top: 8px;
+  opacity: 0;
+  visibility: hidden;
+  top: 70%;
+  transition: 0.3s;
+  align-self: flex-end;
+  @include onlymobile {
+   top: 90%;
+   right: rem(-5px);
+  }
+ }
+ &__lang-list-item {
+  font-weight: 300;
+  font-size: rem(20px);
+  line-height: rem(21.83px);
+  color: rgba(161, 161, 161, 1);
  }
 }

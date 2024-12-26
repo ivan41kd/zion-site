@@ -63,13 +63,12 @@
 
  &__graph {
   width: 100%;
-  @include onlymobile {
-   height: rem(419px);
-  }
+
   opacity: 1 !important;
   visibility: visible !important;
   position: relative;
   overflow: hidden;
+  margin-bottom: rem(16px);
  }
 
  &__graph-main {
@@ -128,7 +127,7 @@
   }
   @include onlymobile {
    row-gap: rem(60px);
-   transform: translateY(-52.5%);
+   transform: translateY(-53.5%);
   }
  }
  &__graph-percent {
@@ -331,6 +330,7 @@
   margin-bottom: rem(25px);
   align-items: center;
   gap: rem(15px);
+  transition: 0.3s;
   @include ifdesktop {
    display: flex;
   }
@@ -338,10 +338,31 @@
    display: none;
   }
  }
+ &__levels.active &__level {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+ }
+ &__levels.active &__dropdown-icon {
+  transform: rotate(180deg);
+  transition: 0.3s;
+  @include onlymobile {
+   transform: rotate(274deg);
+  }
+ }
+ &__levels.mobile.active &__level-items {
+  overflow: auto;
+  max-height: 63px;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+ }
  &__dropdown-icon {
   width: rem(7.5px);
   height: rem(15px);
+  transition: 0.3s;
   @include onlymobile {
+   transform: rotate(90deg);
    width: rem(5px);
    height: rem(10px);
   }
@@ -355,11 +376,13 @@
    flex-direction: column;
    max-width: rem(115px);
    width: 100%;
+   overflow: hidden;
   }
  }
+
  &__level-items {
-  max-height: rem(63px);
-  overflow: auto;
+  max-height: 0;
+  overflow: hidden;
   width: 100%;
   border: 1px solid rgba(161, 161, 161, 1);
   border-radius: 0px 0px 15px 15px;
@@ -368,7 +391,9 @@
   align-items: center;
   border-top: none;
   transform: translateY(-30%);
-
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
   padding-top: rem(8px);
  }
 
@@ -407,6 +432,8 @@
   color: rgba(161, 161, 161, 1);
   transition: 0.3s;
   cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
   &:hover {
    color: white;
    transition: 0.3s;
@@ -423,6 +450,7 @@
   border-radius: rem(15px);
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 1);
+  text-wrap: nowrap;
   @include onlymobile {
    font-size: rem(10px);
    line-height: rem(12.19px);
@@ -447,5 +475,10 @@
   align-self: center;
   opacity: 0;
   visibility: hidden;
+  @include onlymobile {
+   font-size: rem(14px);
+   line-height: rem(21.22px);
+   padding: rem(2px) rem(18px);
+  }
  }
 }
