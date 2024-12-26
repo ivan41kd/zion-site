@@ -1624,7 +1624,7 @@ button.btc {
 }
 @media screen and (min-width: 0px) and (max-width: 1023px) {
   .dashboard__history-table-items {
-    grid-template-columns: 3.5rem 3.5rem 5.3125rem 4.6875rem 4.375rem;
+    grid-template-columns: 3.5rem 3.5rem 5.3125rem 4.6875rem 4.5625rem;
   }
 }
 .dashboard__history-table-item {
@@ -1758,7 +1758,7 @@ button.btc {
 }
 @media screen and (min-width: 0px) and (max-width: 1023px) {
   .dashboard__trades-table-items {
-    grid-template-columns: 5.3125rem 2.8125rem 2.8125rem 2.8125rem 2.8125rem 2rem 2.8125rem;
+    grid-template-columns: 5.3125rem 2.8125rem 2.8125rem 2.8125rem 2.8125rem 2rem 3rem;
   }
 }
 .dashboard__trades-table-item {

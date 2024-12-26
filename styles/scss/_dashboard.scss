@@ -1460,7 +1460,7 @@
   border-right: none;
   border-bottom: none;
   @include onlymobile {
-   grid-template-columns: rem(56px) rem(56px) rem(85px) rem(75px) rem(70px);
+   grid-template-columns: rem(56px) rem(56px) rem(85px) rem(75px) rem(73px);
   }
  }
  &__history-table-item {
@@ -1592,7 +1592,7 @@
   @include onlymobile {
    grid-template-columns:
     rem(85px) rem(45px) rem(45px) rem(45px) rem(45px) rem(32px)
-    rem(45px);
+    rem(48px);
   }
  }
  &__trades-table-item {
