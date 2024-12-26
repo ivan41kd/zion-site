@@ -91,9 +91,8 @@
    font-size: rem(14px);
    line-height: rem(17.07px);
    padding: rem(10px) rem(15px);
-   width: -webkit-fit-content !important;
-   width: -moz-fit-content !important;
-   width: fit-content !important;
+   max-width: rem(200px) !important;
+   width: 100% !important;
    &::after {
     width: rem(8px);
     height: rem(8px);

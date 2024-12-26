@@ -277,8 +277,8 @@ button.btc {
     font-size: 0.875rem;
     line-height: 1.066875rem;
     padding: 0.625rem 0.9375rem;
-    width: -moz-fit-content !important;
-    width: fit-content !important;
+    max-width: 12.5rem !important;
+    width: 100% !important;
   }
   .dashboard__tab::after {
     width: 0.5rem;
