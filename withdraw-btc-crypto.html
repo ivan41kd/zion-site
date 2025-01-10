@@ -3,7 +3,7 @@
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zion | Altcoins</title>
+  <title>Zion | Вывод средств</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -11,10 +11,6 @@
    rel="stylesheet"
   />
   <link rel="stylesheet" href="./styles/scss/style.css" />
-  <link
-   rel="stylesheet"
-   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
   <link rel="stylesheet" href="./styles/fonts/nexa/nexa.css" />
  </head>
  <body>
@@ -53,7 +49,7 @@
      </div>
      <ul class="aside__item-list">
       <a href="dashboard.html">
-       <li class="aside__list-item active">
+       <li class="aside__list-item">
         <svg
          width="20"
          height="20"
@@ -93,7 +89,7 @@
        <p class="aside__list-item-name">Партнерская программа</p>
       </li>
       <a href="create-depo-binance.html">
-       <li class="aside__list-item">
+       <li class="aside__list-item active">
         <svg
          width="20"
          height="20"
@@ -894,7 +890,7 @@
         <div class="main__burger-wrapper">
          <ul class="main__burger-nav-list">
           <a href="dashboard.html">
-           <li class="main__burger-nav-item active">
+           <li class="main__burger-nav-item">
             <svg
              width="20"
              height="20"
@@ -934,7 +930,7 @@
            <p class="main__burger-nav-item-name">Партнерская программа</p>
           </li>
           <a href="create-depo-binance.html">
-           <li class="main__burger-nav-item">
+           <li class="main__burger-nav-item active">
             <svg
              width="20"
              height="20"
@@ -1080,387 +1076,280 @@
       </div>
      </div>
     </div>
+
     <section class="dashboard">
      <div class="dashboard__container">
       <div class="dashboard__header">
        <div class="dashboard__title-wrapper">
-        <img
-         src="./assets/img/logos/altcoins.svg"
-         alt="ZION ALTCOINS"
-         class="dashboard__title-icon"
-        />
-        <h1 class="dashboard__title">ALtcoins</h1>
+        <h1 class="dashboard__title">Вывод средств</h1>
        </div>
       </div>
-      <div class="dashboard__tabs">
-       <a href="dashboard.html">
-        <div class="dashboard__tab">Дашборд</div>
-       </a>
-       <div class="dashboard__tab active online">
-        <a href="dashboard-binance.html">
-         <img
-          src="./assets/img/logos/altcoins.svg"
-          alt="ZION ALTCOINS"
-          class="dashboard__tab-icon"
-         />
-         ALtcoins
-        </a>
-       </div>
-       <div class="dashboard__tab online">
-        <a href="dashboard-btc.html">
-         <img
-          src="./assets/img/logos/btc-eth.svg"
-          alt="ZION BTC/ETH"
-          class="dashboard__tab-icon"
-         />
-         BTC/ETH
-        </a>
-       </div>
-       <div class="dashboard__tab">Stacking</div>
-       <div class="dashboard__tab">
-        <img
-         src="./assets/img/dashboard/kucoin.svg"
-         alt="ZION KUCOIN"
-         class="dashboard__tab-icon"
-        />
-       </div>
-       <div class="dashboard__tab">
-        <img
-         src="./assets/img/dashboard/bybit.svg"
-         alt="ZION BYBIT"
-         class="dashboard__tab-icon"
-        />
-       </div>
-       <div class="dashboard__tab">
-        <img
-         src="./assets/img/dashboard/okx.svg"
-         alt="ZION OKX"
-         class="dashboard__tab-icon"
-        />
-       </div>
-      </div>
-      <div class="dashboard__tabs mobile swiper">
-       <div class="dashboard__tabs-wrapper swiper-wrapper">
-        <div class="dashboard__tab swiper-slide">
-         <a href="dashboard.html"> Дашборд </a>
-        </div>
 
-        <div class="dashboard__tab online swiper-slide active">
-         <a href="dashboard-binance.html">
-          <img
-           src="./assets/img/logos/altcoins.svg"
-           alt="ZION ALTCOINS"
-           class="dashboard__tab-icon"
-          />
-          ALtcoins
-         </a>
-        </div>
-        <div class="dashboard__tab online swiper-slide">
-         <a href="dashboard-btc.html">
-          <img
-           src="./assets/img/logos/btc-eth.svg"
-           alt="ZION BTC/ETH"
-           class="dashboard__tab-icon"
-          />
-          BTC/ETH
-         </a>
-        </div>
-        <div class="dashboard__tab swiper-slide">Stacking</div>
-        <div class="dashboard__tab swiper-slide">
-         <img
-          src="./assets/img/dashboard/kucoin.svg"
-          alt="ZION KUCOIN"
-          class="dashboard__tab-icon"
-         />
-        </div>
-        <div class="dashboard__tab swiper-slide">
-         <img
-          src="./assets/img/dashboard/bybit.svg"
-          alt="ZION BYBIT"
-          class="dashboard__tab-icon"
-         />
-        </div>
-        <div class="dashboard__tab swiper-slide">
-         <img
-          src="./assets/img/dashboard/okx.svg"
-          alt="ZION OKX"
-          class="dashboard__tab-icon"
-         />
-        </div>
-       </div>
-      </div>
       <div class="dashboard__wrapper">
-       <div class="dashboard__content">
-        <div class="dashboard__deposits">
-         <div class="dashboard__deposit dash-1000">
-          <p class="dashboard__deposit-name">Общий депозит</p>
-          <div class="dashboard__deposit-wallet">
-           <img
-            src="./assets/img/icons/usdt-icon.svg"
-            alt="ZION USDT"
-            class="dashboard__deposit-wallet-icon"
-           />
-           USDT
-          </div>
-          <p class="dashboard__deposit-amount">$ 0</p>
-         </div>
-         <div class="dashboard__deposit dash-1000">
-          <p class="dashboard__deposit-name">1/20 депозита</p>
-          <div class="dashboard__deposit-wallet">
-           <img
-            src="./assets/img/icons/usdt-icon.svg"
-            alt="ZION USDT"
-            class="dashboard__deposit-wallet-icon"
-           />
-           USDT
-          </div>
-          <p class="dashboard__deposit-amount">$ 0</p>
-         </div>
-         <div class="dashboard__level-profit dash-1000">
-          <div class="dashboard__level-profit-wrapper">
-           <div class="dashboard__level-profit-info">
-            <p class="dashboard__level-profit-name">Уровень доходности</p>
-            <p class="dashboard__level-profit-level">Уровень 1</p>
-            <p class="dashboard__level-profit-value">5%</p>
+       <div class="dashboard__payments-tabs">
+        <a href="withdraw-btc-crypto.html">
+         <div class="dashboard__payment-tab active">Криптовалюта</div>
+        </a>
+        <a href="withdraw-btc-bank.html">
+         <div class="dashboard__payment-tab">Банковская карта</div>
+        </a>
+       </div>
+       <div class="dashboard__withdraw btc">
+        <div class="dashboard__withdraw-wrapper">
+         <div class="dashboard__withdraw-content">
+          <form class="dashboard__withdraw-form">
+           <div class="dashboard__fields">
+            <div class="dashboard__field">
+             <label class="dashboard__field-label">Выберите монету</label>
+             <div class="dashboard__select wallet">
+              <div class="dashboard__select-current">
+               <div class="dashboard__select-current-wrapper">
+                <img
+                 src="./assets/img/icons/usdt-icon.svg"
+                 alt="ZION USDT"
+                 class="dashboard__select-current-icon"
+                />
+                USDT TetherUS
+               </div>
+               <img
+                src="./assets/img/icons/dropdown-select-icon.svg"
+                alt="ZION ДРОПДАУН"
+                class="dashboard__select-dropdown-icon"
+               />
+              </div>
+              <div class="dashboard__select-items">
+               <ul class="dashboard__select-items-list">
+                <li class="dashboard__select-item">
+                 <img
+                  src="./assets/img/icons/usdt-icon.svg"
+                  alt="ZION USDT"
+                  class="dashboard__select-item-icon"
+                 />
+                 USDT TetherUS
+                </li>
+                <li class="dashboard__select-item">
+                 <img
+                  src="./assets/img/icons/bitcoin.svg"
+                  alt="ZION BTC"
+                  class="dashboard__select-item-icon"
+                 />
+                 Bitcoin
+                </li>
+                <li class="dashboard__select-item">
+                 <img
+                  src="./assets/img/icons/eth.svg"
+                  alt="ZION ETH"
+                  class="dashboard__select-item-icon"
+                 />
+                 Ethereum
+                </li>
+               </ul>
+              </div>
+             </div>
+            </div>
+            <div class="dashboard__field">
+             <label class="dashboard__field-label">Выберите сеть </label>
+             <div class="dashboard__select network">
+              <div class="dashboard__select-current">
+               <div class="dashboard__select-current-wrapper">Сеть</div>
+               <img
+                src="./assets/img/icons/dropdown-select-icon.svg"
+                alt="ZION ДРОПДАУН"
+                class="dashboard__select-dropdown-icon"
+               />
+              </div>
+              <div class="dashboard__select-items">
+               <ul class="dashboard__select-items-list">
+                <li class="dashboard__select-item">
+                 <div class="dashboard__select-item-info">
+                  <p class="dashboard__select-item-info-name">TRС</p>
+                  <p class="dashboard__select-item-info-subtitle">
+                   Tron (TRC20)
+                  </p>
+                 </div>
+                 <div class="dashboard__select-item-info">
+                  <p class="dashboard__select-item-info-name">Комиссия сети</p>
+                  <p class="dashboard__select-item-info-subtitle">~4-8 USDT</p>
+                 </div>
+                </li>
+                <li class="dashboard__select-item">
+                 <div class="dashboard__select-item-info">
+                  <p class="dashboard__select-item-info-name">BSC</p>
+                  <p class="dashboard__select-item-info-subtitle">
+                   BNB Smart Chain (BEP20)
+                  </p>
+                 </div>
+                 <div class="dashboard__select-item-info">
+                  <p class="dashboard__select-item-info-name">Комиссия сети</p>
+                  <p class="dashboard__select-item-info-subtitle">~0,1 USDT</p>
+                 </div>
+                </li>
+                <li class="dashboard__select-item">
+                 <div class="dashboard__select-item-info">
+                  <p class="dashboard__select-item-info-name">POLYGON</p>
+                  <p class="dashboard__select-item-info-subtitle">
+                   Polygon Network
+                  </p>
+                 </div>
+                 <div class="dashboard__select-item-info">
+                  <p class="dashboard__select-item-info-name">Комиссия сети</p>
+                  <p class="dashboard__select-item-info-subtitle">~0,1 USDT</p>
+                 </div>
+                </li>
+               </ul>
+              </div>
+             </div>
+            </div>
+            <div class="dashboard__field">
+             <label class="dashboard__field-label">Введите адрес</label>
+             <div class="dashboard__withdraw-input-container address">
+              <div class="dashboard__withdraw-input-wrapper">
+               <input
+                type="text"
+                class="dashboard__withdraw-input address"
+                placeholder="Адрес"
+               />
+              </div>
+              <span class="error-input">Неверный адрес</span>
+             </div>
+            </div>
+            <div class="dashboard__field">
+             <label class="dashboard__field-label">Сумма</label>
+             <div class="dashboard__withdraw-input-container amount">
+              <div class="dashboard__withdraw-input-wrapper">
+               <input
+                type="text"
+                class="dashboard__withdraw-input amount"
+                placeholder="Минимальная сумма 5 USDT"
+               />
+              </div>
+              <p class="dashboard__withdraw-input-subtitle">
+               Минимальная сумма реинвеста - 20 USDT
+              </p>
+              <span class="error-input">Неверная сумма</span>
+             </div>
+            </div>
+            <div class="dashboard__field">
+             <label class="dashboard__field-label"
+              >Введите код подверждения</label
+             >
+             <div class="dashboard__withdraw-input-container code">
+              <div class="dashboard__withdraw-input-wrapper">
+               <input
+                type="text"
+                class="dashboard__withdraw-input code"
+                placeholder="Код будет отправлен на почту"
+               />
+               <button class="dashboard__withdraw-get-code" type="button">
+                Получить код
+               </button>
+              </div>
+              <span class="error-input">Неверный код</span>
+             </div>
+            </div>
            </div>
-           <img
-            src="./assets/img/levels/level-1.png"
-            alt="ZION УРОВЕНЬ-1"
-            class="dashboard__level-profit-icon"
-           />
-          </div>
+           <button class="dashboard__withdraw-button">Вывод</button>
+          </form>
          </div>
         </div>
-        <div class="dashboard__profit dash-1000">
-         <div class="dashboard__profit-items">
-          <div class="dashboard__profit-item main-profit">
-           <div class="dashboard__profit-info">
-            <p class="dashboard__profit-info-name">Доход за сутки</p>
-            <p class="dashboard__profit-info-amount">$ +0</p>
-           </div>
-           <div class="dashboard__profit-result plus">+0,888%</div>
-          </div>
-          <img
-           src="./assets/img/dashboard/graph.svg"
-           alt="ZION ГРАФИК ДОХОДА"
-           class="dashboard__profit-graph"
-          />
-          <div class="dashboard__profit-item">
-           <div class="dashboard__profit-info">
-            <p class="dashboard__profit-info-name">Доход за неделю</p>
-            <p class="dashboard__profit-info-amount">$ +0</p>
-           </div>
-           <div class="dashboard__profit-result minus">+0,888%</div>
-          </div>
-          <div class="dashboard__profit-item">
-           <div class="dashboard__profit-info">
-            <p class="dashboard__profit-info-name">Всего</p>
-            <p class="dashboard__profit-info-amount">$ +0</p>
-           </div>
-           <div class="dashboard__profit-wallet">
+        <div class="dashboard__withdraw-info">
+         <div class="dashboard__withdraw-balance">
+          <div class="dashboard__withdraw-balance-info">
+           <p class="dashboard__withdraw-balance-name">Доступно к выводу</p>
+           <div class="dashboard__withdraw-balance-title-wrapper">
             <img
-             src="./assets/img/icons/usdt-icon.svg"
-             alt="ZION ДОХОД ВАЛЮТА"
-             class="dashboard__profit-wallet-icon"
+             src="./assets/img/logos/btc-eth.svg"
+             alt="ZION BTC/ETH"
+             class="dashboard__withdraw-title-icon btc"
             />
-            USDT
+            BTC/ETH
+           </div>
+           <p class="dashboard__withdraw-balance-value">$ 0</p>
+          </div>
+          <div class="dashboard__withdraw-date">
+           <p class="dashboard__withdraw-date-title">
+            Заявка будет обработана:
+           </p>
+           <div class="dashboard__withdraw-date-wrapper">
+            <img
+             src="./assets/img/icons/withdraw-date.svg"
+             alt="ZION ДАТА ЗАЯВКИ"
+             class="dashboard__withdraw-date-icon"
+            />
+            07.07.1997
            </div>
           </div>
          </div>
-        </div>
-        <div class="dashboard__level-profit dash-1000">
-         <div class="dashboard__level-profit-wrapper">
-          <div class="dashboard__level-profit-info">
-           <p class="dashboard__level-profit-name">Уровень доходности</p>
-           <p class="dashboard__level-profit-level">Уровень 1</p>
-           <p class="dashboard__level-profit-value">5%</p>
+         <div class="dashboard__withdraw-conditions">
+          <div class="dashboard__withdraw-conditions-wrapper">
+           <h3 class="dashboard__withdraw-conditions-title">УСЛОВИЯ ВЫВОДА</h3>
+           <p class="dashboard__withdraw-conditions-text">
+            Вывод заработанных средств возможен<br />
+            <span>один раз в неделю</span>
+           </p>
+           <p class="dashboard__withdraw-conditions-text">
+            Минимальная сумма вывода составляет
+            <span>20 USDT</span>
+           </p>
+           <p class="dashboard__withdraw-conditions-text">
+            Вывод можно оформить<br />
+            <span>в любой день</span>
+           </p>
+
+           <p class="dashboard__withdraw-conditions-text">
+            Сумма будет перечислена<br />
+            на ваш кошелек в <span>понедельник</span>
+           </p>
+           <p class="dashboard__withdraw-conditions-text">
+            Платформа не берет комиссию за вывод,<br />
+            пользователь оплачивает только<br />
+            <span>комиссию сети</span><br />
+            <span>TRC20 - (~4-8 USDT)</span><br />
+            <span>BEP20 - (~0,1 USDT)</span>
+           </p>
           </div>
-          <img
-           src="./assets/img/levels/level-1.png"
-           alt="ZION УРОВЕНЬ-1"
-           class="dashboard__level-profit-icon"
-          />
-         </div>
-        </div>
-        <div class="dashboard__trade-deposits">
-         <div class="dashboard__trade-deposit dash-1000">
-          <p class="dashboard__trade-deposit-name">Торгуемый депозит</p>
-          <div class="dashboard__trade-deposit-wallet">
-           <img
-            src="./assets/img/icons/usdt-icon.svg"
-            alt="ZION ДОХОД ВАЛЮТА"
-            class="dashboard__trade-deposit-icon"
-           />
-           USDT
-          </div>
-          <p class="dashboard__trade-deposit-amount">$ 0</p>
-         </div>
-         <div class="dashboard__trade-info dash-1000">
-          <p class="dashboard__trade-info-name">Количество сделок</p>
-          <p class="dashboard__trade-info-amount">144</p>
-         </div>
-         <div class="dashboard__trade-info dash-1000">
-          <p class="dashboard__trade-info-name">Активные сделки</p>
-          <p class="dashboard__trade-info-amount">3</p>
          </div>
         </div>
        </div>
-       <div class="dashboard__bottom">
-        <h2 class="dashboard__trades-title">Сделки Live</h2>
-        <div class="dashboard__trades-table">
-         <div class="dashboard__trades-table-header">
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">Торгуемая пара</p>
-          </div>
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">Цена покупки</p>
-          </div>
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">Время покупки</p>
-          </div>
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">Цена продажи</p>
-          </div>
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">Время продажи</p>
-          </div>
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">Спред</p>
-          </div>
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">USDT</p>
-          </div>
-         </div>
-         <div class="dashboard__trades-table-body">
-          <div class="dashboard__trades-table-items">
-           <div class="dashboard__trades-table-item">
-            <img
-             src="./assets/img/icons/dego-usdt.svg"
-             alt="ZION DEGO-USDT"
-             class="dashboard__trades-table-item-icon"
-            />
-            <a
-             href="https://www.binance.com/ru/trade/DEGO_USDT?theme=dark&type=spot"
-            >
-             DEGO/USDT
-            </a>
+       <div class="dashboard__more">
+        <div class="dashboard__more-top">
+         <p class="dashboard__more-top-name">Подробнее</p>
+         <img
+          src="./assets/img/icons/dropdown-select-icon.svg"
+          alt="ZION РАСКРЫТИЕ"
+          class="dashboard__more-dropdown-icon"
+         />
+        </div>
+        <div class="dashboard__more-content">
+         <div class="dashboard__more-content-wrapper">
+          <div class="dashboard__withdraw-conditions">
+           <div class="dashboard__withdraw-conditions-wrapper">
+            <h3 class="dashboard__withdraw-conditions-title">УСЛОВИЯ ВЫВОДА</h3>
+            <p class="dashboard__withdraw-conditions-text">
+             Вывод заработанных средств возможен<br />
+             <span>один раз в неделю</span>
+            </p>
+            <p class="dashboard__withdraw-conditions-text">
+             Минимальная сумма вывода составляет
+             <span>20 USDT</span>
+            </p>
+            <p class="dashboard__withdraw-conditions-text">
+             Вывод можно оформить<br />
+             <span>в любой день</span>
+            </p>
+
+            <p class="dashboard__withdraw-conditions-text">
+             Сумма будет перечислена<br />
+             на ваш кошелек в <span>понедельник</span>
+            </p>
+            <p class="dashboard__withdraw-conditions-text">
+             Платформа не берет комиссию за вывод,<br />
+             пользователь оплачивает только<br />
+             <span>комиссию сети</span><br />
+             <span>TRC20 - (~4-8 USDT)</span><br />
+             <span>BEP20 - (~0,1 USDT)</span>
+            </p>
            </div>
-           <div class="dashboard__trades-table-item green">1.235</div>
-           <div class="dashboard__trades-table-item green">14:05 UTC</div>
-           <div class="dashboard__trades-table-item green">1.344</div>
-           <div class="dashboard__trades-table-item green">14:05 UTC</div>
-           <div class="dashboard__trades-table-item green">3</div>
-           <div class="dashboard__trades-table-item green">0.6000</div>
-          </div>
-         </div>
-         <div class="dashboard__trades-table-body">
-          <div class="dashboard__trades-table-items">
-           <div class="dashboard__trades-table-item">
-            <img
-             src="./assets/img/icons/alice-usdt.svg"
-             alt="ZION ALICE-USDT"
-             class="dashboard__trades-table-item-icon"
-            />
-            <a
-             href="https://www.binance.com/ru/trade/ALICE_USDT?theme=dark&type=spot"
-            >
-             ALICE/USDT
-            </a>
-           </div>
-           <div class="dashboard__trades-table-item red">1.235</div>
-           <div class="dashboard__trades-table-item red">14:05 UTC</div>
-           <div class="dashboard__trades-table-item red">0.08634</div>
-           <div class="dashboard__trades-table-item red">14:05 UTC</div>
-           <div class="dashboard__trades-table-item red">-3</div>
-           <div class="dashboard__trades-table-item red">-0.6000</div>
-          </div>
-         </div>
-         <div class="dashboard__trades-table-body">
-          <div class="dashboard__trades-table-items">
-           <div class="dashboard__trades-table-item">
-            <img
-             src="./assets/img/icons/akrm-usdt.svg"
-             alt="ZION ARKM-USDT"
-             class="dashboard__trades-table-item-icon"
-            />
-            <a
-             href="https://www.binance.com/ru/trade/ARKM_USDT?theme=dark&type=spot"
-            >
-             ARKM/USDT
-            </a>
-           </div>
-           <div class="dashboard__trades-table-item blue">1.235</div>
-           <div class="dashboard__trades-table-item blue">14:05 UTC</div>
-           <div class="dashboard__trades-table-item blue">1.235</div>
-           <div class="dashboard__trades-table-item blue">14:05 UTC</div>
-           <div class="dashboard__trades-table-item blue">3</div>
-           <div class="dashboard__trades-table-item blue">0</div>
-          </div>
-         </div>
-         <div class="dashboard__trades-table-body">
-          <div class="dashboard__trades-table-items">
-           <div class="dashboard__trades-table-item">
-            <img
-             src="./assets/img/icons/stx-usdt.svg"
-             alt="ZION STX-USDT"
-             class="dashboard__trades-table-item-icon"
-            />
-            <a
-             href="https://www.binance.com/ru/trade/STX_USDT?theme=dark&type=spot"
-            >
-             STX/USDT
-            </a>
-           </div>
-           <div class="dashboard__trades-table-item">1.235</div>
-           <div class="dashboard__trades-table-item">14:05 UTC</div>
-           <div class="dashboard__trades-table-item">-</div>
-           <div class="dashboard__trades-table-item">-:-:- UTC</div>
-           <div class="dashboard__trades-table-item">-</div>
-           <div class="dashboard__trades-table-item">-</div>
-          </div>
-         </div>
-         <div class="dashboard__trades-table-body">
-          <div class="dashboard__trades-table-items">
-           <div class="dashboard__trades-table-item">
-            <img
-             src="./assets/img/icons/woo-usdt.svg"
-             alt="ZION WOO-USDT"
-             class="dashboard__trades-table-item-icon"
-            />
-            <a
-             href="https://www.binance.com/ru/trade/WOO_USDT?theme=dark&type=spot"
-            >
-             WOO/USDT
-            </a>
-           </div>
-           <div class="dashboard__trades-table-item">1.235</div>
-           <div class="dashboard__trades-table-item">14:05 UTC</div>
-           <div class="dashboard__trades-table-item">-</div>
-           <div class="dashboard__trades-table-item">-:-:- UTC</div>
-           <div class="dashboard__trades-table-item">-</div>
-           <div class="dashboard__trades-table-item">-</div>
-          </div>
-         </div>
-         <div class="dashboard__trades-table-body">
-          <div class="dashboard__trades-table-items">
-           <div class="dashboard__trades-table-item">
-            <img
-             src="./assets/img/icons/dock-usdt.svg"
-             alt="ZION DOCK-USDT"
-             class="dashboard__trades-table-item-icon"
-            />
-            <a
-             href="https://www.binance.com/ru/trade/DOCK_USDT?theme=dark&type=spot"
-            >
-             DOCK/USDT
-            </a>
-           </div>
-           <div class="dashboard__trades-table-item green">1.235</div>
-           <div class="dashboard__trades-table-item green">14:05 UTC</div>
-           <div class="dashboard__trades-table-item green">1.344</div>
-           <div class="dashboard__trades-table-item green">14:05 UTC</div>
-           <div class="dashboard__trades-table-item green">3</div>
-           <div class="dashboard__trades-table-item green">0.6000</div>
           </div>
          </div>
         </div>
@@ -1470,10 +1359,11 @@
     </section>
    </div>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./js/dashboard/renew/renew.js"></script>
+  <script src="./js/dashboard/withdraw/withdraw.js"></script>
+  <script src="./js/dashboard/withdraw/withdraw-crypto.js"></script>
+  <script src="./js/dashboard/select/select.js"></script>
   <script src="./js/header/header.js"></script>
   <script src="./js/lang/lang.js"></script>
-  <script src="./js/slider/tab.js"></script>
+  <script src="./js/dashboard/deposit/more.js"></script>
  </body>
 </html>

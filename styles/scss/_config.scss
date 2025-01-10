@@ -38,7 +38,7 @@ dd {
  margin: 0;
 }
 
-input {
+input:not(.dashboard__withdraw-input) {
  background: none;
  border: none;
  outline: none;
@@ -50,7 +50,7 @@ input {
  padding-bottom: rem(5px);
  transition: 0.3s;
 }
-input:focus {
+input:focus:not(.dashboard__withdraw-input) {
  color: white;
  transition: 0.3s;
  border-bottom: 1px solid rgba(255, 255, 255, 1);

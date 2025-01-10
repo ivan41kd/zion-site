@@ -78,27 +78,25 @@
    rgba(194, 181, 120, 0.002) 98.82%
   );
   overflow: hidden;
-  max-height: rem(60px);
   border-radius: rem(15px);
   cursor: pointer;
-  transition: 0.5s ease;
-  @include onlymobile {
-   max-height: rem(30px);
-  }
+  display: flex;
+  flex-direction: column;
  }
- &__item.big-height {
-  @include onlymobile {
-   max-height: rem(50px);
-  }
+
+ &__item-body {
+  display: grid;
+  grid-template-rows: 0fr;
+
+  transition: 0.5s grid-template-rows;
  }
- &__item.big-height-alt {
-  @include onlymobile {
-   max-height: rem(60px);
-  }
+ &__item-body p {
+  overflow: hidden;
  }
- &__item.active {
-  max-height: rem(1276px);
-  transition: 1.5s;
+ &__item.active &__item-body {
+  grid-template-rows: 1fr;
+
+  transition: 0.5s grid-template-rows;
  }
  &__item-dropdown-icon {
   width: rem(22px);

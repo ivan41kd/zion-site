@@ -150,6 +150,7 @@
   column-gap: 13px;
   border-left: 1px solid rgba(255, 255, 255, 1);
   padding-left: 10px;
+  padding-right: 10px;
   width: 100%;
   padding-top: rem(6px);
   padding-bottom: rem(6px);
@@ -586,6 +587,10 @@
  &__logout-icon {
   width: rem(15px);
   height: rem(15px);
+ }
+ &__logo {
+  width: rem(112px);
+  height: rem(20px);
  }
 }
 
