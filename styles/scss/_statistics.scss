@@ -385,6 +385,7 @@
   color: rgba(156, 156, 156, 1);
   cursor: pointer;
   border-bottom: rem(1px) solid transparent;
+  transition: 0.3s;
   @include onlymobile {
    font-size: rem(16px);
    line-height: rem(17.46px);
@@ -393,6 +394,7 @@
  &__year.active {
   color: white;
   border-bottom: rem(1px) solid rgba(95, 151, 110, 1);
+  transition: 0.3s;
  }
  &__levels {
   margin-bottom: rem(10px);

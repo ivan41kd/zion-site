@@ -9941,6 +9941,7 @@ button.btc {
   color: rgb(156, 156, 156);
   cursor: pointer;
   border-bottom: 0.0625rem solid transparent;
+  transition: 0.3s;
 }
 @media screen and (min-width: 0px) and (max-width: 1023px) {
   .statistics__year {
@@ -9951,6 +9952,7 @@ button.btc {
 .statistics__year.active {
   color: white;
   border-bottom: 0.0625rem solid rgb(95, 151, 110);
+  transition: 0.3s;
 }
 .statistics__levels {
   margin-bottom: 0.625rem;
