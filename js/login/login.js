@@ -123,6 +123,7 @@ const enableCodeTelegramCheck = (wrapper) => {
   checkCode(codeWrapper, codeInput);
   if (codeWrapper.classList.contains('verified')) {
    localStorage.setItem('isAuthorized', true);
+   localStorage.setItem('isTelegram', true);
    window.location.href = '/dashboard.html';
   }
  });
