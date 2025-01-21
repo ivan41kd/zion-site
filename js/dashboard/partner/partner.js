@@ -8,6 +8,17 @@ const inviteElement = document.querySelector('.dashboard__partner-card.invite');
 partnerLines.forEach((line) => {
  const unhide = line.querySelector('.dashboard__partner-table-unhide');
  unhide.addEventListener('click', () => {
+  partnerLines.forEach((otherLine) => {
+   if (otherLine !== line) {
+    otherLine.classList.remove('active');
+    const otherUnhide = otherLine.querySelector(
+     '.dashboard__partner-table-unhide'
+    );
+    if (otherUnhide) otherUnhide.textContent = 'Раскрыть';
+   }
+  });
+
+  // Тогглим текущий элемент
   line.classList.toggle('active');
   line.classList.contains('active')
    ? (unhide.textContent = 'Скрыть')
