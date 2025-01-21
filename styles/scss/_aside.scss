@@ -47,6 +47,11 @@
   font-size: rem(16px);
   font-weight: 600;
   line-height: rem(19.5px);
+  max-width: rem(100px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  word-break: auto-phrase;
  }
  &__copy {
   display: flex;
@@ -124,7 +129,31 @@
  }
  &__list-item.active &__list-item-name {
   color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  &::after {
+   content: '';
+   background: white;
+   width: 100%;
+   height: 1px;
+   display: block;
+  }
+ }
+ &__list-item.partner.active &__list-item-name {
+  &::after {
+   content: '';
+   background: white;
+   width: rem(86px);
+   height: 1px;
+   display: block;
+  }
+ }
+ &__list-item.stats.active &__list-item-name {
+  &::after {
+   content: '';
+   background: white;
+   width: rem(70px);
+   height: 1px;
+   display: block;
+  }
  }
  &__list-item.active &__list-item-icon-bg {
   fill: white;
@@ -188,14 +217,7 @@
   height: rem(20px);
   cursor: pointer;
  }
- &__lang {
-  display: flex;
-  flex-direction: column;
-  gap: rem(20px);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
- }
+
  &__lang-wrapper {
   gap: rem(5px);
   display: flex;
@@ -203,11 +225,13 @@
   align-items: center;
  }
  &__lang {
-  display: flex;
+  display: grid;
+  grid-template-rows: max-content 0fr;
   cursor: pointer;
   transition: 0.3s;
-  gap: rem(10px);
   position: relative;
+  width: max-content;
+  margin-bottom: rem(25px);
  }
  &__lang:hover &__lang-icon {
   transform: scale(0.8);
@@ -228,8 +252,8 @@
   stroke: white;
  }
  &__lang-icon {
-  width: rem(35px);
-  height: rem(35px);
+  width: rem(20px);
+  height: rem(20px);
   transition: 0.3s;
   @include onlymobile {
    width: rem(20px);
@@ -243,8 +267,8 @@
  &__lang-current {
   transition: 0.3s;
   font-weight: 100;
-  font-size: rem(24px);
-  line-height: rem(26.2px);
+  font-size: rem(16px);
+  line-height: rem(17.46px);
   width: rem(37px);
   @include onlymobile {
    display: none;
@@ -258,12 +282,21 @@
   line-height: rem(21.83px);
   width: rem(31px);
  }
+
  &__lang:hover &__lang-list {
   opacity: 1;
   visibility: visible;
   transition: 0.3s;
  }
 
+ &__lang:hover {
+  grid-template-rows: max-content 1fr;
+ }
+ &__lang-list-items {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+ }
  &__lang-list {
   display: flex;
   flex-direction: column;
@@ -275,6 +308,7 @@
   top: 70%;
   transition: 0.3s;
   align-self: flex-end;
+  overflow: hidden;
   @include onlymobile {
    top: 90%;
    right: rem(-5px);

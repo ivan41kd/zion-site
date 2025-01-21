@@ -1,10 +1,32 @@
 .faq {
+ @include onlymobile {
+  .space {
+   display: none;
+  }
+ }
  @include ifdesktop {
-  padding-top: rem(55px);
+  .space-mobile {
+   display: none;
+  }
+ }
+ @include ifdesktop {
+  & .container {
+   padding-left: rem(166px);
+   padding-right: rem(248px);
+  }
+ }
+ @include onlymobile {
+  & .container {
+   padding-left: rem(40px);
+   padding-right: rem(30px);
+  }
+ }
+ @include ifdesktop {
+  padding-top: rem(160px);
   padding-bottom: rem(309px);
  }
  @include onlymobile {
-  padding-top: rem(111px);
+  padding-top: rem(130px);
   padding-bottom: rem(140px);
  }
  position: relative;
@@ -17,7 +39,7 @@
     no-repeat;
    width: 100%;
    height: 100%;
-   top: 0;
+   top: 10%;
    right: 0;
    background-position: top right;
    background-size: 50%;
@@ -25,9 +47,9 @@
   @include onlymobile {
    background: url("data:image/svg+xml,%3Csvg width='329' height='672' viewBox='0 0 329 672' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_1558_6779)'%3E%3Cellipse cx='312.225' cy='367.712' rx='267.387' ry='211.275' transform='rotate(89.365 312.225 367.712)' fill='url(%23paint0_linear_1558_6779)'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_1558_6779' x='0.941895' y='0.330811' width='622.566' height='734.762' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='50' result='effect1_foregroundBlur_1558_6779'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_1558_6779' x1='348.46' y1='611.83' x2='323.821' y2='267.066' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BEF12C' stop-opacity='0.09'/%3E%3Cstop offset='1' stop-color='%230F8A74' stop-opacity='0.45'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E ")
     no-repeat;
-   width: 100%;
-   height: 100%;
-   bottom: -17%;
+   width: rem(375px);
+   height: rem(1000px);
+   top: rem(350px);
    background-position: center right;
    background-size: 70%;
   }
@@ -39,18 +61,16 @@
   @include ifdesktop {
    background: url("data:image/svg+xml,%3Csvg width='618' height='1146' viewBox='0 0 618 1146' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_1362_60135)'%3E%3Cellipse cx='56.59' cy='572.919' rx='331.204' ry='318.269' transform='rotate(-80.9116 56.59 572.919)' fill='url(%23paint0_linear_1362_60135)'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_1362_60135' x='-503.859' y='0.184372' width='1120.9' height='1145.47' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='120.9' result='effect1_foregroundBlur_1362_60135'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_1362_60135' x1='101.473' y1='940.664' x2='56.4422' y2='422.564' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BEF12C' stop-opacity='0.09'/%3E%3Cstop offset='1' stop-color='%230F8A74' stop-opacity='0.45'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
     no-repeat;
-   width: 100%;
-   height: 100%;
+   width: rem(1000px);
+   height: rem(1000px);
    bottom: 5%;
-   background-position: bottom left;
-   background-size: 30%;
   }
   @include onlymobile {
    top: 5%;
    background: url("data:image/svg+xml,%3Csvg width='256' height='662' viewBox='0 0 256 662' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_1558_6778)'%3E%3Cellipse cx='-55.7748' cy='293.712' rx='267.387' ry='211.275' transform='rotate(89.365 -55.7748 293.712)' fill='url(%23paint0_linear_1558_6778)'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_1558_6778' x='-367.058' y='-73.6692' width='622.566' height='734.762' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='50' result='effect1_foregroundBlur_1558_6778'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_1558_6778' x1='-19.5398' y1='537.83' x2='-44.179' y2='193.066' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BEF12C' stop-opacity='0.09'/%3E%3Cstop offset='1' stop-color='%230F8A74' stop-opacity='0.45'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E ")
     no-repeat;
-   width: 100%;
-   height: 100%;
+   width: rem(350px);
+   height: rem(900px);
    background-size: 80%;
   }
  }
@@ -63,13 +83,16 @@
   @include onlymobile {
    font-size: rem(20px);
    line-height: rem(21.83px);
-   margin-bottom: rem(30px);
+   margin-bottom: rem(35px);
   }
  }
  &__items {
   display: flex;
   flex-direction: column;
-  row-gap: rem(15px);
+  row-gap: rem(20px);
+  @include onlymobile {
+   row-gap: rem(11px);
+  }
  }
  &__item {
   background: linear-gradient(
@@ -84,19 +107,23 @@
   flex-direction: column;
  }
 
+ &__item-body-wrapper {
+  overflow: hidden;
+ }
  &__item-body {
+  overflow: hidden;
   display: grid;
   grid-template-rows: 0fr;
 
   transition: 0.5s grid-template-rows;
  }
- &__item-body p {
-  overflow: hidden;
- }
  &__item.active &__item-body {
   grid-template-rows: 1fr;
 
   transition: 0.5s grid-template-rows;
+ }
+ &__item.active &__item-header {
+  padding-bottom: 0;
  }
  &__item-dropdown-icon {
   width: rem(22px);
@@ -112,14 +139,14 @@
   transition: 0.3s;
  }
  &__item-header {
-  padding: rem(15px) rem(25px);
-  padding-bottom: 0;
+  padding: rem(10px) rem(25px) rem(15px) rem(20px);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.3s;
   @include onlymobile {
    padding: rem(5px) rem(10px);
-   padding-bottom: 0;
   }
  }
  &__item-question {
@@ -145,12 +172,15 @@
    text-wrap: pretty;
   }
  }
- &__item-body {
+ &__item-body-wrapper {
   padding: rem(15px) rem(25px);
   padding-top: rem(10px);
   @include onlymobile {
    padding-top: rem(10px);
    padding: rem(5px) rem(10px);
   }
+ }
+ &__item-body-container {
+  overflow: hidden;
  }
 }

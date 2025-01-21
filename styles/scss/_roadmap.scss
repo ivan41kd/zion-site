@@ -6,20 +6,23 @@
  @include onlymobile {
   background: url('../../assets/img/bg/roadmap-bg-mobile.png') no-repeat;
   background-size: 100%;
+  background-position: 0% 92%;
+  padding-top: rem(131px);
  }
  position: relative;
  background-size: 100%;
  @include ifdesktop {
-  height: rem(1024px);
+  height: rem(1080px);
  }
  @include onlymobile {
-  height: rem(600px);
+  height: rem(720px);
  }
  @include onlymobile {
-  .container {
+  & .container {
    padding: 0 rem(15px);
   }
  }
+
  &::after {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 1.2%, #000000 79.64%);
   height: rem(186px);
@@ -62,7 +65,7 @@
   }
  }
  &__steps {
-  padding-top: rem(124px);
+  padding-top: rem(143px);
   display: flex;
   flex-direction: column;
 
@@ -70,13 +73,13 @@
    gap: rem(35px);
   }
   @include onlymobile {
-   padding-top: rem(125px);
+   padding-top: rem(100px);
    gap: rem(15px);
+   transform: translateY(rem(-25px));
   }
  }
  &__step {
   display: flex;
-  align-items: center;
   gap: rem(25px);
   @include onlymobile {
    gap: rem(5px);
@@ -84,39 +87,57 @@
  }
 
  &__step:nth-child(1) {
-  transform: translateX(-8%);
+  transform: translateX(-14%);
+  @include onlymobile {
+   transform: translateX(-26%);
+  }
  }
  &__step:nth-child(2) {
-  transform: translateX(-4%);
+  transform: translateX(-2%);
+  @include onlymobile {
+   transform: translateX(-11%);
+  }
  }
  &__step:nth-child(3) {
-  transform: translateX(0%);
+  transform: translateX(7%);
+  @include onlymobile {
+   transform: translateX(-4%);
+  }
  }
  &__step:nth-child(4) {
-  transform: translateX(4%);
+  transform: translateX(11%);
+  @include onlymobile {
+   transform: translateX(3%);
+  }
  }
  &__step:nth-child(5) {
-  transform: translateX(4.5%);
+  transform: translateX(11.5%);
+  @include onlymobile {
+   transform: translateX(3%);
+  }
  }
  &__step:nth-child(6) {
   @include ifdesktop {
-   transform: translateX(2.5%);
+   transform: translate(7%, 15%);
   }
   @include onlymobile {
-   transform: translateX(-1.5%);
+   transform: translateX(-3.5%);
   }
  }
  &__step:nth-child(7) {
+  @include ifdesktop {
+   transform: translate(-2%, 25%);
+  }
   @include onlymobile {
-   transform: translateX(-8.5%);
+   transform: translateX(-11.5%);
   }
  }
  &__step:nth-child(8) {
   @include ifdesktop {
-   transform: translateX(-3.5%);
+   transform: translate(-14%, 25%);
   }
   @include onlymobile {
-   transform: translateX(-26.5%);
+   transform: translate(-27.5%, 60%);
   }
  }
 

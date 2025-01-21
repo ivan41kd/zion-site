@@ -174,17 +174,24 @@
   display: flex;
   gap: rem(20px);
   width: rem(252px);
+  justify-content: flex-end;
  }
  &__button {
   font-weight: 700;
   font-size: rem(16px);
   line-height: rem(19.5px);
-  color: rgba(161, 161, 161, 1);
-  background: transparent;
   padding: rem(10px) rem(20px);
-  border: 1px solid rgba(161, 161, 161, 1);
   border-radius: rem(15px);
   cursor: pointer;
+ }
+ &__button.login {
+  color: rgba(161, 161, 161, 1);
+  background: transparent;
+  border: 1px solid rgba(161, 161, 161, 1);
+ }
+ &__button.authorized {
+  color: black;
+  background: linear-gradient(93.41deg, #5f976e 22.48%, #ddc081 79.18%);
  }
  &__lang {
   display: flex;
@@ -339,6 +346,10 @@
  &__burger-nav {
   margin-bottom: rem(65px);
  }
+ &__burger-buttons {
+  display: flex;
+  gap: rem(21px);
+ }
  &__burger-button {
   padding: rem(10px) rem(20px);
   border-radius: rem(15px);
@@ -349,11 +360,13 @@
  }
  &__burger-button.create {
   background: rgba(95, 151, 110, 1);
+  width: rem(184px);
  }
  &__burger-button.log-in {
   background: none;
   border: 1px solid rgba(156, 156, 156, 1);
   color: rgba(156, 156, 156, 1);
+  width: rem(118px);
  }
  &__burger-bottom {
   padding: 0 rem(14px);

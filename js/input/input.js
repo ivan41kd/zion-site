@@ -13,7 +13,7 @@ const observeDynamicElements = () => {
 
  const showPassword = (wrapper) => {
   const showIcon = wrapper.querySelector('.form-layout__show-password');
-  const passInput = wrapper.querySelector('.form-layout__input.password');
+  const passInput = wrapper.querySelector('.form-layout__input');
   if (showIcon && passInput) {
    showIcon.addEventListener('click', () => {
     showIcon.classList.toggle('active');
@@ -30,12 +30,11 @@ const observeDynamicElements = () => {
   if (input) {
    input.addEventListener('input', () => focusInput(input, wrapper));
   }
-  if (wrapper.classList.contains('password')) {
-   const showIcon = wrapper.querySelector('.form-layout__show-password');
-   if (showIcon && !showIcon.dataset.listenerAdded) {
-    showPassword(wrapper);
-    showIcon.dataset.listenerAdded = 'true';
-   }
+
+  const showIcon = wrapper.querySelector('.form-layout__show-password');
+  if (showIcon && !showIcon.dataset.listenerAdded) {
+   showPassword(wrapper);
+   showIcon.dataset.listenerAdded = 'true';
   }
  });
 };

@@ -1,5 +1,6 @@
 .footer {
  padding: rem(70px) 0;
+ padding-bottom: rem(90px);
  position: relative;
  @include onlymobile {
   padding: rem(20px) 0;
@@ -17,6 +18,11 @@
   }
  }
  @include ifdesktop {
+  & .container {
+   padding-right: rem(108.37px);
+  }
+ }
+ @include ifdesktop {
   &::after {
    position: absolute;
    content: '';
@@ -25,8 +31,8 @@
    right: 0;
    background: url("data:image/svg+xml,%3Csvg width='891' height='620' viewBox='0 0 891 620' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_746_2846)'%3E%3Cellipse cx='572.102' cy='418.044' rx='331.204' ry='173.821' transform='rotate(174.997 572.102 418.044)' fill='url(%23paint0_linear_746_2846)'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_746_2846' x='0.00468445' y='0.666794' width='1144.19' height='834.756' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='120.9' result='effect1_foregroundBlur_746_2846'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_746_2846' x1='616.985' y1='618.886' x2='603.482' y2='334.433' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BEF12C' stop-opacity='0.09'/%3E%3Cstop offset='1' stop-color='%230F8A74' stop-opacity='0.45'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E ")
     no-repeat;
-   background-position: center right;
-   background-size: 66%;
+   background-position: 100% 100%;
+   background-size: 60%;
    top: 0;
    z-index: -1;
   }
@@ -64,10 +70,13 @@
  }
  &__info {
   width: rem(293px);
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(15px);
  }
  &__copyright {
   font-family: $font-nexa;
-  font-size: rem(18px);
+  font-size: rem(16px);
   line-height: rem(24.26px);
   color: rgba(161, 161, 161, 1);
   font-weight: 400;
@@ -108,7 +117,7 @@
  &__socials {
   display: flex;
   flex-direction: column;
-  row-gap: rem(54px);
+  row-gap: rem(15px);
   @include onlymobile {
    order: 3;
    row-gap: rem(10px);

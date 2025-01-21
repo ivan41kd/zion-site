@@ -154,8 +154,8 @@ const selectLevel = ({ level, value }) => {
   graphMain.classList.remove('circle-appear');
   graphMobile.classList.remove('value-appear');
 
-  const result = -60 + level * 8 + level / value;
-  const mobileResult = -53.5 + level * 8.5 + level / value;
+  const result = -30 + level * 8.1 + level / value;
+  const mobileResult = -32.2 + level * 8.1 + level / value;
 
   setTimeout(() => {
    graph.classList.remove('anim-out');

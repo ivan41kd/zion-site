@@ -1,5 +1,10 @@
 .information {
- padding-bottom: rem(264px);
+ @include ifdesktop {
+  padding-bottom: rem(260px);
+ }
+ @include onlymobile {
+  padding-bottom: rem(90px);
+ }
  &__wrapper {
   max-width: rem(1319px);
   width: 100%;
@@ -9,6 +14,7 @@
   @include onlymobile {
    text-align: center;
    align-items: center;
+   row-gap: rem(10px);
   }
  }
  &__title {

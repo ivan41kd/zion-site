@@ -1,6 +1,6 @@
 const headerLang = document.querySelectorAll('.header__lang');
 const formLang = document.querySelectorAll('.form-layout__lang');
-const mainLang = document.querySelector('.main__lang');
+const mainLang = document.querySelectorAll('.main__lang');
 const asideLang = document.querySelectorAll('.aside__lang');
 
 headerLang.forEach((lang) => {
@@ -36,6 +36,14 @@ asideLang.forEach((lang) => {
    if (currentLang) {
     currentLang.textContent = item.textContent;
    }
+  });
+ });
+});
+mainLang.forEach((lang) => {
+ const langItem = lang.querySelectorAll('.main__lang-list-item');
+ langItem.forEach((item) => {
+  item.addEventListener('click', () => {
+   console.log('Selected');
   });
  });
 });

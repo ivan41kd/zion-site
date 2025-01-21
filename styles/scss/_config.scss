@@ -38,7 +38,9 @@ dd {
  margin: 0;
 }
 
-input:not(.dashboard__withdraw-input) {
+input:not(.dashboard__withdraw-input):not(
+  .dashboard__datepicker-current-date-value
+ ):not(.dashboard__select-level-current-title) {
  background: none;
  border: none;
  outline: none;

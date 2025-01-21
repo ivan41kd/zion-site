@@ -1,5 +1,4 @@
 .statistics {
- padding-bottom: rem(150px);
  display: flex;
  flex-direction: column;
  &__container {
@@ -8,10 +7,10 @@
  }
  @include ifdesktop {
   &__container {
-   padding-left: rem(129px);
+   padding-left: rem(150px);
    padding-right: rem(84px);
   }
-  &__container div {
+  &__container div:not(.statistics__graph-container) {
    opacity: 0;
    visibility: hidden;
    transition: 0.3s;
@@ -22,7 +21,7 @@
    padding-left: rem(38px);
    padding-right: rem(41px);
   }
-  &__container div {
+  &__container div:not(.statistics__graph-container) {
    opacity: 0;
    visibility: hidden;
    transition: 0.3s;
@@ -69,14 +68,25 @@
   position: relative;
   overflow: hidden;
   margin-bottom: rem(16px);
+  height: 100%;
+  @include onlymobile {
+   margin-bottom: rem(32px);
+  }
+ }
+ &__graph-container {
+  overflow: hidden;
+  height: rem(474px);
+  @include onlymobile {
+   height: rem(300px);
+  }
  }
 
  &__graph-main {
   @include ifdesktop {
    display: block;
    width: rem(977px);
-   height: rem(268px);
-   transform: translateX(15%);
+   height: 100%;
+   transform: translate(rem(140px), rem(82px));
   }
   @include onlymobile {
    display: none;
@@ -88,13 +98,13 @@
   }
   @include onlymobile {
    display: block;
-   transform: translate(20%);
+   transform: translate(rem(50px), rem(38px));
    width: rem(230px);
-   height: rem(220px);
+   height: rem(300px);
   }
  }
  &__graph-percents-wrapper {
-  height: rem(404px);
+  height: rem(504px);
   overflow: hidden;
   position: absolute;
 
@@ -115,7 +125,12 @@
   }
   @include onlymobile {
    display: flex;
+   height: rem(480px);
   }
+ }
+ &__graph-percents-container {
+  overflow: hidden;
+  width: 100%;
  }
  &__graph-percents {
   display: flex;
@@ -123,11 +138,11 @@
   row-gap: rem(85px);
   width: 100%;
   @include ifdesktop {
-   transform: translateY(-60%);
+   transform: translateY(-30%);
   }
   @include onlymobile {
    row-gap: rem(60px);
-   transform: translateY(-53.5%);
+   transform: translateY(-32.2%);
   }
  }
  &__graph-percent {
@@ -135,7 +150,7 @@
   line-height: rem(13.1px);
   font-weight: 400;
   position: relative;
-  border-bottom: 2px solid transparent;
+  border-bottom: rem(2px) solid transparent;
   -o-border-image: linear-gradient(
    90deg,
    #404040 1.33%,
@@ -186,6 +201,8 @@
  &__graph-value {
   opacity: 0;
   transition: 0.3s;
+  width: rem(51px);
+  height: rem(16px);
  }
  &__graph-month {
   opacity: 0;
@@ -245,6 +262,10 @@
   visibility: hidden;
   transition: 0.3s;
   margin-bottom: rem(25px);
+  @include onlymobile {
+   margin-bottom: rem(15px);
+   gap: rem(5px);
+  }
  }
  &__tab {
   display: flex;
@@ -265,13 +286,13 @@
    height: 100%;
    top: 0;
    left: 0;
-   border-radius: 10px;
+   border-radius: rem(10px);
    -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
    -webkit-mask-composite: destination-out;
    mask-composite: exclude;
-   padding: 1px;
+   padding: rem(1px);
   }
   &::after {
    content: '';
@@ -282,15 +303,27 @@
    background-size: 100%;
   }
   @include onlymobile {
-   padding: rem(10px) rem(15px);
+   padding: rem(8px) rem(15px);
    gap: rem(5px);
    width: rem(130px);
   }
  }
  &__tab-logo {
-  max-width: rem(100px);
+  width: rem(100px);
   @include onlymobile {
-   max-width: rem(75px);
+   width: rem(75px);
+  }
+ }
+ &__tab-logo.binance {
+  width: rem(100px);
+  @include onlymobile {
+   width: rem(75px);
+  }
+ }
+ &__tab-logo.btc {
+  width: rem(36.1px);
+  @include onlymobile {
+   width: rem(29.53px);
   }
  }
  &__tab-name {
@@ -340,19 +373,29 @@
   display: flex;
   gap: rem(35px);
   margin-bottom: rem(30px);
+  @include onlymobile {
+   gap: rem(20px);
+   margin-bottom: rem(15px);
+  }
  }
  &__year {
   font-weight: 400;
   font-size: rem(24px);
   line-height: rem(26.2px);
   color: rgba(156, 156, 156, 1);
+  cursor: pointer;
+  border-bottom: rem(1px) solid transparent;
+  @include onlymobile {
+   font-size: rem(16px);
+   line-height: rem(17.46px);
+  }
  }
  &__year.active {
   color: white;
-  border-bottom: 1px solid rgba(95, 151, 110, 1);
+  border-bottom: rem(1px) solid rgba(95, 151, 110, 1);
  }
  &__levels {
-  margin-bottom: rem(25px);
+  margin-bottom: rem(10px);
   align-items: center;
   gap: rem(15px);
   transition: 0.3s;
@@ -377,7 +420,7 @@
  }
  &__levels.mobile.active &__level-items {
   overflow: auto;
-  max-height: 63px;
+  max-height: rem(63px);
   opacity: 1;
   visibility: visible;
   transition: 0.3s;
@@ -399,27 +442,37 @@
   @include onlymobile {
    display: flex;
    flex-direction: column;
-   max-width: rem(115px);
-   width: 100%;
-   overflow: hidden;
+   width: max-content;
+   position: relative;
+   margin-bottom: rem(15px);
   }
  }
-
- &__level-items {
-  max-height: 0;
+ &__level-items-container {
+  width: 100%;
+  overflow: hidden;
   overflow: hidden;
   width: 100%;
-  border: 1px solid rgba(161, 161, 161, 1);
-  border-radius: 0px 0px 15px 15px;
+  border: rem(1px) solid rgba(161, 161, 161, 1);
+  border-radius: 0 0 rem(15px) rem(15px);
   display: flex;
   flex-direction: column;
   align-items: center;
   border-top: none;
-  transform: translateY(-30%);
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
-  padding-top: rem(8px);
+  position: absolute;
+  top: 66%;
+  z-index: 1;
+ }
+ &__level-items {
+  max-height: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+  padding-top: rem(11px);
  }
 
  &__level-item {
@@ -430,6 +483,7 @@
   position: relative;
   width: 100%;
   text-align: center;
+  background: black;
  }
  &__level-item:not(:nth-last-child(1)) {
   padding-bottom: rem(4px);
@@ -439,7 +493,7 @@
    position: absolute;
    content: '';
    width: 100%;
-   height: 1px;
+   height: rem(1px);
    background: linear-gradient(
     90deg,
     #ffffff 0%,
@@ -474,7 +528,7 @@
   gap: rem(10px);
   border-radius: rem(15px);
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: rem(1px) solid rgba(255, 255, 255, 1);
   text-wrap: nowrap;
   @include onlymobile {
    font-size: rem(10px);
@@ -482,11 +536,11 @@
    font-weight: 500;
    padding: rem(10px);
    border-radius: rem(5px);
-   border: 1px solid rgba(161, 161, 161, 1);
+   border: rem(1px) solid rgba(161, 161, 161, 1);
    width: 100%;
+   background: black;
    position: relative;
    z-index: 2;
-   background: black;
   }
  }
  &__history-button {

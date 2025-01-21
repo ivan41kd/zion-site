@@ -8,14 +8,24 @@
   background-position: center;
   background-size: cover !important;
   background: url('../../assets/img/bg/reasons-bg-mobile.png') no-repeat;
-  padding-bottom: rem(59px);
+  padding-bottom: rem(100px);
+ }
+ @include onlymobile {
+  .space {
+   display: none;
+  }
+ }
+ @include onlymobile {
+  & .container {
+   padding-left: rem(40px);
+   padding-right: rem(40px);
+  }
  }
  &__title {
   font-weight: 400;
   font-size: rem(48px);
   line-height: rem(52.39px);
   margin-bottom: rem(64px);
-
   @include onlymobile {
    font-size: rem(20px);
    line-height: rem(21.83px);
@@ -23,6 +33,16 @@
    margin-bottom: rem(14.62px);
   }
  }
+
+ .mobile-space {
+  @include ifdesktop {
+   display: none;
+  }
+  @include onlymobile {
+   display: block;
+  }
+ }
+
  &__cards {
   display: grid;
   grid-template-columns: repeat(3, rem(375px));
@@ -30,7 +50,7 @@
   @include onlymobile {
    display: flex;
    flex-direction: column;
-   gap: rem(7.25px);
+   gap: rem(7.5px);
   }
  }
  &__card {
@@ -42,14 +62,38 @@
    rgba(71, 150, 124, 0.1) 5.58%,
    rgba(194, 181, 120, 0.002) 98.82%
   );
-  padding: rem(31px) rem(21.16px) rem(70px) rem(24px);
+  padding: rem(31px) 0 rem(5px) rem(24px);
   -webkit-backdrop-filter: blur(131.60000610351562px);
   backdrop-filter: blur(131.60000610351562px);
   gap: rem(15px);
-  @include onlymobile {
-   padding: rem(13px) rem(20px) rem(18px) rem(13px);
-   align-items: center;
+  @include ifdesktop {
+   height: rem(210px);
   }
+  @include onlymobile {
+   padding: rem(20px) rem(22px) rem(10px) rem(3px);
+   align-items: center;
+   gap: 0;
+   width: 100%;
+  }
+ }
+ &__card:nth-child(4) {
+  @include onlymobile {
+   padding: rem(15px) rem(22px) rem(10px) rem(10px);
+  }
+ }
+ &__card:nth-child(5) {
+  @include onlymobile {
+   padding: rem(10px) rem(22px) rem(10px) rem(3px);
+  }
+ }
+ &__card:nth-child(6) {
+  @include onlymobile {
+   padding: rem(15px) rem(18px) rem(15px) rem(17px);
+   gap: rem(8.96px);
+  }
+ }
+ &__card:nth-child(6) &__cards-texts {
+  row-gap: rem(11px);
  }
  &__card-icon {
   width: rem(85px);
@@ -57,6 +101,66 @@
   @include onlymobile {
    width: rem(67.93px);
    height: rem(41.61px);
+  }
+ }
+ &__card-icon.tech {
+  width: rem(160px);
+  height: rem(70px);
+  @include onlymobile {
+   width: rem(154px);
+   height: rem(35px);
+  }
+ }
+ &__card-icon.signals {
+  width: rem(150px);
+  height: rem(68px);
+  @include ifdesktop {
+   object-fit: cover;
+  }
+  @include onlymobile {
+   width: rem(112px);
+   height: rem(28px);
+  }
+ }
+ &__card-icon.partner {
+  width: rem(80px);
+  height: rem(45px);
+  @include onlymobile {
+   width: rem(175px);
+   height: rem(38px);
+  }
+ }
+ &__card-icon.deals {
+  width: rem(170px);
+  height: rem(50px);
+  @include ifdesktop {
+   object-fit: cover;
+  }
+  @include onlymobile {
+   width: rem(240px);
+   height: rem(30px);
+  }
+ }
+ &__card-icon.history {
+  width: rem(87px);
+  height: rem(47px);
+  @include ifdesktop {
+   object-fit: none;
+  }
+  @include onlymobile {
+   width: rem(190px);
+   height: rem(33px);
+  }
+ }
+ &__card-icon.work {
+  width: rem(100px);
+  height: rem(52px);
+  @include ifdesktop {
+   object-fit: none;
+  }
+  @include onlymobile {
+   width: rem(80px);
+   height: rem(56px);
   }
  }
  &__card-texts {

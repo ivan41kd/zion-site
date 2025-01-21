@@ -380,5 +380,14 @@ const renderTasks = (level, tasks) => {
       </div>`;
  }
 };
+
+const copyIcon = document.querySelector('.dashboard__level-link-copy-icon');
+const linkValue = document.querySelector('.dashboard__level-link-value');
+const copyLink = (link) => {
+ navigator.clipboard.writeText(link.textContent);
+};
+copyIcon.addEventListener('click', () => {
+ copyLink(linkValue);
+});
 renderLevel(currentLevel);
 renderTasks(currentLevel, levelTasks);

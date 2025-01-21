@@ -1,10 +1,10 @@
 .hero {
- padding-top: rem(135px);
+ padding-top: rem(150px);
  padding-bottom: rem(286px);
  position: relative;
  @include onlymobile {
-  padding-top: rem(61px);
-  padding-bottom: rem(280px);
+  padding-top: rem(65px);
+  padding-bottom: rem(220px);
  }
  &__wrapper {
   display: flex;
@@ -71,13 +71,13 @@
    height: 100%;
    top: 0;
    left: 0;
-   border-radius: 10px;
+   border-radius: rem(10px);
    -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
    -webkit-mask-composite: destination-out;
    mask-composite: exclude;
-   padding: 3px;
+   padding: rem(2px);
   }
   @include onlymobile {
    font-size: rem(16px);
@@ -115,7 +115,7 @@
   color: black;
   @include onlymobile {
    border-radius: rem(10px);
-   width: rem(192px);
+   width: rem(162px);
    padding: rem(5px) 0;
    font-size: rem(16px);
    line-height: rem(24.26px);
@@ -127,8 +127,15 @@
    padding: 0;
   }
  }
- &__button.create {
+ &__button.create,
+ &__button.authorized {
   background: rgba(95, 151, 110, 1);
+  width: rem(273px);
+  padding: rem(10px) 0;
+  @include onlymobile {
+   width: rem(162px);
+   padding: rem(5px) 0;
+  }
  }
  @include ifdesktop {
   &__button.log-in,
@@ -147,10 +154,12 @@
  }
  &__button.app {
   background: rgba(168, 168, 168, 1);
+  width: rem(371px);
+  padding: rem(10px) 0;
  }
  &__button.log-in {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: rem(1px) solid rgba(255, 255, 255, 1);
   color: white;
  }
  &__button.app-mobile {

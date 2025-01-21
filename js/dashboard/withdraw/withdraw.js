@@ -18,12 +18,22 @@ const checkCode = (wrapper, input) => {
  }
 };
 const maxAmount = (wrapper, input) => {
- if (input.value < 20 || input.value == '') {
-  wrapper.classList.add('invalid');
-  wrapper.classList.remove('verified');
+ if (input.classList.contains('btc')) {
+  if (input.value < 20 || input.value == '') {
+   wrapper.classList.add('invalid');
+   wrapper.classList.remove('verified');
+  } else {
+   wrapper.classList.remove('invalid');
+   wrapper.classList.add('verified');
+  }
  } else {
-  wrapper.classList.remove('invalid');
-  wrapper.classList.add('verified');
+  if (input.value < 5 || input.value == '') {
+   wrapper.classList.add('invalid');
+   wrapper.classList.remove('verified');
+  } else {
+   wrapper.classList.remove('invalid');
+   wrapper.classList.add('verified');
+  }
  }
 };
 const checkAddress = (wrapper, input) => {

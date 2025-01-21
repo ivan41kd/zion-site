@@ -13,6 +13,8 @@ const passWrapper = passInput.parentElement;
 
 const layoutWrapper = document.querySelector('.form-layout__wrapper');
 
+const telegramButton = document.querySelector('.form-layout__telegram-button');
+
 const submitForm = (form) => {
  form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -94,6 +96,33 @@ const enableCodeCheck = (wrapper) => {
   e.preventDefault();
   checkCode(codeWrapper, codeInput);
   if (codeWrapper.classList.contains('verified')) {
+   localStorage.setItem('isAuthorized', true);
+   window.location.href = '/dashboard.html';
+  }
+ });
+};
+
+const enableCodeTelegramCheck = (wrapper) => {
+ wrapper.innerHTML = `<h1 class="form-layout__title">Подтверждение входа</h1>
+   <form class="form-layout__form code-form">
+    <div class="form-layout__input-wrapper">
+     <input type="text" class="form-layout__input code" />
+     <span class="form-layout__input-placeholder">Код подтверждения</span>
+     <span class="form-layout__input-subtitle">ZION Support отправил вам код в Telegram</span>
+    </div>
+    <div class="form-layout__form-buttons">
+     <button type="submit" class="form-layout__form-button">Продолжить</button>
+    </div>
+   </form>`;
+ const codeWrapper = wrapper.querySelector('.form-layout__input-wrapper');
+ const codeInput = wrapper.querySelector('.form-layout__input.code');
+ const codeForm = wrapper.querySelector('.form-layout__form.code-form');
+
+ codeForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  checkCode(codeWrapper, codeInput);
+  if (codeWrapper.classList.contains('verified')) {
+   localStorage.setItem('isAuthorized', true);
    window.location.href = '/dashboard.html';
   }
  });
@@ -120,4 +149,7 @@ const checkCode = (wrapper, input) => {
   }
  }
 };
+telegramButton.addEventListener('click', () => {
+ enableCodeTelegramCheck(layoutWrapper);
+});
 submitForm(loginForm);

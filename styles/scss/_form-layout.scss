@@ -77,6 +77,7 @@
   flex-direction: column;
   row-gap: rem(5px);
  }
+
  &__input-wrapper.verified {
   &::after {
    background: url('../../assets/img/icons/verified.svg') no-repeat;
@@ -320,6 +321,11 @@
   line-height: rem(10.92px);
   color: rgba(246, 0, 0, 1);
   transition: 0.3s;
+  display: none;
+ }
+
+ &__input-wrapper.invalid &__input-error {
+  display: block;
  }
 
  &__input-wrapper.verified &__show-password {
