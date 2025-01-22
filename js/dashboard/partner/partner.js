@@ -18,7 +18,6 @@ partnerLines.forEach((line) => {
    }
   });
 
-  // Тогглим текущий элемент
   line.classList.toggle('active');
   line.classList.contains('active')
    ? (unhide.textContent = 'Скрыть')

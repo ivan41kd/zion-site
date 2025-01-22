@@ -1,5 +1,4 @@
 const dashboardCondition = document.querySelectorAll('.dashboard__conditions');
-console.log(dashboardCondition);
 
 const closePopup = (section) => {
  section.remove();

@@ -265,7 +265,7 @@
   white-space: nowrap;
   overflow: hidden;
   word-break: auto-phrase;
-  max-width: rem(100px);
+  max-width: rem(200px);
  }
  &__burger-icon {
   width: rem(25px);
@@ -528,6 +528,14 @@
    mask-composite: exclude;
    padding: 1px;
   }
+ }
+
+ &__copy-link {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  word-break: auto-phrase;
+  max-width: rem(80px);
  }
  &__copy-link-icon {
   width: rem(15px);

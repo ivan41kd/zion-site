@@ -79,8 +79,8 @@ const cardImg = document.querySelector(
  '.dashboard__history-trade-card-level-img'
 );
 
-const setLevel = ({ level, profit }) => {
- levelTitle.value = `Уровень ${level} - ${profit}%`;
+const setLevel = ({ level }) => {
+ levelTitle.value = `${level} `;
  levelSection.classList.remove('active');
 };
 levelWrapper.addEventListener('click', () => {

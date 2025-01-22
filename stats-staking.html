@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-   href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+   href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
    rel="stylesheet"
   />
   <link rel="stylesheet" href="./styles/scss/style.css" />
@@ -1114,11 +1114,11 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
       </div>
 
       <div class="dashboard__stats-tabs">
-       <a href="stats-binance.html">
-        <div class="dashboard__stats-tab">Статистика торговли</div>
+       <a href="stats-staking.html">
+        <div class="dashboard__stats-tab active">Статистика торговли</div>
        </a>
-       <a href="history-binance.html">
-        <div class="dashboard__stats-tab active">История сделок</div>
+       <a href="history-staking.html">
+        <div class="dashboard__stats-tab">История сделок</div>
        </a>
       </div>
       <div class="dashboard__tabs splide">
@@ -1136,8 +1136,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
        </div>
        <div class="dashboard__tabs-container splide__track">
         <div class="dashboard__tabs-wrapper splide__list">
-         <div class="dashboard__tab online splide__slide active">
-          <a href="history-binance.html">
+         <div class="dashboard__tab online splide__slide">
+          <a href="stats-binance.html">
            <img
             src="./assets/img/logos/altcoins.svg"
             alt="ZION ALTCOINS"
@@ -1147,7 +1147,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           </a>
          </div>
          <div class="dashboard__tab online splide__slide">
-          <a href="history-btc.html">
+          <a href="stats-btc.html">
            <img
             src="./assets/img/logos/btc-eth.svg"
             alt="ZION BTC/ETH"
@@ -1156,294 +1156,457 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
            BTC/ETH
           </a>
          </div>
+         <div class="dashboard__tab splide__slide active">
+          <a href="stats-staking.html"> Staking </a>
+         </div>
+         <div class="dashboard__tab splide__slide">
+          <a href="stats-kucoin.html">
+           <img
+            src="./assets/img/dashboard/kucoin.svg"
+            alt="ZION KUCOIN"
+            class="dashboard__tab-icon kucoin"
+           />
+          </a>
+         </div>
+         <div class="dashboard__tab splide__slide">
+          <a href="stats-bybit.html">
+           <img
+            src="./assets/img/dashboard/bybit.svg"
+            alt="ZION BYBIT"
+            class="dashboard__tab-icon bybit"
+           />
+          </a>
+         </div>
+         <div class="dashboard__tab splide__slide">
+          <a href="stats-okx.html">
+           <img
+            src="./assets/img/dashboard/okx.svg"
+            alt="ZION OKX"
+            class="dashboard__tab-icon okx"
+           />
+          </a>
+         </div>
         </div>
        </div>
       </div>
       <div class="dashboard__wrapper">
-       <div class="dashboard__history">
-        <div class="dashboard__history-wrapper">
-         <div class="dashboard__history-selects">
-          <div class="dashboard__calendar">
-           <div class="dashboard__calendar-container">
-            <div class="dashboard__calendar-sticker binance">Дата</div>
-            <div class="dashboard__calendar-wrapper">
-             <input
-              type="text"
-              disabled
-              class="dashboard__calendar-date-value"
+       <div class="dashboard__loading">
+        <img
+         src="./assets/img/icons/loading-icon.svg"
+         alt="ZION ЗАГРУЗКА"
+         class="dashboard__loading-icon"
+        />
+        Скоро в доступе
+       </div>
+       <div class="dashboard__stats">
+        <div class="dashboard__stats-circles">
+         <div class="dashboard__stats-info">
+          <svg
+           width="115"
+           height="115"
+           viewBox="0 0 115 115"
+           fill="none"
+           xmlns="http://www.w3.org/2000/svg"
+           class="dashboard__stats-circle-progress"
+           style="--value: 0"
+          >
+           <g clip-path="url(#clip0_47_618)">
+            <circle
+             cx="57.5"
+             cy="57.5"
+             r="52.5"
+             fill="#47967C"
+             fill-opacity="0.1"
+            />
+            <g filter="url(#filter0_d_47_618)">
+             <circle
+              cx="57.5"
+              cy="57.5"
+              r="54"
+              stroke="url(#paint0_linear_47_618)"
+              stroke-width="3"
+              shape-rendering="crispEdges"
+              class="dashboard__stats-circle"
              />
-             <img
-              src="./assets/img/icons/calendar-icon.svg"
-              alt=""
-              class="dashboard__calendar-date-icon"
+            </g>
+           </g>
+           <defs>
+            <filter
+             id="filter0_d_47_618"
+             x="-1"
+             y="-1"
+             width="117"
+             height="117"
+             filterUnits="userSpaceOnUse"
+             color-interpolation-filters="sRGB"
+            >
+             <feFlood flood-opacity="0" result="BackgroundImageFix" />
+             <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
              />
-            </div>
+             <feOffset />
+             <feGaussianBlur stdDeviation="1.5" />
+             <feComposite in2="hardAlpha" operator="out" />
+             <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 1 0 0 0 0 0.946565 0 0 0 0 0.695833 0 0 0 0.6 0"
+             />
+             <feBlend
+              mode="normal"
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_47_618"
+             />
+             <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="effect1_dropShadow_47_618"
+              result="shape"
+             />
+            </filter>
+            <linearGradient
+             id="paint0_linear_47_618"
+             x1="30.0147"
+             y1="4.99999"
+             x2="92.8731"
+             y2="8.74643"
+             gradientUnits="userSpaceOnUse"
+            >
+             <stop stop-color="#DDC081" />
+             <stop offset="1" stop-color="#5F976E" />
+            </linearGradient>
+            <clipPath id="clip0_47_618">
+             <rect width="115" height="115" fill="white" />
+            </clipPath>
+           </defs>
+          </svg>
+
+          <div class="dashboard__stats-circle-info">
+           <p class="dashboard__stats-circle-name">Общий депозит</p>
+           <div class="dashboard__stats-circle-wallet">
+            <img
+             src="./assets/img/icons/usdt-icon.svg"
+             alt="ZION USDT"
+             class="dashboard__stats-circle-wallet-icon"
+            />
+            USDT
            </div>
-           <div class="dashboard__datepicker binance">
-            <div class="dashboard__datepicker-header">
-             <div class="dashboard__datepicker-current-date">
-              <img
-               src="./assets/img/icons/prev-date.svg"
-               alt=""
-               class="dashboard__datepicker-prev-date"
-              />
-              <input
-               type="text"
-               disabled
-               class="dashboard__datepicker-current-date-value"
-              />
-              <img
-               src="./assets/img/icons/next-date.svg"
-               alt=""
-               class="dashboard__datepicker-next-date"
-              />
-             </div>
-            </div>
-            <div class="dashboard__datepicker-days">
-             <div class="dashboard__datepicker-day">Mon</div>
-             <div class="dashboard__datepicker-day">Tue</div>
-             <div class="dashboard__datepicker-day">Wed</div>
-             <div class="dashboard__datepicker-day">Thu</div>
-             <div class="dashboard__datepicker-day">Fri</div>
-             <div class="dashboard__datepicker-day">Sat</div>
-             <div class="dashboard__datepicker-day">Sun</div>
-            </div>
-            <div class="dashboard__datepicker-dates"></div>
-           </div>
-          </div>
-          <div class="dashboard__select-level">
-           <div class="dashboard__select-level-wrapper">
-            <div class="dashboard__select-level-current">
-             <input
-              type="text"
-              disabled
-              class="dashboard__select-level-current-title"
-             />
-             <img
-              src="./assets/img/icons/dropdown-select-icon.svg"
-              alt=""
-              class="dashboard__select-level-dropdown-icon"
-             />
-            </div>
-            <div class="dashboard__select-level-items-container">
-             <ul class="dashboard__select-level-items"></ul>
-            </div>
-           </div>
+           <p class="dashboard__stats-circle-value">$ 1,000,000.00</p>
           </div>
          </div>
-         <div class="dashboard__history-layouts">
-          <div class="dashboard__history-layout">
-           <div class="dashboard__history-layout-wrapper">
-            <p class="dashboard__history-layout-name">Количество сделок</p>
-            <p class="dashboard__history-layout-value">88</p>
+         <div class="dashboard__stats-info">
+          <svg
+           width="115"
+           height="115"
+           viewBox="0 0 115 115"
+           fill="none"
+           xmlns="http://www.w3.org/2000/svg"
+           class="dashboard__stats-circle-progress"
+           style="--value: 0"
+          >
+           <g clip-path="url(#clip0_47_618)">
+            <circle
+             cx="57.5"
+             cy="57.5"
+             r="52.5"
+             fill="#47967C"
+             fill-opacity="0.1"
+            />
+            <g filter="url(#filter0_d_47_618)">
+             <circle
+              cx="57.5"
+              cy="57.5"
+              r="54"
+              stroke="url(#paint0_linear_47_618)"
+              stroke-width="3"
+              shape-rendering="crispEdges"
+              class="dashboard__stats-circle"
+             />
+            </g>
+           </g>
+           <defs>
+            <filter
+             id="filter0_d_47_618"
+             x="-1"
+             y="-1"
+             width="117"
+             height="117"
+             filterUnits="userSpaceOnUse"
+             color-interpolation-filters="sRGB"
+            >
+             <feFlood flood-opacity="0" result="BackgroundImageFix" />
+             <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
+             />
+             <feOffset />
+             <feGaussianBlur stdDeviation="1.5" />
+             <feComposite in2="hardAlpha" operator="out" />
+             <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 1 0 0 0 0 0.946565 0 0 0 0 0.695833 0 0 0 0.6 0"
+             />
+             <feBlend
+              mode="normal"
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_47_618"
+             />
+             <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="effect1_dropShadow_47_618"
+              result="shape"
+             />
+            </filter>
+            <linearGradient
+             id="paint0_linear_47_618"
+             x1="30.0147"
+             y1="4.99999"
+             x2="92.8731"
+             y2="8.74643"
+             gradientUnits="userSpaceOnUse"
+            >
+             <stop stop-color="#DDC081" />
+             <stop offset="1" stop-color="#5F976E" />
+            </linearGradient>
+            <clipPath id="clip0_47_618">
+             <rect width="115" height="115" fill="white" />
+            </clipPath>
+           </defs>
+          </svg>
+
+          <div class="dashboard__stats-circle-info">
+           <p class="dashboard__stats-circle-name">Всего заработано</p>
+           <div class="dashboard__stats-circle-wallet">
+            <img
+             src="./assets/img/icons/usdt-icon.svg"
+             alt="ZION USDT"
+             class="dashboard__stats-circle-wallet-icon"
+            />
+            USDT
            </div>
-           <img
-            src="./assets/img/icons/history-deals.svg"
-            alt="ZION КОЛИЧЕСТВО СДЕЛОК"
-            class="dashboard__history-layout-icon"
-           />
-          </div>
-          <div class="dashboard__history-layout">
-           <div class="dashboard__history-layout-wrapper">
-            <p class="dashboard__history-layout-name">Доход за сутки</p>
-            <p class="dashboard__history-layout-value">+ 1,5%</p>
-           </div>
-           <img
-            src="./assets/img/icons/history-profit.svg"
-            alt="ZION ДОХОД ЗА СУТКИ"
-            class="dashboard__history-layout-icon"
-           />
+           <p class="dashboard__stats-circle-value">$ 10,000.00</p>
           </div>
          </div>
-         <div class="dashboard__history-level level-1">
-          <div class="dashboard__history-level-wrapper">
-           <p class="dashboard__history-level-label">Текущий уровень</p>
-           <p class="dashboard__history-level-name">Уровень 1</p>
-           <p class="dashboard__history-level-value">5%</p>
+         <div class="dashboard__stats-info">
+          <svg
+           width="115"
+           height="115"
+           viewBox="0 0 115 115"
+           fill="none"
+           xmlns="http://www.w3.org/2000/svg"
+           class="dashboard__stats-circle-progress"
+           style="--value: 0"
+          >
+           <g clip-path="url(#clip0_47_618)">
+            <circle
+             cx="57.5"
+             cy="57.5"
+             r="52.5"
+             fill="#47967C"
+             fill-opacity="0.1"
+            />
+            <g filter="url(#filter0_d_47_618)">
+             <circle
+              cx="57.5"
+              cy="57.5"
+              r="54"
+              stroke="url(#paint0_linear_47_618)"
+              stroke-width="3"
+              shape-rendering="crispEdges"
+              class="dashboard__stats-circle"
+             />
+            </g>
+           </g>
+           <defs>
+            <filter
+             id="filter0_d_47_618"
+             x="-1"
+             y="-1"
+             width="117"
+             height="117"
+             filterUnits="userSpaceOnUse"
+             color-interpolation-filters="sRGB"
+            >
+             <feFlood flood-opacity="0" result="BackgroundImageFix" />
+             <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
+             />
+             <feOffset />
+             <feGaussianBlur stdDeviation="1.5" />
+             <feComposite in2="hardAlpha" operator="out" />
+             <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 1 0 0 0 0 0.946565 0 0 0 0 0.695833 0 0 0 0.6 0"
+             />
+             <feBlend
+              mode="normal"
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_47_618"
+             />
+             <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="effect1_dropShadow_47_618"
+              result="shape"
+             />
+            </filter>
+            <linearGradient
+             id="paint0_linear_47_618"
+             x1="30.0147"
+             y1="4.99999"
+             x2="92.8731"
+             y2="8.74643"
+             gradientUnits="userSpaceOnUse"
+            >
+             <stop stop-color="#DDC081" />
+             <stop offset="1" stop-color="#5F976E" />
+            </linearGradient>
+            <clipPath id="clip0_47_618">
+             <rect width="115" height="115" fill="white" />
+            </clipPath>
+           </defs>
+          </svg>
+
+          <div class="dashboard__stats-circle-info">
+           <p class="dashboard__stats-circle-name">Всего выведено</p>
+           <div class="dashboard__stats-circle-wallet">
+            <img
+             src="./assets/img/icons/usdt-icon.svg"
+             alt="ZION USDT"
+             class="dashboard__stats-circle-wallet-icon"
+            />
+            USDT
+           </div>
+           <p class="dashboard__stats-circle-value">$ 10,000.00</p>
           </div>
-          <img
-           src="./assets/img/levels/level-1.png"
-           alt="ZION УРОВЕНЬ"
-           class="dashboard__history-level-icon"
-          />
          </div>
         </div>
-        <div class="dashboard__trades-table">
-         <div class="dashboard__trades-table-header">
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">Торгуемая пара</p>
+       </div>
+       <div class="dashboard__stats-history">
+        <div class="dashboard__stats-history-header">
+         <div class="dashboard__stats-history-header-col">Дата операции</div>
+         <div class="dashboard__stats-history-header-col">
+          Количество сделок
+         </div>
+         <div class="dashboard__stats-history-header-col">
+          <img
+           src="./assets/img/icons/usdt-icon.svg"
+           alt="ZION USDT"
+           class="dashboard__stats-history-header-col-icon"
+          />
+          Доход
+         </div>
+         <div class="dashboard__stats-history-header-col">Доход за сутки</div>
+        </div>
+        <div class="dashboard__stats-history-body binance">
+         <div class="dashboard__stats-history-body-cols">
+          <div class="dashboard__stats-history-body-col">
+           <img
+            src="./assets/img/icons/calendar-icon.svg"
+            alt="ZION ДАТА РЕГИСТРАЦИИ"
+            class="dashboard__stats-history-body-col-icon calendar"
+           />
+           <p class="dashboard__stats-history-body-col-value">14-12-23</p>
           </div>
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">Цена покупки</p>
+          <div class="dashboard__stats-history-body-col">
+           <img
+            src="./assets/img/icons/history-table-deals.svg"
+            alt="ZION КОЛИЧЕСТВО СДЕЛОК"
+            class="dashboard__stats-history-body-col-icon"
+           />
+           <p class="dashboard__stats-history-body-col-value">200</p>
           </div>
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">Время покупки</p>
+          <div class="dashboard__stats-history-body-col">
+           <img
+            src="./assets/img/icons/history-table-profit.svg"
+            alt="ZION ДОХОД"
+            class="dashboard__stats-history-body-col-icon"
+           />
+           <p class="dashboard__stats-history-body-col-value">$ 130.27</p>
           </div>
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">Цена продажи</p>
-          </div>
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">Время продажи</p>
-          </div>
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">Спред</p>
-          </div>
-          <div class="dashboard__trades-table-header-tab">
-           <p class="dashboard__trades-table-header-name">USDT</p>
+          <div class="dashboard__stats-history-body-col">
+           <img
+            src="./assets/img/icons/history-table-profit-amount.svg"
+            alt="ZION ДОХОД ЗА СУТКИ"
+            class="dashboard__stats-history-body-col-icon"
+           />
+           <p class="dashboard__stats-history-body-col-value">1,57%</p>
           </div>
          </div>
-         <div class="dashboard__trades-table-body">
-          <div class="dashboard__trades-table-items">
-           <div class="dashboard__trades-table-item">
-            <img
-             src="./assets/img/icons/dego-usdt.svg"
-             alt="ZION DEGO-USDT"
-             class="dashboard__trades-table-item-icon"
-            />
-            <a
-             href="https://www.binance.com/ru/trade/DEGO_USDT?theme=dark&type=spot"
-            >
-             DEGO/USDT
-            </a>
-           </div>
-           <div class="dashboard__trades-table-item green">1.235</div>
-           <div class="dashboard__trades-table-item green">14:05 UTC</div>
-           <div class="dashboard__trades-table-item green">1.344</div>
-           <div class="dashboard__trades-table-item green">14:05 UTC</div>
-           <div class="dashboard__trades-table-item green">3</div>
-           <div class="dashboard__trades-table-item green">0.6000</div>
+         <div class="dashboard__stats-history-body-cols">
+          <div class="dashboard__stats-history-body-col">
+           <img
+            src="./assets/img/icons/calendar-icon.svg"
+            alt="ZION ДАТА РЕГИСТРАЦИИ"
+            class="dashboard__stats-history-body-col-icon calendar"
+           />
+           <p class="dashboard__stats-history-body-col-value">14-12-23</p>
+          </div>
+          <div class="dashboard__stats-history-body-col">
+           <img
+            src="./assets/img/icons/history-table-deals.svg"
+            alt="ZION КОЛИЧЕСТВО СДЕЛОК"
+            class="dashboard__stats-history-body-col-icon"
+           />
+           <p class="dashboard__stats-history-body-col-value">200</p>
+          </div>
+          <div class="dashboard__stats-history-body-col">
+           <img
+            src="./assets/img/icons/history-table-profit.svg"
+            alt="ZION ДОХОД"
+            class="dashboard__stats-history-body-col-icon"
+           />
+           <p class="dashboard__stats-history-body-col-value">$ 130.27</p>
+          </div>
+          <div class="dashboard__stats-history-body-col">
+           <img
+            src="./assets/img/icons/history-table-profit-amount.svg"
+            alt="ZION ДОХОД ЗА СУТКИ"
+            class="dashboard__stats-history-body-col-icon"
+           />
+           <p class="dashboard__stats-history-body-col-value">1,57%</p>
           </div>
          </div>
-         <div class="dashboard__trades-table-body">
-          <div class="dashboard__trades-table-items">
-           <div class="dashboard__trades-table-item">
-            <img
-             src="./assets/img/icons/alice-usdt.svg"
-             alt="ZION ALICE-USDT"
-             class="dashboard__trades-table-item-icon"
-            />
-            <a
-             href="https://www.binance.com/ru/trade/ALICE_USDT?theme=dark&type=spot"
-            >
-             ALICE/USDT
-            </a>
-           </div>
-           <div class="dashboard__trades-table-item red">1.235</div>
-           <div class="dashboard__trades-table-item red">14:05 UTC</div>
-           <div class="dashboard__trades-table-item red">0.08634</div>
-           <div class="dashboard__trades-table-item red">14:05 UTC</div>
-           <div class="dashboard__trades-table-item red">-3</div>
-           <div class="dashboard__trades-table-item red">-0.6000</div>
+         <div class="dashboard__stats-history-body-cols">
+          <div class="dashboard__stats-history-body-col">
+           <img
+            src="./assets/img/icons/calendar-icon.svg"
+            alt="ZION ДАТА РЕГИСТРАЦИИ"
+            class="dashboard__stats-history-body-col-icon calendar"
+           />
+           <p class="dashboard__stats-history-body-col-value">14-12-23</p>
           </div>
-         </div>
-         <div class="dashboard__trades-table-body">
-          <div class="dashboard__trades-table-items">
-           <div class="dashboard__trades-table-item">
-            <img
-             src="./assets/img/icons/akrm-usdt.svg"
-             alt="ZION ARKM-USDT"
-             class="dashboard__trades-table-item-icon"
-            />
-            <a
-             href="https://www.binance.com/ru/trade/ARKM_USDT?theme=dark&type=spot"
-            >
-             ARKM/USDT
-            </a>
-           </div>
-           <div class="dashboard__trades-table-item blue">1.235</div>
-           <div class="dashboard__trades-table-item blue">14:05 UTC</div>
-           <div class="dashboard__trades-table-item blue">1.235</div>
-           <div class="dashboard__trades-table-item blue">14:05 UTC</div>
-           <div class="dashboard__trades-table-item blue">3</div>
-           <div class="dashboard__trades-table-item blue">0</div>
+          <div class="dashboard__stats-history-body-col">
+           <img
+            src="./assets/img/icons/history-table-deals.svg"
+            alt="ZION КОЛИЧЕСТВО СДЕЛОК"
+            class="dashboard__stats-history-body-col-icon"
+           />
+           <p class="dashboard__stats-history-body-col-value">200</p>
           </div>
-         </div>
-         <div class="dashboard__trades-table-body selected">
-          <div class="dashboard__trades-table-items">
-           <div class="dashboard__trades-table-item">
-            <img
-             src="./assets/img/icons/stx-usdt.svg"
-             alt="ZION STX-USDT"
-             class="dashboard__trades-table-item-icon"
-            />
-            <a
-             href="https://www.binance.com/ru/trade/STX_USDT?theme=dark&type=spot"
-            >
-             STX/USDT
-            </a>
-           </div>
-           <div class="dashboard__trades-table-item">1.235</div>
-           <div class="dashboard__trades-table-item">14:05 UTC</div>
-           <div class="dashboard__trades-table-item">-</div>
-           <div class="dashboard__trades-table-item">-:-:- UTC</div>
-           <div class="dashboard__trades-table-item">-</div>
-           <div class="dashboard__trades-table-item">-</div>
+          <div class="dashboard__stats-history-body-col">
+           <img
+            src="./assets/img/icons/history-table-profit.svg"
+            alt="ZION ДОХОД"
+            class="dashboard__stats-history-body-col-icon"
+           />
+           <p class="dashboard__stats-history-body-col-value">$ 130.27</p>
           </div>
-         </div>
-         <div class="dashboard__trades-table-body selected">
-          <div class="dashboard__trades-table-items">
-           <div class="dashboard__trades-table-item">
-            <img
-             src="./assets/img/icons/woo-usdt.svg"
-             alt="ZION WOO-USDT"
-             class="dashboard__trades-table-item-icon"
-            />
-            <a
-             href="https://www.binance.com/ru/trade/WOO_USDT?theme=dark&type=spot"
-            >
-             WOO/USDT
-            </a>
-           </div>
-           <div class="dashboard__trades-table-item">1.235</div>
-           <div class="dashboard__trades-table-item">14:05 UTC</div>
-           <div class="dashboard__trades-table-item">-</div>
-           <div class="dashboard__trades-table-item">-:-:- UTC</div>
-           <div class="dashboard__trades-table-item">-</div>
-           <div class="dashboard__trades-table-item">-</div>
-          </div>
-         </div>
-         <div class="dashboard__trades-table-body">
-          <div class="dashboard__trades-table-items">
-           <div class="dashboard__trades-table-item">
-            <img
-             src="./assets/img/icons/dock-usdt.svg"
-             alt="ZION DOCK-USDT"
-             class="dashboard__trades-table-item-icon"
-            />
-            <a
-             href="https://www.binance.com/ru/trade/DOCK_USDT?theme=dark&type=spot"
-            >
-             DOCK/USDT
-            </a>
-           </div>
-           <div class="dashboard__trades-table-item green">1.235</div>
-           <div class="dashboard__trades-table-item green">14:05 UTC</div>
-           <div class="dashboard__trades-table-item green">1.344</div>
-           <div class="dashboard__trades-table-item green">14:05 UTC</div>
-           <div class="dashboard__trades-table-item green">3</div>
-           <div class="dashboard__trades-table-item green">0.6000</div>
-          </div>
-         </div>
-         <div class="dashboard__trades-table-body selected">
-          <div class="dashboard__trades-table-items">
-           <div class="dashboard__trades-table-item">
-            <img
-             src="./assets/img/icons/sol-usdt.svg"
-             alt="ZION SOl-USDT"
-             class="dashboard__trades-table-item-icon"
-            />
-            <a
-             href="https://www.binance.com/ru/trade/SOL_USDT?theme=dark&type=spot"
-            >
-             SOL/USDT
-            </a>
-           </div>
-           <div class="dashboard__trades-table-item">1.235</div>
-           <div class="dashboard__trades-table-item">14:05 UTC</div>
-           <div class="dashboard__trades-table-item">-</div>
-           <div class="dashboard__trades-table-item">-:-:- UTC</div>
-           <div class="dashboard__trades-table-item">-</div>
-           <div class="dashboard__trades-table-item">-</div>
+          <div class="dashboard__stats-history-body-col">
+           <img
+            src="./assets/img/icons/history-table-profit-amount.svg"
+            alt="ZION ДОХОД ЗА СУТКИ"
+            class="dashboard__stats-history-body-col-icon"
+           />
+           <p class="dashboard__stats-history-body-col-value">1,57%</p>
           </div>
          </div>
         </div>
@@ -1456,8 +1619,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   <script src="
   https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
   "></script>
-  <script src="./js/calendar/calendar.js"></script>
-  <script src="./js/dashboard/history/history-select.js"></script>
+  <script src="./js/dashboard/stats/stats.js"></script>
   <script src="./js/header/header.js"></script>
   <script src="./js/lang/lang.js"></script>
   <script src="./js/slider/tab.js"></script>

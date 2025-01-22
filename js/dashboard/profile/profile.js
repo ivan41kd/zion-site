@@ -1,7 +1,6 @@
 const profileInfo = document.querySelector('.dashboard__profile-info');
 const checkTelegram = () => {
  if (JSON.parse(localStorage.getItem('isTelegram')) == true) {
-  console.log(localStorage.getItem('isTelegram'));
   profileInfo.classList.remove('telegram');
   profileInfo.innerHTML = `         <p class="dashboard__profile-info-title">Информация об аккаунте</p>
   <div class="dashboard__profile-info-cols">

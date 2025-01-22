@@ -18,6 +18,12 @@
    flex-direction: column;
   }
  }
+
+ &__content.btc {
+  @include onlymobile {
+   gap: rem(10px);
+  }
+ }
  &__title-wrapper {
   display: flex;
   align-items: center;
@@ -53,6 +59,30 @@
   @include onlymobile {
    width: rem(45.85px);
    height: rem(27px);
+  }
+ }
+ &__title-icon.kucoin {
+  width: rem(225px);
+  height: rem(52px);
+  @include onlymobile {
+   width: rem(129.78px);
+   height: rem(30px);
+  }
+ }
+ &__title-icon.bybit {
+  width: rem(156px);
+  height: rem(52px);
+  @include onlymobile {
+   width: rem(90px);
+   height: rem(30px);
+  }
+ }
+ &__title-icon.okx {
+  width: rem(166.68px);
+  height: rem(50px);
+  @include onlymobile {
+   width: rem(100.01px);
+   height: rem(30px);
   }
  }
 
@@ -408,8 +438,11 @@
   }
  }
  &__card-info.profit {
-  padding: rem(20px) rem(35px) rem(22px) rem(33px);
+  padding: rem(20px) rem(32.95px) rem(20px) rem(32.95px);
   gap: rem(25px);
+  @include onlymobile {
+   padding: rem(10px) rem(21px);
+  }
  }
  &__card-info.profit &__card-info-wrapper {
   padding: 0;
@@ -420,11 +453,15 @@
   margin-bottom: rem(10px);
   @include onlymobile {
    width: 100%;
+   margin-bottom: rem(5px);
   }
  }
  &__card-info.profit &__card-info-header {
   margin-bottom: 0;
   padding: 0;
+  @include onlymobile {
+   margin-bottom: rem(5px);
+  }
  }
  &__card-info-header-wrapper {
   display: flex;
@@ -615,9 +652,18 @@
  &__card-profit-icon {
   width: rem(20px);
   height: rem(20px);
+  @include onlymobile {
+   width: rem(15px);
+   height: rem(15px);
+  }
  }
  &__card-profit-icon.btc {
-  width: rem(36px);
+  width: rem(36.1px);
+  height: rem(22px);
+  @include onlymobile {
+   width: rem(29.53px);
+   height: rem(18px);
+  }
  }
  &__card-profit-name {
   font-weight: 600;
@@ -650,12 +696,20 @@
  &__card-partner-wrapper {
   padding: rem(15px) rem(30px);
   padding-bottom: 0;
+  @include onlymobile {
+   padding: rem(10px) rem(15px);
+  }
  }
  &__card-info-title {
   font-weight: 600;
   font-size: rem(20px);
   line-height: rem(24.38px);
   margin-bottom: rem(10px);
+  @include onlymobile {
+   font-size: rem(18px);
+   line-height: rem(21.94px);
+   margin-bottom: rem(5px);
+  }
  }
  &__deposit-sticker-icon.btc {
   width: rem(36px);
@@ -676,27 +730,36 @@
   position: absolute;
   backdrop-filter: blur(30.399999618530273px);
   width: 100%;
-  height: 100%;
+  height: 110%;
   display: flex;
   flex-direction: column;
   gap: rem(10px);
-  z-index: 1;
+  z-index: 4;
   font-size: rem(48px);
   line-height: rem(58.51px);
   color: #a1a1a1;
   align-items: center;
   padding-top: rem(105px);
   @include onlymobile {
-   height: 100%;
+   width: 100dvw;
+   min-height: 100dvh;
    font-size: rem(36px);
    line-height: rem(43.88px);
+  }
+ }
+ @keyframes loadinganim {
+  from {
+   transform: rotatez(0);
+  }
+  to {
+   transform: rotate(360deg);
   }
  }
  &__loading-icon {
   width: rem(95.44px);
   height: rem(100px);
+  animation: 0.8s loadinganim linear infinite;
  }
-
  &__bottom-tabs.mobile {
   @include onlymobile {
    display: flex !important;
@@ -1017,11 +1080,10 @@
  &__deposits {
   display: flex;
   flex-direction: column;
-  row-gap: rem(15px);
+  justify-content: space-between;
   width: rem(340px);
   @include onlymobile {
    flex-direction: row;
-   justify-content: space-between;
    width: 100%;
   }
  }
@@ -1327,17 +1389,20 @@
  }
  &__profit {
   width: rem(400px);
-  padding: rem(18px) rem(45px);
+  padding: rem(20px) rem(43.9px) rem(25px) rem(44px);
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.06) inset;
   background: rgba(71, 150, 124, 0.1);
   border-radius: rem(15px);
   @include onlymobile {
    width: 100%;
-   padding: rem(10px) rem(17px);
+   padding: rem(10px) rem(24.5px);
   }
  }
  &__profit.btc {
   padding: rem(30px) rem(44px);
+  @include onlymobile {
+   padding: rem(10px) rem(24.5px);
+  }
  }
  &__profit.btc &__profit-graph {
   margin-bottom: rem(15px);
@@ -1386,16 +1451,28 @@
   line-height: rem(15.85px);
   color: white;
   font-weight: 700;
-  height: rem(20px);
   border-radius: rem(7px);
   display: flex;
   align-items: center;
+  @include onlymobile {
+   border-radius: rem(5px);
+  }
  }
  &__profit-result.plus {
   background: rgba(95, 151, 110, 1);
+  @include onlymobile {
+   font-size: rem(12px);
+   line-height: rem(14.63px);
+   padding: rem(2px) rem(10px);
+  }
  }
  &__profit-result.minus {
   background: rgba(238, 100, 103, 1);
+  padding: rem(2px) rem(10px);
+  @include onlymobile {
+   font-size: rem(10px);
+   line-height: rem(12.19px);
+  }
  }
  &__profit-graph {
   width: 100%;
@@ -1415,20 +1492,28 @@
  &__profit-item:nth-child(3) &__profit-info-name {
   font-size: rem(13px);
   line-height: rem(15.85px);
+  @include onlymobile {
+   font-size: rem(10px);
+   line-height: rem(12.19px);
+  }
  }
  &__profit-item:nth-child(4) &__profit-info-name {
   font-size: rem(13px);
   line-height: rem(15.85px);
+  @include onlymobile {
+   font-size: rem(10px);
+   line-height: rem(12.19px);
+  }
  }
  &__profit-item:nth-child(3) {
   align-items: center;
   margin-bottom: rem(15px);
  }
- &__profit-item.main-profit &__profit-result {
-  height: rem(34px);
+ &__profit-item.main-profit &__profit-result.plus {
   font-size: rem(20px);
   line-height: rem(24.38px);
-  padding: 0 rem(10px);
+  padding: rem(5px) rem(10px);
+  height: max-content;
   @include onlymobile {
    height: rem(19px);
    font-size: rem(12px);
@@ -1892,8 +1977,13 @@
   &__trades-table-item:not(:last-child) {
   border-right: 1px solid rgba(156, 156, 156, 1);
  }
+ &__trade-table-body.selected
+  &__trades-table-items
+  &__trades-table-item:last-child {
+  border-radius: 0px 0px rem(15px) rem(15px);
+ }
  &__trades-table-body.selected &__trades-table-items {
-  border: 1px solid rgba(156, 156, 156, 1);
+  border: rem(1px) solid rgba(156, 156, 156, 1);
  }
  &__trades-table-items {
   display: grid;
@@ -1908,6 +1998,13 @@
     rem(85px) rem(45px) rem(45px) rem(45px) rem(45px) rem(32px)
     rem(48px);
   }
+ }
+ &__trades-table-body:last-child &__trades-table-items {
+  border-radius: 0px 0px rem(15px) rem(15px);
+  border-bottom: rem(1px) solid rgba(64, 64, 64, 1);
+ }
+ &__trades-table-body:last-child.selected &__trades-table-items {
+  border-radius: 0px 0px rem(15px) rem(15px);
  }
  &__trades-table-item {
   display: flex;
@@ -1927,8 +2024,10 @@
    padding: rem(10.5px);
   }
  }
+
  &__trades-table-item:last-child {
   border-right: none;
+  border-radius: 0px 0px rem(15px) rem(15px);
  }
  &__trades-table-item a {
   text-decoration: underline;
@@ -1951,6 +2050,11 @@
    width: rem(15px);
    height: rem(15px);
   }
+ }
+
+ &__trades-table-body.selected:last-child &__trades-table-items {
+  border-radius: 0px 0px rem(15px) rem(15px);
+  border-bottom: rem(1px) rgba(156, 156, 156, 1) solid;
  }
  .inactive:not(.dashboard__datepicker-number) {
   opacity: 0;
@@ -4091,7 +4195,7 @@
  }
  &__level-link {
   display: grid;
-  grid-template-columns: rem(85px) 1fr rem(12.75px);
+  grid-template-columns: rem(85px) rem(324px) rem(12.75px);
   padding: rem(10px);
   gap: rem(10px);
   justify-items: center;
@@ -4116,10 +4220,22 @@
   font-weight: 600;
   font-size: rem(11px);
   line-height: rem(13.41px);
+  @include ifdesktop {
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
+   word-break: auto-phrase;
+   max-width: rem(324px);
+  }
   @include onlymobile {
    font-size: rem(10px);
    line-height: rem(12.19px);
    word-break: break-all;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   max-width: rem(159px);
   }
  }
  &__level-link-copy-icon {
@@ -7545,10 +7661,12 @@
   border: none;
   padding: 0;
   color: white;
-  text-align: center;
   user-select: none;
   position: relative;
   z-index: -1;
+  @include ifdesktop {
+   text-align: center;
+  }
   @include onlymobile {
    width: 100%;
    font-size: rem(12px);
