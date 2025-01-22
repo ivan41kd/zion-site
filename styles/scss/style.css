@@ -11745,6 +11745,14 @@ button.btc {
     row-gap: 3.125rem;
   }
 }
+.form-layout__wrapper.login {
+  row-gap: 3.75rem;
+}
+@media screen and (min-width: 0px) and (max-width: 1023px) {
+  .form-layout__wrapper.login {
+    row-gap: 3.125rem;
+  }
+}
 .form-layout__container {
   display: flex;
   flex-direction: column;

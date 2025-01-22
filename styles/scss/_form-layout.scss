@@ -57,6 +57,12 @@
    row-gap: rem(50px);
   }
  }
+ &__wrapper.login {
+  row-gap: rem(60px);
+  @include onlymobile {
+   row-gap: rem(50px);
+  }
+ }
  &__container {
   display: flex;
   flex-direction: column;
