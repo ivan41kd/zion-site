@@ -390,6 +390,10 @@
    font-size: rem(16px);
    line-height: rem(17.46px);
   }
+  &:hover {
+   color: white;
+   transition: 0.3s;
+  }
  }
  &__year.active {
   color: white;

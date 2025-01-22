@@ -124,6 +124,10 @@
   font-size: rem(31px);
   font-weight: 800;
   line-height: rem(47px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  word-break: auto-phrase;
   @include onlymobile {
    font-size: rem(16px);
    line-height: rem(24.26px);
@@ -135,9 +139,17 @@
   font-weight: 400;
   line-height: rem(18.83px);
   color: rgba(161, 161, 161, 1);
+  display: -webkit-box;
+  -webkit-line-clamp: 16;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 100%;
   @include onlymobile {
    font-size: rem(11px);
    line-height: rem(11.51px);
+   -webkit-line-clamp: 21;
   }
  }
  &__swiper-button {
